@@ -1,0 +1,50 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "5e24eb66-2d17-476b-994b-8375957a0da0",
+	"meta": {
+		"type": "entity",
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+			"${meta.Symbols}": "^(?!undefined$)",
+			"${meta.PeptideModifiedSequence}": "^(?!undefined$)"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.symbol}",
+				"src": "${PREFIX}/static/images/RNA-seq.png",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Name": {
+				"text": "${meta.Symbols}",
+				"type": "title",
+				"field": "meta.Symbols",
+				"priority": 1,
+				"visibility": 1
+			},
+			"ID": {
+				"text": "${meta.ID}",
+				"type": "subtitle",
+				"field": "meta.ID",
+				"priority": 3,
+				"visibility": 2
+			},
+			"AltID": {
+				"text": "${meta.ID}",
+				"type": "alternative",
+				"field": "meta.ID",
+				"priority": 3,
+				"visibility": 2
+			},
+			"Peptide Modified Sequence": {
+				"text": "${meta.PeptideModifiedSequence}",
+				"type": "text",
+				"field": "meta.PeptideModifiedSequence",
+				"priority": 2,
+				"visibility": 2
+			}
+		}
+	}
+}

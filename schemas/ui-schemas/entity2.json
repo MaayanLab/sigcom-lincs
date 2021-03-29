@@ -1,0 +1,65 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "a0b8edba-bc41-4c0d-93c6-6a33c2428492",
+	"meta": {
+		"type": "entity",
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+			"${meta.symbol}": "^(?!undefined$)"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.symbol}",
+				"src": "${PREFIX}/static/images/dna.png",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Name": {
+				"text": "${meta.symbol}",
+				"type": "title",
+				"field": "meta.symbol",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "${meta.description}",
+				"type": "subtitle",
+				"field": "meta.description",
+				"priority": 2,
+				"visibility": 2
+			},
+			"Alt ID": {
+				"text": "${meta.geneid}",
+				"type": "alternative",
+				"field": "meta.geneid",
+				"priority": 2,
+				"visibility": 2
+			},
+			"Gene ID": {
+				"text": "${meta.geneid}",
+				"type": "text",
+				"field": "meta.geneid",
+				"priority": 2,
+				"visibility": 2
+			},
+			"Synonyms": {
+				"type": "array",
+				"field": "meta.synonyms",
+				"object": "meta.synonyms",
+				"priority": 4,
+				"icon": "mdi-tag",
+				"synonyms": true,
+				"visibility": 1
+			},
+			"Taxon ID": {
+				"text": "${meta.taxid}",
+				"type": "text",
+				"field": "meta.taxid",
+				"priority": 3,
+				"visibility": 2
+			}
+		}
+	}
+}

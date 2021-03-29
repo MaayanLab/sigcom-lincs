@@ -1,0 +1,172 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "9634f5d9-bced-4597-851d-7ce490d4261b",
+	"meta": {
+		"font_families": [
+			"https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900",
+			"https://fonts.googleapis.com/css?family=Archivo+Narrow"
+		],
+		"favicon": {
+			"alt": "LINCS Datasets and Signatures",
+			"src": "${PREFIX}/static/LINCS.ico",
+			"title": "LINCS Datasets and Signatures"
+		},
+		"header_info": {
+			"icon": {
+				"alt": "lincs",
+				"src": "${PREFIX}/static/LINCS.ico",
+				"style": {
+					"width": 60,
+					"marginBottom": -15
+				}
+			},
+			"header_right": " LINCS Datasets and Signatures"
+		},
+		"nav": {
+			"API": {
+				"active": true
+			},
+			"Resources": {
+				"active": true,
+				"endpoint": "/DSGCs"
+			},
+			"MetadataSearch": {
+				"active": true,
+				"endpoint": "/TermSearch",
+				"navName": "Term Search",
+				"props": {
+					"model_tabs": [
+						"libraries",
+						"signatures",
+						"entities"
+					],
+					"entry_model": "signatures",
+					"placeholder": "Search for any term, i.e. drug, gene, or a cell line",
+					"examples": {
+						"entities": [
+							"ACE2",
+							"STAT3"
+						],
+						"libraries": [
+							"L1000",
+							"proteomics",
+							"kinase"
+						],
+						"signatures": [
+							"Apoptosis",
+							"Interferon",
+							"Autophagy",
+							"PKN3"
+						]
+					}
+				}
+			},
+			"SignatureSearch": {
+				"active": true,
+				"endpoint": "/EnrichmentAnalysis",
+				"navName": "Enrichment Analysis",
+				"props": {
+					"types": {
+						"Overlap": {
+							"active": false
+						},
+						"Rank": {
+							"active": true,
+							"switch": "Up-Down Enrichment",
+							"up_placeholder": "Up-regulated genes",
+							"down_placeholder": "Down-regulated genes",
+							"icon": "mdi-menu-swap",
+							"examples": [
+								{
+									"label": "Example Up and Down Sets",
+									"input": {
+										"up_entities": "TAAR9\nEBF2\nWDR78\nRRAGA\nSPATA18\nSPINT2\nMRGPRD\nCD9\nRBP1\nCYB5RL\nMXRA8\nPM20D1\nITIH5\nEPAS1\nAHCYL2\nPANK2\nPON2\nLRP5\nSLC5A3\nNSL1\nCLDN2\nLRP8\nAQP1\nCLDN1\nTMEM72\nGNG4\nNHLH2\nS100A13\nLY6G6C\nPOF1B\nWLS\nFZD4\nCOG7\nFZD6\nFOXF1\nFZD7\nERLIN2\nTYSND1\nACADSB\nOR51I2\nPARP12\nPPFIBP2\nATP4A\nALDH7A1\nTCN2\nSLCO5A1\nSFXN4\nPRR15\nMOXD1\nCAPSL",
+										"down_entities": "GBP7\nOR8H1\nACOT8\nARL14\nGPR37L1\nPPP2R1A\nMED6\nCDC20\nNEIL3\nDDX39B\nLAP3\nKATNAL2\nZSCAN20\nUQCRC2\nRBCK1\nTMCC3\nRNF2\nCMAS\nTESK2\nZFYVE1\nIL27RA\nKIAA1328\nFRAT1\nSNRPD2\nHERC1\nVTI1B\nCHAC2\nNXNL1\nEXOSC2\nSAMD11\nSAMD5\nEPSTI1\nHABP2\nBATF3\nPLK4\nTSPYL1\nXRCC4\nRAB27A\nXRCC2\nBHLHA15\nVPS37C\nTUBG2\nDHFR\nFERMT1\nRNF144B\nBPIFB3\nSMU1\nRIPPLY3\nRNPS1\nSFXN2"
+									}
+								}
+							]
+						}
+					}
+				}
+			}
+		},
+		"extraNav": [
+			{
+				"type": "iframe",
+				"iframe": {
+				  "Workflows": {
+					"id": "Workflows",
+					"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
+					"name": "Workflows",
+					"height": 2000,
+					"frameBorder": 0
+				  }
+				},
+				"navName": "Workflows",
+				"endpoint": "/Workflows"
+			  }
+		],
+		"preferred_name_singular": {
+			"libraries": "Dataset",
+			"resources": "Data and Signature Generation Center"
+		},
+		"preferred_name": {
+			"libraries": "Datasets",
+			"resources": "Data and Signature Generation Centers"
+		},
+		"footer_links": [
+			{
+				"alt": "LINCS",
+				"src": "${PREFIX}/static/NIHLINCS.jpg",
+				"href": "http://www.lincsproject.org/LINCS/data/overview",
+				"imageProps": {
+					"style": {
+						"width": 300
+					}
+				},
+				"containerProps": {
+					"style": {
+						"width": 300
+					}
+				}
+			},
+			{
+				"alt": "dcic",
+				"src": "${PREFIX}/static/images/dcic_light.png",
+				"href": "http://lincs-dcic.org/"
+			}
+		],
+		"theme_mod": {
+			"palette": {
+				"default": {
+					"main": "#555"
+				},
+				"primary": {
+					"main": "#3a5278"
+				},
+				"secondary": {
+					"main": "rgb(204, 204, 153)"
+				},
+				"defaultCard": {
+					"contrastText": "#FFF"
+				},
+				"defaultChip": {
+					"contrastText": "#FFF"
+				},
+				"defaultButton": {
+					"main": "#3a5278"
+				}
+			},
+			"typography": {
+				"fontFamily": "Lato, serif, Archivo Narrow"
+			}
+		},
+		"pie_chart_style": {
+			"Pie": {
+				"fill": "rgb(124, 162, 206)"
+			}
+		},
+		"about": "./static/about-lincs.md",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/landing-ui.json"
+	}
+}

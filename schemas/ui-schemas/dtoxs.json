@@ -1,0 +1,67 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "7609280f-51c4-48ad-b5d1-b5a916659944",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+			"${meta.platform}": "mtSinaiRNASeqAug2015"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${library.meta.title}",
+				"src": "${PREFIX}/${library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Signature ID": {
+				"text": "${meta.signatureid}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Dataset": {
+				"text": "${library.meta.title}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Platform": {
+				"text": "${meta.platform}",
+				"type": "text",
+				"icon": "mdi-microscope",
+				"priority": 4,
+				"visibility": 1
+			},
+			"Factor": {
+				"text": "${meta.factor}",
+				"type": "text",
+				"icon": "mdi-hexagon-multiple",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Direction": {
+				"text": "${scores['direction']",
+				"type": "text",
+				"priority": 4,
+				"condition": {
+					"${meta['logp-fisher']}": {
+						"ne": "undefined"
+					}
+				},
+				"visibility": 1
+			},
+			"Log(p) Fisher": {
+				"text": "${Number.parseFloat(scores['logp-fisher']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			},
+			"Log(p) Ave": {
+				"text": "${Number.parseFloat(scores['logp-avg']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			}
+		}
+	}
+}

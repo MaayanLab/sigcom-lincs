@@ -1,0 +1,192 @@
+[
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "7dbd0db2-9c04-48e4-b43e-655b03c086d6",
+		"meta": {
+		  "type": "table",
+		  "icon": "mdi-bookshelf",
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		  "model": "libraries",
+		  "text": "Datasets",
+		  "priority": 2
+		}
+	  },
+	  {
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "7de4d1bc-e0f3-47c4-a75e-1a4d19f756e3",
+		"meta": {
+		  "type": "table",
+		  "icon": "mdi-fingerprint",
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		  "model": "signatures",
+		  "text": "LINCS Signatures",
+		  "priority": 2
+		}
+	  },
+	  {
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "2215f5bd-74a5-43ba-a16b-8855ef4c6b14",
+		"meta": {
+		  "type": "table",
+		  "icon": "mdi-certificate",
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		  "model": "resources",
+		  "text": "Data and Signature Generation Centers",
+		  "priority": 2
+		}
+	  },
+	  {
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "cb58bff1-9579-4250-96e5-2b5d2ac83e3f",
+	  "meta": {
+		"icon": "mdi-certificate",
+		"text": "Data and Signature Generation Center",
+		"type": "filter",
+		"field": "resource",
+		"model": "signatures",
+		"priority": 1,
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"search_field": "resource"
+	  }
+	},
+	
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "cd2cb813-1dbe-4164-bc07-d94a0fdc9c41",
+	  "meta": {
+		"icon": "mdi-bookshelf",
+		"text": "Dataset",
+		"type": "filter",
+		"field": "library",
+		"model": "signatures",
+		"priority": 2,
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"search_field": "library"
+	  }
+	},
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "453fd8ea-2b13-4611-bd23-624281c26554",
+	  "meta": {
+		"icon": "mdi-test-tube",
+		"text": "Platform",
+		"type": "filter",
+		"field": "meta.platform",
+		"search_field": "meta.platform",
+		"model": "signatures",
+		"priority": 2,
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
+	  }
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "dfe210fd-627e-416a-b64b-5c872b4729fb",
+		"meta": {
+		"text": "Data and Signature Generation Center",
+		"type": "filter",
+		"field": "resource",
+
+		"search_field": "resource",
+		"model": "libraries",
+		"priority": 2,
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
+		}
+	  },
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "237aa563-e83e-42d5-ac6d-a403a23d0ded",
+		"meta": {
+			"type": "pie",
+			"model": "signatures",
+			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+			"field": "resource",
+			"search_field": "meta.name",
+			"text": "Signatures per DSGC",
+			"priority": 3
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "918ce5b5-88a2-431a-bc51-8f1a90080ea0",
+		"meta": {
+		  "type": "pie",
+		"model": "libraries",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.types.instrument.value",
+		"search_field": "meta.types",
+		"text": "Dataset Instruments",
+		"priority": 2
+		}
+	  },
+
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "9806d5a9-ddd1-47c1-b70c-1a37920b8e44",
+	  "meta": {
+		"type": "pie",
+		"model": "libraries",
+		"icon": "mdi-test-tube",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.types.method.value",
+		"search_field": "meta.types",
+		"text": "Dataset Assays",
+		"priority": 1
+	  }
+	},
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "29e6c6d6-6a91-4015-8f6d-20d17bbb3851",
+	  "meta": {
+		"type": "word",
+		"model": "signatures",
+		"icon": "mdi-microscope",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.cellline",
+		"search_field": "meta.cellline",
+		"text": "Cell Lines",
+		"priority": 4
+	  }
+	},
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "9a06c324-c6b0-4e72-a3fa-015ea447a8ff",
+	  "meta": {
+		"type": "word",
+		"model": "signatures",
+		"icon": "mdi-hexagon-multiple",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.clueIoCompound",
+		"search_field": "meta.clueIoCompound",
+		"text": "Compounds",
+		"priority": 5
+	  }
+	},
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "44b4c01e-5c52-44a3-91b7-da39e457ae6d",
+	  "meta": {
+		"type": "word",
+		"model": "signatures",
+		"icon": "mdi-target-variant",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.clueIoGeneTargets",
+		"search_field": "meta.clueIoGeneTargets",
+		"text": "Targets",
+		"priority": 6
+	  }
+	},
+	{
+	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	  "id": "b6aca2c5-29eb-4531-a43d-17d53cb04989",
+	  "meta": {
+		"type": "word",
+		"model": "signatures",
+		"icon": "mdi-settings-outline",
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		"field": "meta.clueIoMOA",
+		"search_field": "meta.clueIoMOA",
+		"text": "MoA",
+		"priority": 7
+	  }
+	}
+  ]

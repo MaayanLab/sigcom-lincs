@@ -1,0 +1,1375 @@
+[
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "90f102a1-f68d-4b5b-b8c9-d7235738dfaa",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+				"${library.dataset}": "LDS*",
+				"${library.dataset_type}": "rank_matrix"
+			},
+			"$validator": "https://raw.githubusercontent.com/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"P-Up": {
+					"text": "${meta['p-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Z-Up": {
+					"text": "${meta['z-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${library.meta.title}",
+					"src": "${PREFIX}/${library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+					"icon": true,
+					"text": "${library.meta.title}",
+					"type": "img",
+					"priority": 1,
+					"subtitle": true,
+					"visibility": 1
+				},
+				"P-Down": {
+					"text": "${meta['p-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Z-Down": {
+					"text": "${meta['z-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"P-Value": {
+					"text": "${meta['p-value']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-value']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "asc"
+					}
+				},
+				"Download": {
+					"text": "Download",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.file_url}",
+					"visibility": 1
+				},
+				"Cell-line": {
+					"text": "${meta.cell_line.cell_id}",
+					"type": "text",
+					"MDI_Icon": "mdi-microscope",
+					"priority": 4,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Direction": {
+					"text": "${meta['direction'] === 1 ? 'up' : 'down'}",
+					"type": "text",
+					"priority": 4,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": "undefined"
+						}
+					},
+					"visibility": 1
+				},
+				"Odds Ratio": {
+					"text": "${meta.oddsratio}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.oddsratio}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Time Point": {
+					"text": "${meta.pert.pert_itime}",
+					"type": "text",
+					"MDI_Icon": "mdi-av-timer",
+					"priority": 3,
+					"clickable": false,
+					"visibility": 1
+				},
+				"Perturbation": {
+					"text": "${meta.pert.pert_iname}",
+					"type": "text",
+					"MDI_Icon": "mdi-hexagon-multiple",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Signature ID": {
+					"name": true,
+					"text": "${meta.lincs_sig_id}",
+					"type": "text",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Concentration": {
+					"text": "${meta.pert.pert_idose}",
+					"type": "text",
+					"MDI_Icon": "mdi-eyedropper",
+					"priority": 3,
+					"clickable": false,
+					"visibility": 1
+				},
+				"Gene Set Size": {
+					"text": "${meta.setsize}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.setsize}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Log(p) Fisher": {
+					"text": "${meta['logp-fisher']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "desc"
+					}
+				},
+				"Log(p) Average": {
+					"text": "${meta['logp-avg']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-avg']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "9634f5d9-bced-4597-851d-7ce490d4261b",
+		"meta": {
+			"content": {
+				"nav": {
+					"API": {
+						"active": true
+					},
+					"Resources": {
+						"active": true,
+						"endpoint": "/DSGCs"
+					},
+					"MetadataSearch": {
+						"active": true,
+						"endpoint": "/MetadataSearch"
+					},
+					"SignatureSearch": {
+						"active": true,
+						"endpoint": "/SignatureSearch"
+					}
+				},
+				"text_1": "Explore an extensive collection of LINCS datasets and signatures",
+				"favicon": {
+					"alt": "LINCS Datasets and Signatures",
+					"src": "${PREFIX}/static/LINCS.ico",
+					"title": "LINCS Datasets and Signatures"
+				},
+				"examples": [
+					{
+						"input": {
+							"type": "Rank",
+							"up_geneset": "UTP14A\nS100A6\nSCAND1\nRRP12\nCIAPIN1\nADH5\nMTERF3\nSPR\nCHMP4A\nUFM1\nVAT1\nHACD3\nRFC5\nCOTL1\nNPRL2\nTRIB3\nPCCB\nTLE1\nCD58\nBACE2\nKDM3A\nTARBP1\nRNH1\nCHAC1\nMBNL2\nVDAC1\nTES\nOXA1L\nNOP56\nHAT1\nCPNE3\nDNMT1\nARHGAP1\nVPS28\nEIF2S2\nBAG3\nCDCA4\nNPDC1\nRPS6KA1\nFIS1\nSYPL1\nSARS\nCDC45\nCANT1\nHERPUD1\nSORBS3\nMRPS2\nTOR1A\nTNIP1\nSLC25A46",
+							"down_geneset": "MAL\nEPCAM\nHDAC6\nCAPN1\nTNRC6B\nPKD1\nRRS1\nHP\nANO10\nCEP170B\nIDE\nDENND2D\nCAMK2B\nZNF358\nRPP38\nMRPL19\nNUCB2\nGNAI1\nLSR\nADGRE2\nPKMYT1\nCDK5R1\nABL1\nPILRB\nAXIN1\nFBXL8\nMCF2L\nDBNDD1\nIGHMBP2\nWIPF2\nWFS1\nOGFOD2\nMAPK1IP1L\nCOL11A1\nREG3A\nSERPINA1\nMYCBP2\nPIGK\nTCAP\nCRADD\nELK1\nDNAJB2\nZBTB16\nDAZAP1\nMAPKAPK2\nEDRF1\nCRIP1\nUCP3\nAGR2\nP4HA2"
+						},
+						"label": "Example Up and Down Sets"
+					}
+				],
+				"theme_mod": {
+					"palette": {
+						"default": {
+							"main": "#555"
+						},
+						"primary": {
+							"main": "#3a5278"
+						},
+						"secondary": {
+							"main": "rgb(204, 204, 153)"
+						},
+						"defaultCard": {
+							"contrastText": "#FFF"
+						},
+						"defaultChip": {
+							"contrastText": "#FFF"
+						},
+						"defaultButton": {
+							"main": "#3a5278"
+						}
+					},
+					"typography": {
+						"fontFamily": "Lato, serif, Archivo Narrow"
+					}
+				},
+				"ui_schema": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+				"header_info": {
+					"icon": {
+						"alt": "lincs",
+						"src": "${PREFIX}/static/LINCS.ico",
+						"style": {
+							"width": 60,
+							"marginBottom": -15
+						}
+					},
+					"header_right": " LINCS Datasets and Signatures"
+				},
+				"footer_links": [
+					{
+						"alt": "LINCS",
+						"src": "${PREFIX}/static/NIHLINCS.jpg",
+						"href": "http://www.lincsproject.org/LINCS/data/overview",
+						"imageProps": {
+							"style": {
+								"width": 300
+							}
+						},
+						"containerProps": {
+							"style": {
+								"width": 300
+							}
+						}
+					},
+					{
+						"alt": "dcic",
+						"src": "${PREFIX}/static/images/dcic_light.png",
+						"href": "http://lincs-dcic.org/"
+					}
+				],
+				"search_terms": [
+					"Apoptosis",
+					"Interferon",
+					"Autophagy",
+					"PKN3"
+				],
+				"font_families": [
+					"https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900",
+					"https://fonts.googleapis.com/css?family=Archivo+Narrow"
+				],
+				"overlap_search": false,
+				"bar_chart_style": {
+					"Bar": {
+						"fill": "rgb(124, 162, 206)"
+					},
+					"Chart": {
+						"margin": {
+							"left": 50,
+							"right": 80
+						}
+					},
+					"XAxis": {
+						"tick": {
+							"fontSize": 9
+						},
+						"angle": 45,
+						"height": 180,
+						"axisLine": false,
+						"interval": 0,
+						"textAnchor": "start"
+					},
+					"ResponsiveContainer": {
+						"width": 420,
+						"height": 420
+					}
+				},
+				"pie_chart_style": {
+					"Pie": {
+						"fill": "rgb(124, 162, 206)"
+					}
+				},
+				"showNonResource": false,
+				"counting_validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+				"deactivate_download": false,
+				"metadata_placeholder": "Search over LINCS datasets and signatures",
+				"preferred_name_singular": {
+					"libraries": "Dataset",
+					"resources": "Data and Signature Generation Center"
+				}
+			},
+			"landing": true,
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/landing-ui.json"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "cb58bff1-9579-4250-96e5-2b5d2ac83e3f",
+		"meta": {
+			"Type": "string",
+			"Table": "signatures",
+			"Filter": true,
+			"MDI_Icon": "mdi-certificate",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "resource",
+			"Parent_Meta": true,
+			"Parent_Table": "libraries",
+			"Preferred_Name": "Data and Signature Generation Centers",
+			"Grandparent_Table": "resources",
+			"Preferred_Name_Singular": "Data and Signature Generation Center"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "5e24eb66-2d17-476b-994b-8375957a0da0",
+		"meta": {
+			"type": "entity",
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+				"${meta.Symbols}": "^(?!undefined$)",
+				"${meta.PeptideModifiedSequence}": "^(?!undefined$)"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"ID": {
+					"text": "${meta.ID}",
+					"type": "text",
+					"field": "meta.ID",
+					"priority": 3,
+					"subtitle": 2,
+					"visibility": 2
+				},
+				"Name": {
+					"name": true,
+					"text": "${meta.Symbols}",
+					"type": "text",
+					"field": "meta.Symbols",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta.symbol}",
+					"src": "${PREFIX}/static/images/dna.png",
+					"icon": true,
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Peptide Modified Sequence": {
+					"text": "${meta.PeptideModifiedSequence}",
+					"type": "text",
+					"field": "meta.PeptideModifiedSequence",
+					"priority": 2,
+					"visibility": 2
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "9fdd1b99-14c9-40e8-a86c-5754c78ff5c9",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+				"${dataset_type}": "rank_matrix",
+				"${meta['@type']}": "undefined"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"Assay": {
+					"text": "${meta.assay}",
+					"type": "text",
+					"MDI_Icon": "mdi-test-tube",
+					"priority": 2,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta.title || meta.libraryName || dataset}",
+					"src": "${PREFIX}/${meta.icon || 'static/LINCS.ico'}",
+					"icon": true,
+					"name": true,
+					"text": "${meta.title || meta.libraryName || dataset}",
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Organism": {
+					"text": "${meta.organism}",
+					"type": "text",
+					"MDI_Icon": "mdi-human-child",
+					"priority": 3,
+					"visibility": 1
+				},
+				"Description": {
+					"text": "${meta.libraryInfo}",
+					"type": "text",
+					"priority": 2,
+					"subtitle": true,
+					"visibility": 1,
+					"description": true
+				},
+				"Signature Count": {
+					"alt": "${meta.signatureCount}",
+					"type": "text",
+					"priority": 3,
+					"visibility": 1
+				},
+				"Perturbation Type": {
+					"text": "${meta.perturbation_type}",
+					"type": "text",
+					"MDI_Icon": "mdi-flask-outline",
+					"priority": 3,
+					"visibility": 1
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "9b6c082a-e46d-4f96-9c2d-87583f32e275",
+		"meta": {
+			"type": "entity",
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+				"${meta.geneSymbol}": "^(?!undefined$)",
+				"${meta.VMsiteFlanks}": "^(?!undefined$)"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"ID": {
+					"text": "${meta.ID}",
+					"type": "text",
+					"field": "meta.ID",
+					"priority": 3,
+					"subtitle": 2,
+					"visibility": 2
+				},
+				"Name": {
+					"name": true,
+					"text": "${meta.geneSymbol}",
+					"type": "text",
+					"field": "meta.geneSymbol",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta.symbol}",
+					"src": "${PREFIX}/static/images/dna.png",
+					"icon": true,
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"VMsite Flanks": {
+					"text": "${meta.VMsiteFlanks}",
+					"type": "text",
+					"field": "meta.VMsiteFlanks",
+					"priority": 3,
+					"subtitle": 2,
+					"visibility": 2
+				},
+				"Peptide Modified Sequence": {
+					"text": "${meta.PeptideModifiedSequence}",
+					"type": "text",
+					"field": "meta.PeptideModifiedSequence",
+					"priority": 2,
+					"visibility": 2
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "38ce3bbb-48d0-4cd0-a7bc-0f0d715f98c6",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/resource.json"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"URL": {
+					"text": "${meta['URL']}",
+					"type": "text",
+					"field": "URL",
+					"priority": 3,
+					"visibility": 1
+				},
+				"PMID": {
+					"text": "${meta['PMID']}",
+					"type": "text",
+					"field": "PMID",
+					"priority": 3,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta.name}",
+					"src": "${PREFIX}/${meta.extraProperties[0].values[0]}",
+					"icon": true,
+					"name": true,
+					"text": "${meta.name}",
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Description": {
+					"text": "${meta['description']}",
+					"type": "text",
+					"field": "description",
+					"priority": 2,
+					"subtitle": true,
+					"visibility": 0,
+					"description": true
+				},
+				"Signature Count": {
+					"text": "${meta['Signature_Count']}",
+					"type": "text",
+					"field": "Signature_Count",
+					"priority": 3,
+					"visibility": 1
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "e044717c-8927-407c-844d-bcc9da4b41f8",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+				"${library.meta.assay}": "P100"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"ID": {
+					"name": true,
+					"text": "${meta.id}",
+					"type": "text",
+					"priority": 1,
+					"visibility": 1
+				},
+				"P-Up": {
+					"text": "${meta['p-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Z-Up": {
+					"text": "${meta['z-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Assay": {
+					"text": "${library.meta.assay}",
+					"type": "text",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${library.meta.libraryName}",
+					"src": "${PREFIX}/${library.meta.icon}",
+					"icon": true,
+					"text": "${library.meta.libraryName}",
+					"type": "img",
+					"priority": 1,
+					"subtitle": true,
+					"visibility": 1
+				},
+				"P-Down": {
+					"text": "${meta['p-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Z-Down": {
+					"text": "${meta['z-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"P-Value": {
+					"text": "${meta['p-value']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-value']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "asc"
+					}
+				},
+				"Compound": {
+					"text": "${meta.pert_iname}",
+					"type": "text",
+					"MDI_Icon": "mdi-hexagon-multiple",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Cell-line": {
+					"text": "${meta.cellid}",
+					"type": "text",
+					"MDI_Icon": "mdi-microscope",
+					"priority": 4,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Direction": {
+					"text": "${meta['direction'] === 1 ? 'up' : 'down'}",
+					"type": "text",
+					"priority": 4,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": "undefined"
+						}
+					},
+					"visibility": 1
+				},
+				"Odds Ratio": {
+					"text": "${meta.oddsratio}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.oddsratio}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Pubchem ID": {
+					"text": "${meta.pubchem_cid}",
+					"type": "text",
+					"MDI_Icon": "mdi-database",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Time Point": {
+					"text": "${meta.pert_time}${meta.pert_time_unit}",
+					"type": "text",
+					"MDI_Icon": "mdi-av-timer",
+					"priority": 5,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Concentration": {
+					"text": "${meta.pert_dose}${meta.pert_dose_unit}",
+					"type": "text",
+					"MDI_Icon": "mdi-eyedropper",
+					"priority": 3,
+					"clickable": false,
+					"visibility": 1
+				},
+				"Gene Set Size": {
+					"text": "${meta.setsize}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.setsize}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Log(p) Fisher": {
+					"text": "${meta['logp-fisher']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "desc"
+					}
+				},
+				"Log(p) Average": {
+					"text": "${meta['logp-avg']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-avg']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "b7b75c53-dfcb-48b0-a60a-246fe6dd464d",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+				"${dataset_type}": "rank_matrix",
+				"${meta['@type']}": "Dataset"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"Assay": {
+					"text": "${meta.types[0].method.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-test-tube",
+					"priority": 1,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta['title']}",
+					"src": "${PREFIX}/${meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+					"icon": true,
+					"name": true,
+					"text": "${meta['title']}",
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Dataset": {
+					"text": "${meta.types[0].description.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.distributions[0].access.accessURL}",
+					"visibility": 1
+				},
+				"Insignia": {
+					"text": "Insignia",
+					"type": "text",
+					"homepage": true,
+					"priority": 10,
+					"hyperlink": "${(meta.distributions || meta.hasPart[0].distributions)[0].access.accessURL.split('&file')[0]}",
+					"visibility": 1
+				},
+				"Dataset 1": {
+					"text": "${meta.hasPart[0].types[0].description.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.hasPart[0].distributions[0].access.accessURL}",
+					"visibility": 1
+				},
+				"Dataset 2": {
+					"text": "${meta.hasPart[1].types[0].description.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.hasPart[1].distributions[0].access.accessURL}",
+					"visibility": 1
+				},
+				"Dataset 3": {
+					"text": "${meta.hasPart[2].types[0].description.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.hasPart[2].distributions[0].access.accessURL}",
+					"visibility": 1
+				},
+				"Dataset 4": {
+					"text": "${meta.hasPart[3].types[0].description.value}",
+					"type": "text",
+					"MDI_Icon": "mdi-download",
+					"download": true,
+					"priority": 10,
+					"hyperlink": "${meta.hasPart[3].distributions[0].access.accessURL}",
+					"visibility": 1
+				},
+				"Institute": {
+					"text": "${meta.creators[0].affiliations[0].name}",
+					"type": "text",
+					"MDI_Icon": "mdi-certificate",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Description": {
+					"text": "${meta.description}",
+					"type": "text",
+					"priority": 1,
+					"subtitle": true,
+					"visibility": 1,
+					"description": true
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "cd2cb813-1dbe-4164-bc07-d94a0fdc9c41",
+		"meta": {
+			"Type": "string",
+			"Table": "signatures",
+			"Filter": true,
+			"MDI_Icon": "mdi-library-books",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "library",
+			"Preferred_Name": "Datasets",
+			"Preferred_Name_Singular": "Dataset"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "453fd8ea-2b13-4611-bd23-624281c26554",
+		"meta": {
+			"Type": "string",
+			"Table": "signatures",
+			"Filter": true,
+			"MDI_Icon": "mdi-test-tube",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.platform",
+			"Preferred_Name": "Platforms",
+			"Preferred_Name_Singular": "Platform"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "918ce5b5-88a2-431a-bc51-8f1a90080ea0",
+		"meta": {
+			"Type": "object",
+			"Table": "libraries",
+			"MDI_Icon": "mdi-microscope",
+			"Pie_Count": true,
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.types.instrument.value",
+			"Meta_Count": true,
+			"Preferred_Name": "Instruments",
+			"Preferred_Name_Singular": "Instrument"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "7a3fa3bd-cec5-48d6-9a0e-74b486617607",
+		"meta": {
+			"Type": "object",
+			"Table": "libraries",
+			"MDI_Icon": "mdi-animation-outline",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.types.description.value",
+			"Meta_Count": true,
+			"Preferred_Name": "Data Levels",
+			"Preferred_Name_Singular": "Data Level"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "d9da1703-153f-4f96-853f-d38a133c9c1e",
+		"meta": {
+			"Type": "object",
+			"Table": "libraries",
+			"MDI_Icon": "mdi-database",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.storedIn.name",
+			"Meta_Count": true,
+			"Preferred_Name": "Repositories",
+			"Preferred_Name_Singular": "Repository"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "dfe210fd-627e-416a-b64b-5c872b4729fb",
+		"meta": {
+			"Type": "string",
+			"Table": "libraries",
+			"Filter": true,
+			"MDI_Icon": "mdi-certificate",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "resource",
+			"Preferred_Name": "Data and Signature Generation Centers",
+			"Preferred_Name_Singular": "Data and Signature Generation Center"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "5401de13-1b1c-4d5d-84e4-a56c6d2bc241",
+		"meta": {
+			"Type": "object",
+			"Table": "libraries",
+			"MDI_Icon": "mdi-certificate",
+			"Pie_Count": true,
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.creators.affiliations.name",
+			"Meta_Count": false,
+			"Preferred_Name": "Data and Signature Generation Centers",
+			"Preferred_Name_Singular": "Data and Signature Generation Center"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "9806d5a9-ddd1-47c1-b70c-1a37920b8e44",
+		"meta": {
+			"Type": "object",
+			"Table": "libraries",
+			"MDI_Icon": "mdi-test-tube",
+			"Pie_Count": true,
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.types.method.value",
+			"Meta_Count": true,
+			"Preferred_Name": "Assays",
+			"Preferred_Name_Singular": "Assay"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "29e6c6d6-6a91-4015-8f6d-20d17bbb3851",
+		"meta": {
+			"Type": "text",
+			"Table": "signatures",
+			"MDI_Icon": "mdi-microscope",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.cellline",
+			"Meta_Count": true,
+			"Word_Count": true,
+			"Preferred_Name": "Cell Lines",
+			"Preferred_Name_Singular": "Cell Line"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "9a06c324-c6b0-4e72-a3fa-015ea447a8ff",
+		"meta": {
+			"Type": "text",
+			"Table": "signatures",
+			"MDI_Icon": "mdi-hexagon-multiple",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.clueIoCompound",
+			"Meta_Count": true,
+			"Word_Count": true,
+			"Preferred_Name": "Compounds",
+			"Preferred_Name_Singular": "Compound"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "44b4c01e-5c52-44a3-91b7-da39e457ae6d",
+		"meta": {
+			"Type": "text",
+			"Table": "signatures",
+			"MDI_Icon": "mdi-target-variant",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.clueIoGeneTargets",
+			"Meta_Count": true,
+			"Word_Count": true,
+			"Preferred_Name": "Targets",
+			"Preferred_Name_Singular": "Target"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "b6aca2c5-29eb-4531-a43d-17d53cb04989",
+		"meta": {
+			"Type": "text",
+			"Table": "signatures",
+			"MDI_Icon": "mdi-settings-outline",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "meta.clueIoMOA",
+			"Meta_Count": true,
+			"Word_Count": true,
+			"Preferred_Name": "MoA",
+			"Preferred_Name_Singular": "MoA"
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "7dbd0db2-9c04-48e4-b43e-655b03c086d6",
+		"meta": {
+			"Type": "table",
+			"MDI_Icon": "mdi-folder-text-outline",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "libraries",
+			"Table_Count": true,
+			"Preferred_Name": "Datasets",
+			"Visible_On_Admin": true,
+			"Visible_On_Landing": true
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "7de4d1bc-e0f3-47c4-a75e-1a4d19f756e3",
+		"meta": {
+			"Type": "table",
+			"MDI_Icon": "mdi-fingerprint",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "signatures",
+			"Table_Count": true,
+			"Preferred_Name": "Signatures",
+			"Visible_On_Admin": true,
+			"Visible_On_Landing": true
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "2215f5bd-74a5-43ba-a16b-8855ef4c6b14",
+		"meta": {
+			"Type": "table",
+			"MDI_Icon": "mdi-certificate",
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/counting.json",
+			"Field_Name": "resources",
+			"Table_Count": true,
+			"Preferred_Name": "Data and Signature Generation Centers",
+			"Visible_On_Admin": true,
+			"Visible_On_Landing": true
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "a0b8edba-bc41-4c0d-93c6-6a33c2428492",
+		"meta": {
+			"type": "entity",
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+				"${meta.symbol}": "^(?!undefined$)"
+			},
+			"$validator": "/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"Name": {
+					"name": true,
+					"text": "${meta.symbol}",
+					"type": "text",
+					"field": "meta.symbol",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${meta.symbol}",
+					"src": "${PREFIX}/static/images/dna.png",
+					"icon": true,
+					"type": "img",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Gene ID": {
+					"text": "${meta.geneid}",
+					"type": "text",
+					"field": "meta.geneid",
+					"priority": 2,
+					"visibility": 2
+				},
+				"Synonyms": {
+					"text": "${meta.synonyms}",
+					"type": "object",
+					"field": "meta.synonyms",
+					"priority": 3,
+					"synonyms": true,
+					"visibility": 0
+				},
+				"Taxon ID": {
+					"text": "${meta.taxid}",
+					"type": "text",
+					"field": "meta.taxid",
+					"priority": 3,
+					"visibility": 2
+				},
+				"Description": {
+					"text": "${meta.description}",
+					"type": "text",
+					"field": "meta.description",
+					"priority": 2,
+					"subtitle": "True",
+					"visibility": 2
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v5/core/schema.json",
+		"id": "71efd168-47ca-419c-87e5-031847a49b8a",
+		"meta": {
+			"match": {
+				"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+				"${library.dataset}": "^(?!LDS*$)",
+				"${library.meta.assay}": "^(?!P100$)"
+			},
+			"$validator": "https://raw.githubusercontent.com/dcic/signature-commons-schema/v5/meta/schema/ui-schema.json",
+			"properties": {
+				"MoA": {
+					"text": "${meta.clueIoMOA}",
+					"type": "text",
+					"MDI_Icon": "mdi-settings-outline",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"P-Up": {
+					"text": "${meta['p-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Z-Up": {
+					"text": "${meta['z-up']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-up']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Image": {
+					"alt": "${library.dataset}",
+					"src": "${PREFIX}/${library.meta.icon || library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+					"icon": true,
+					"text": "${library.dataset}",
+					"type": "img",
+					"priority": 1,
+					"subtitle": true,
+					"visibility": 1
+				},
+				"P-Down": {
+					"text": "${meta['p-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Tissue": {
+					"text": "${meta.tissue}",
+					"type": "text",
+					"MDI_Icon": "mdi-camera-metering-matrix",
+					"priority": 4,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Z-Down": {
+					"text": "${meta['z-down']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['z-down']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"P-Value": {
+					"text": "${meta['p-value']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['p-value']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "asc"
+					}
+				},
+				"Compound": {
+					"text": "${meta.clueIoCompound}",
+					"type": "text",
+					"MDI_Icon": "mdi-hexagon-multiple",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Organism": {
+					"text": "${meta.organism}",
+					"type": "text",
+					"MDI_Icon": "mdi-human-child",
+					"priority": 5,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Cell-line": {
+					"text": "${meta.cellline}",
+					"type": "text",
+					"MDI_Icon": "mdi-microscope",
+					"priority": 4,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Direction": {
+					"text": "${meta['direction'] === 1 ? 'up' : 'down'}",
+					"type": "text",
+					"priority": 4,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": "undefined"
+						}
+					},
+					"visibility": 1
+				},
+				"Odds Ratio": {
+					"text": "${meta.oddsratio}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.oddsratio}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Gene Target": {
+					"text": "${meta.clueIoGeneTargets}",
+					"type": "text",
+					"MDI_Icon": "mdi-target-variant",
+					"priority": 2,
+					"clickable": true,
+					"visibility": 1
+				},
+				"Signature ID": {
+					"name": true,
+					"text": "${meta.signatureid}",
+					"type": "text",
+					"priority": 1,
+					"visibility": 1
+				},
+				"Concentration": {
+					"text": "${meta.concentration}",
+					"type": "text",
+					"MDI_Icon": "mdi-eyedropper",
+					"priority": 3,
+					"clickable": false,
+					"visibility": 1
+				},
+				"Gene Set Size": {
+					"text": "${meta.setsize}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta.setsize}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				},
+				"Log(p) Fisher": {
+					"text": "${meta['logp-fisher']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-fisher']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1,
+					"columnOptions": {
+						"sort": true,
+						"sortDirection": "desc"
+					}
+				},
+				"Log(p) Average": {
+					"text": "${meta['logp-avg']}",
+					"type": "text",
+					"priority": 5,
+					"condition": {
+						"${meta['logp-avg']}": {
+							"ne": null
+						}
+					},
+					"columnType": "number",
+					"visibility": 1
+				}
+			}
+		}
+	}
+]

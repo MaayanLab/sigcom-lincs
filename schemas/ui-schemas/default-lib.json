@@ -1,0 +1,60 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "9fdd1b99-14c9-40e8-a86c-5754c78ff5c9",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset_type}": "rank_matrix",
+			"${meta['@type']}": "undefined"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.title || meta.libraryName || dataset}",
+				"src": "${PREFIX}/${meta.icon || 'static/LINCS.ico'}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Title": {
+				"text": "${meta.title || meta.libraryName || dataset}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Assay": {
+				"text": "${meta.assay}",
+				"type": "text",
+				"icon": "mdi-test-tube",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Organism": {
+				"text": "${meta.organism}",
+				"type": "text",
+				"icon": "mdi-human-child",
+				"priority": 3,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "${meta.libraryInfo}",
+				"type": "subtitle",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Signature Count": {
+				"text": "${meta.signatureCount}",
+				"type": "text",
+				"priority": 3,
+				"visibility": 1
+			},
+			"Perturbation Type": {
+				"text": "${meta.perturbation_type}",
+				"type": "text",
+				"icon": "mdi-flask-outline",
+				"priority": 3,
+				"visibility": 1
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "0bb9247a-fd7b-4496-89ed-788d50f09c87",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+			"${library.dataset}": "GTEX",
+			"${library.dataset_type}": "rank_matrix"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${library.meta.title}",
+				"src": "${PREFIX}/${library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Signature ID": {
+				"text": "${meta.lincs_sig_id}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Dataset": {
+				"text": "${library.meta.title}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Download": {
+				"icon": "mdi-download",
+				"text": "Download",
+				"type": "component",
+				"props": {
+					"data": {
+						"type": "prop-array",
+						"items": [
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "Download",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "${meta.file_url}",
+										"type": "text"
+									}
+								}
+							}
+						]
+					}
+				},
+				"location": "chip",
+				"priority": 10,
+				"component": "download",
+				"visibility": 1
+			},
+			"Tissue": {
+				"text": "${meta.tissue}",
+				"type": "text",
+				"icon": "mdi-microscope",
+				"priority": 4,
+				"visibility": 1
+			},
+			"Direction": {
+				"text": "${scores['direction']",
+				"type": "text",
+				"priority": 4,
+				"condition": {
+					"${meta['logp-fisher']}": {
+						"ne": "undefined"
+					}
+				},
+				"visibility": 1
+			},
+			"Log(p) Fisher": {
+				"text": "${Number.parseFloat(scores['logp-fisher']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			},
+			"Log(p) Ave": {
+				"text": "${Number.parseFloat(scores['logp-avg']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			}
+		}
+	}
+}

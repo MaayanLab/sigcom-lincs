@@ -1,0 +1,55 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "38ce3bbb-48d0-4cd0-a7bc-0f0d715f98c6",
+	"meta": {
+	  "match": {
+		"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/resource.json"
+	  },
+	  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+	  "properties": {
+		"Image": {
+		  "alt": "${meta.name}",
+		  "src": "${PREFIX}/${meta.extraProperties[0].values[0]}",
+		  "type": "img",
+		  "priority": 1,
+		  "visibility": 1
+		},
+		"Resource": {
+			"text": "${meta.name}",
+			"type": "title",
+			"priority": 1,
+			"visibility": 1
+		  },
+		"Description": {
+		  "text": "${meta['description']}",
+		  "type": "subtitle",
+		  "field": "meta.description",
+		  "priority": 2,
+		  "visibility": 1
+		},
+		"URL": {
+		  "href": "${meta['URL']}",
+			"text": "${meta['URL']}",
+			"type": "display",
+			"field": "meta.URL",
+			"priority": 2,
+			"visibility": 1
+		},
+		"PMID": {
+			"href": "https://pubmed.ncbi.nlm.nih.gov/${meta.PMID}",
+			"text": "${meta.PMID}",
+			"type": "display",
+			"field": "meta.PMID",
+			"priority": 3,
+			"visibility": 1
+		},
+		"Signature Count": {
+		  "text": "${meta['Signature_Count']}",
+		  "type": "text",
+		  "field": "Signature_Count",
+		  "priority": 3,
+		  "visibility": 1
+		}
+	  }
+	}
+  }

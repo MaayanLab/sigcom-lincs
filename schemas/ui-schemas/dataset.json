@@ -1,0 +1,171 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "b7b75c53-dfcb-48b0-a60a-246fe6dd464d",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset_type}": "rank_matrix",
+			"${meta['@type']}": "Dataset"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta['title']}",
+				"src": "${PREFIX}/${meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Title": {
+				"text": "${meta['title']}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "${meta.description}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Assay": {
+				"text": "${meta.types[0].method.value}",
+				"field": "meta.types.method.value",
+				"search_field": "meta.types",
+				"type": "text",
+				"icon": "mdi-test-tube",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Dataset": {
+				"icon": "mdi-download",
+				"text": "Download",
+				"type": "component",
+				"props": {
+					"data": {
+						"type": "prop-array",
+						"items": [
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta.distributions[0].access.accessURL}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Dataset",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta.distributions[0].access.accessURL}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "${meta.hasPart[0].distributions[0].access.accessURL}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta.hasPart[1].distributions[0].access.accessURL}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "${meta.hasPart[1].types[0].description.value}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta.hasPart[2].distributions[0].access.accessURL}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "${meta.hasPart[2].types[0].description.value}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta.hasPart[3].distributions[0].access.accessURL}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "${meta.hasPart[3].types[0].description.value}",
+										"type": "text"
+									}
+								}
+							}
+						]
+					}
+				},
+				"location": "chip",
+				"priority": 10,
+				"component": "download",
+				"visibility": 1
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "${(meta.distributions || meta.hasPart[0].distributions)[0].access.accessURL.split('&file')[0]}",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			},
+			"Institute": {
+				"text": "${meta.creators[0].affiliations[0].name}",
+				"field": "meta.creators.affiliations.name",
+				"search_field": "meta.creators",
+				"type": "text",
+				"icon": "mdi-certificate",
+				"priority": 2,
+				"visibility": 1
+			}
+		}
+	}
+}
