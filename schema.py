@@ -5,7 +5,7 @@ from glob import glob
 import os
 
 APIURL = os.getenv("URL", "https://maayanlab.cloud/sigcom-lincs/metadata-api/")
-auth = (os.getenv("USERNAME", "admin"), os.getenv("password", "admin"))
+auth = (os.getenv("USERNAME", "admin"), os.getenv("PASSWORD", "admin"))
 res = requests.get(APIURL + "schemas")
 for s in res.json():
 	r = requests.delete(APIURL + "schemas" + "/"+s["id"], auth=auth)
