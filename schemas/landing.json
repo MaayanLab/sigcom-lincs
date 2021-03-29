@@ -167,6 +167,8 @@
 			}
 		},
 		"about": "./static/about-lincs.md",
+		"github":  "https://github.com/MaayanLab/sigcom-lincs",
+    	"github_issues":  "https://github.com/MaayanLab/sigcom-lincs/issues",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/landing-ui.json"
 	}
 }
