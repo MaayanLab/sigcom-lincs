@@ -1,0 +1,92 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_datasets.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"properties": {
+				"description": {
+					"type": "string",
+					"description": "description"
+				},
+				"date": {
+					"type": "string",
+					"description": "date of the dataset"
+				},
+				"size": {
+					"type": "string",
+					"description": "string representation of the size"
+				},
+				"assay": {
+					"type": "string",
+					"description": "assay used in the dataset"
+				},
+				"center": {
+					"type": "string",
+					"description": "DSGC that made the dataset"
+				},
+				"total_size": {
+					"type": "number",
+					"description": "total size, in bytes"
+				},
+				"url_prefix": {
+					"type": "string",
+					"format": "uri",
+					"description": "prefix of the file url for the insignia"
+				}
+			},
+			"patternProperties": {
+				"^datalevel_*$": {
+					"description": "Data Level files",
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string",
+							"description": "ID of the dataset at this level"
+						},
+						"description": {
+							"type": "string",
+							"description": "description of the dataset at this level"
+						},
+						"date": {
+							"type": "string",
+							"description": "date of the dataset"
+						},
+						"size": {
+							"type": "string",
+							"description": "string representation of the size"
+						},
+						"filesize": {
+							"type": "number",
+							"description": "numeric representation of the filesize in bytes"
+						},
+						"version": {
+							"type": "string",
+							"description": "version of the dataset"
+						},
+						"file_url": {
+							"type": "string",
+							"format": "uri",
+							"description": "s3 url of file"
+						},
+						"datalevel": {
+							"type": "integer",
+							"description": "data level"
+						}
+					}
+				}
+			},
+			"required": [
+				"description",
+				"date",
+				"size",
+				"assay",
+				"center",
+				"total_size"
+			],
+			"type": "object"
+		}
+	]
+}
