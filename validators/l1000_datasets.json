@@ -81,10 +81,8 @@
 			"required": [
 				"description",
 				"date",
-				"size",
 				"assay",
-				"center",
-				"total_size"
+				"center"
 			],
 			"type": "object"
 		}
