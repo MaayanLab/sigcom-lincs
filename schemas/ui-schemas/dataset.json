@@ -66,7 +66,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta.distributions[0].access.accessURL}",
+										"text": "${meta.hasPart[0].distributions[0].access.accessURL}",
 										"type": "text"
 									},
 									"icon": {
@@ -74,7 +74,7 @@
 										"type": "text"
 									},
 									"text": {
-										"text": "${meta.hasPart[0].distributions[0].access.accessURL}",
+										"text": "${meta.hasPart[0].types[0].description.value}",
 										"type": "text"
 									}
 								}

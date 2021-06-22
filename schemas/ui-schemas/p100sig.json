@@ -2,95 +2,100 @@
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	"id": "e044717c-8927-407c-844d-bcc9da4b41f8",
 	"meta": {
-	  "match": {
-		"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
-		"${library.meta.assay}": "P100"
-	  },
-	  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
-	  "properties": {
-
-		"Image": {
-			"alt": "${library.meta.libraryName}",
-			"src": "${PREFIX}/${library.meta.icon}",
-			"type": "img",
-			"priority": 1,
-			"visibility": 1
-		  },
-		"ID": {
-		  "text": "${meta.id}",
-		  "type": "title",
-		  "priority": 1,
-		  "visibility": 1
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+			"${library.meta.assay}": "P100"
 		},
-		"Dataset": {
-			"text": "${library.meta.libraryName}",
-			"type": "subtitle",
-			"priority": 1,
-			"visibility": 1
-		  },
-		"Assay": {
-		  "text": "${library.meta.assay}",
-		  "type": "text",
-		  "priority": 1,
-		  "icon": "mdi-microscope",
-		  "visibility": 1
-		},
-		"Compound": {
-		  "text": "${meta.pert_iname}",
-		  "type": "text",
-		  "icon": "mdi-hexagon-multiple",
-		  "priority": 2,
-		  "visibility": 1
-		},
-		"Cell-line": {
-		  "text": "${meta.cellid}",
-		  "type": "text",
-		  "icon": "mdi-microscope",
-		  "priority": 4,
-		  "visibility": 1
-		},
-		"Pubchem ID": {
-		  "text": "${meta.pubchem_cid}",
-		  "type": "text",
-		  "icon": "mdi-database",
-		  "priority": 2,
-		  "visibility": 1
-		},
-		"Time Point": {
-		  "text": "${meta.pert_time}${meta.pert_time_unit}",
-		  "type": "text",
-		  "icon": "mdi-av-timer",
-		  "priority": 5,
-		  "visibility": 1
-		},
-		"Concentration": {
-		  "text": "${meta.pert_dose}${meta.pert_dose_unit}",
-		  "type": "text",
-		  "icon": "mdi-eyedropper",
-		  "priority": 3,
-		  "visibility": 1
-		},
-		"Direction": {
-			"text": "${scores['direction']",
-			"type": "text",
-			"priority": 4,
-			"condition": {
-				"${meta['logp-fisher']}": {
-					"ne": "undefined"
-				}
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${library.meta.libraryName}",
+				"src": "${PREFIX}/${library.meta.icon}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
 			},
-			"visibility": 1
-		},
-		"Log(p) Fisher": {
-			"text": "${Number.parseFloat(scores['logp-fisher']).toPrecision(4)}",
-			"type": "text",
-			"priority": 5
-		},
-		"Log(p) Ave": {
-			"text": "${Number.parseFloat(scores['logp-avg']).toPrecision(4)}",
-			"type": "text",
-			"priority": 5
+			"ID": {
+				"text": "${meta.id}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Dataset": {
+				"text": "${library.meta.libraryName}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Assay": {
+				"text": "${library.meta.assay}",
+				"field": "library.meta.assay",
+				"type": "text",
+				"priority": 1,
+				"icon": "mdi-microscope",
+				"visibility": 1
+			},
+			"Compound": {
+				"text": "${meta.pert_iname}",
+				"field": "meta.pert_iname",
+				"type": "text",
+				"icon": "mdi-hexagon-multiple",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Cell-line": {
+				"text": "${meta.cellid}",
+				"field": "meta.cellid",
+				"type": "text",
+				"icon": "mdi-microscope",
+				"priority": 4,
+				"visibility": 1
+			},
+			"Pubchem ID": {
+				"text": "${meta.pubchem_cid}",
+				"field": "meta.pubchem_cid",
+				"type": "text",
+				"icon": "mdi-database",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Time Point": {
+				"text": "${meta.pert_time}${meta.pert_time_unit}",
+				"field": "meta.pert_time",
+				"type": "text",
+				"icon": "mdi-av-timer",
+				"priority": 5,
+				"visibility": 1
+			},
+			"Concentration": {
+				"text": "${meta.pert_dose}${meta.pert_dose_unit}",
+				"field": "meta.pert_dose",
+				"type": "text",
+				"icon": "mdi-eyedropper",
+				"priority": 3,
+				"visibility": 1
+			},
+			"Direction": {
+				"text": "${direction}",
+				"type": "text",
+				"priority": 4,
+				"condition": {
+					"${meta['logp-fisher']}": {
+						"ne": "undefined"
+					}
+				},
+				"visibility": 1
+			},
+			"Log(p) Fisher": {
+				"text": "${Number.parseFloat(scores['logp-fisher']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			},
+			"Log(p) Ave": {
+				"text": "${Number.parseFloat(scores['logp-avg']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			}
 		}
-	  }
 	}
-  }
+}

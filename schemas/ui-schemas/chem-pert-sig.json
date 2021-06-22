@@ -1,0 +1,216 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "d1b6e8c4-433c-43b5-ae51-02d9f2b7cff9",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+			"${library.dataset}": "LINCS chemical perturbagen signatures"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${library.dataset}",
+				"src": "${PREFIX}/${library.meta.icon}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Signature Name": {
+				"text": "${meta.sig_name}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 0
+			},
+			"Perturbation Type": {
+				"text": "${meta.pert_type}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Drug": {
+				"text": "${meta.compound}",
+				"field": "meta.compound",
+				"type": "text",
+				"icon": "mdi-pill",
+				"priority": 1,
+				"visibility": 1,
+				"primary": true,
+				"primary_label": "Drugs"
+			},
+			"Concentration": {
+				"text": "${meta.concentration}",
+				"field": "meta.concentration",
+				"type": "text",
+				"icon": "mdi-eyedropper",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Cell Line": {
+				"text": "${meta.cellline}",
+				"field": "meta.cellline",
+				"type": "text",
+				"icon": "mdi-microscope",
+				"priority": 3,
+				"visibility": 1,
+				"secondary": true
+			},
+			"Timepoint": {
+				"text": "${meta.time}",
+				"field": "meta.time",
+				"type": "text",
+				"icon": "mdi-clock-time-three",
+				"priority": 4,
+				"visibility": 1
+			},
+			"log p-val (Fisher)": {
+				"text": "${scores['log p (Fisher)']}",
+				"type": "score",
+				"field": "scores['log p (Fisher)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 5,
+				"visibility": 1
+			},
+			"log p-val (avg)": {
+				"text": "${scores['log p (avg)']}",
+				"type": "score",
+				"field": "scores['log p (avg)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 6,
+				"visibility": 1
+			},
+			"p-value (up)": {
+				"text": "${scores['p-value (up)']}",
+				"type": "score",
+				"field": "scores['p-value (up)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 7,
+				"visibility": 1
+			},
+			"p-value (down)": {
+				"text": "${scores['p-value (down)']}",
+				"type": "score",
+				"field": "scores['p-value (down)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 8,
+				"visibility": 1
+			},
+			"z-score (up)": {
+				"text": "${scores['z-score (up)']}",
+				"type": "score",
+				"field": "scores['z-score (up)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 9,
+				"visibility": 1
+			},
+			"z-score (down)": {
+				"text": "${scores['z-score (down)']}",
+				"type": "score",
+				"field": "scores['z-score (down)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 10,
+				"visibility": 1
+			},
+			"FDR (up)": {
+				"text": "${scores['FDR (up)']}",
+				"type": "score",
+				"field": "scores['FDR (up)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 11,
+				"visibility": 0
+			},
+			"FDR (down)": {
+				"text": "${scores['FDR (down)']}",
+				"type": "score",
+				"field": "scores['FDR (down)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 12,
+				"visibility": 0
+			},
+			"p-value Bonferroni (up)": {
+				"text": "${scores['p-value Bonferroni (up)']}",
+				"type": "score",
+				"field": "scores['p-value Bonferroni (up)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 13,
+				"visibility": 0
+			},
+			"p-value Bonferroni (down)": {
+				"text": "${scores['p-value Bonferroni (down)']}",
+				"type": "score",
+				"field": "scores['p-value Bonferroni (down)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 14,
+				"visibility": 0
+			},
+			"Options": {
+				"icon": "mdi-dots-vertical",
+				"text": "More options",
+				"type": "component",
+				"component": "options",
+				"props": {
+					"options": {
+						"type": "prop-array",
+						"items": [
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Perform Signature Search",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-magnify-scan",
+										"type": "text"
+									},
+									"href": {
+										"text": "#SignatureSearch/Rank/${id}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Download Signature",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "download_signature",
+										"type": "internal-function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			}
+		}
+	}
+}

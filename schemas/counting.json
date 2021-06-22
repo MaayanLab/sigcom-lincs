@@ -106,20 +106,6 @@
 		}
 	},
 	{
-		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-		"id": "918ce5b5-88a2-431a-bc51-8f1a90080ea0",
-		"meta": {
-		  "type": "pie",
-		"model": "libraries",
-		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.types.instrument.value",
-		"search_field": "meta.types",
-		"text": "Dataset Instruments",
-		"priority": 2
-		}
-	  },
-
-	{
 	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	  "id": "9806d5a9-ddd1-47c1-b70c-1a37920b8e44",
 	  "meta": {
@@ -127,8 +113,8 @@
 		"model": "libraries",
 		"icon": "mdi-test-tube",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.types.method.value",
-		"search_field": "meta.types",
+		"field": "meta.assay",
+		"search_field": "meta.assay",
 		"text": "Dataset Assays",
 		"priority": 1
 	  }

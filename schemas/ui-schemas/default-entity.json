@@ -2,7 +2,6 @@
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	"id": "9b6c082a-e46d-4f96-9c2d-87583f32e275",
 	"meta": {
-		"type": "entity",
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
 			"${meta.geneSymbol}": "^(?!undefined$)",
@@ -28,20 +27,6 @@
 				"text": "${meta.ID}",
 				"type": "subtitle",
 				"field": "meta.ID",
-				"priority": 3,
-				"visibility": 2
-			},
-			"AltID": {
-				"text": "${meta.ID}",
-				"type": "alternative",
-				"field": "meta.ID",
-				"priority": 3,
-				"visibility": 2
-			},
-			"VMsite Flanks": {
-				"text": "${meta.VMsiteFlanks}",
-				"type": "alternative",
-				"field": "meta.VMsiteFlanks",
 				"priority": 3,
 				"visibility": 2
 			},

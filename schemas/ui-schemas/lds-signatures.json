@@ -10,8 +10,8 @@
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
 			"Image": {
-				"alt": "${library.meta.title}",
-				"src": "${PREFIX}/${library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"alt": "${library.meta.description}",
+				"src": "${PREFIX}/${library.meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1
@@ -23,7 +23,7 @@
 				"visibility": 1
 			},
 			"Dataset": {
-				"text": "${library.meta.title}",
+				"text": "${library.meta.description}",
 				"type": "subtitle",
 				"priority": 1,
 				"visibility": 1
@@ -39,7 +39,7 @@
 							{
 								"type": "prop-object",
 								"properties": {
-									"url": {
+									"text": {
 										"text": "Download",
 										"type": "text"
 									},
@@ -47,7 +47,7 @@
 										"text": "mdi-download",
 										"type": "text"
 									},
-									"text": {
+									"url": {
 										"text": "${meta.file_url}",
 										"type": "text"
 									}
@@ -65,6 +65,7 @@
 				"text": "${meta.cell_line.cell_id}",
 				"type": "text",
 				"icon": "mdi-microscope",
+				"field": "meta.cell_line.cell_id",
 				"priority": 4,
 				"visibility": 1
 			},
@@ -72,11 +73,13 @@
 				"text": "${meta.pert.pert_itime}",
 				"type": "text",
 				"icon": "mdi-av-timer",
+				"field": "meta.pert.pert_itime",
 				"priority": 3,
 				"visibility": 1
 			},
 			"Perturbation": {
 				"text": "${meta.pert.pert_iname}",
+				"field": "meta.pert.pert_iname",
 				"type": "text",
 				"icon": "mdi-hexagon-multiple",
 				"priority": 2,
@@ -84,13 +87,14 @@
 			},
 			"Concentration": {
 				"text": "${meta.pert.pert_idose}",
+				"field": "meta.pert.pert_idose",
 				"type": "text",
 				"icon": "mdi-eyedropper",
 				"priority": 3,
 				"visibility": 1
 			},
 			"Direction": {
-				"text": "${scores['direction']",
+				"text": "${direction}",
 				"type": "text",
 				"priority": 4,
 				"condition": {

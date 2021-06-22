@@ -1,17 +1,16 @@
 {
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	"id": "71efd168-47ca-419c-87e5-031847a49b8a",
+	"id": "4a79138f-2158-4290-9348-9b49af87290d",
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
-			"${library.dataset}": "^(?!LDS*$)",
-			"${library.meta.assay}": "^(?!P100$)"
+			"${library.dataset}": "EDS*"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
 			"Image": {
-				"alt": "${library.dataset}",
-				"src": "${PREFIX}/${library.meta.icon || library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"alt": "${library.meta.description}",
+				"src": "${PREFIX}/${library.meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1
@@ -20,129 +19,32 @@
 				"text": "${meta.signatureid}",
 				"type": "title",
 				"priority": 1,
-				"visibility": 1
+				"visibility": 0
 			},
 			"Dataset": {
-				"text": "${library.dataset}",
+				"text": "${library.meta.experiment}",
 				"type": "subtitle",
 				"priority": 1,
 				"visibility": 1
 			},
-			"MoA": {
-				"text": "${meta.clueIoMOA}",
-				"type": "text",
-				"icon": "mdi-settings-outline",
-				"priority": 2,
-				"visibility": 1
-			},
-			"Tissue": {
-				"text": "${meta.tissue}",
-				"type": "text",
-				"icon": "mdi-camera-metering-matrix",
-				"priority": 4,
-				"visibility": 1
-			},
-			"Compound": {
-				"text": "${meta.clueIoCompound}",
-				"type": "text",
-				"icon": "mdi-hexagon-multiple",
-				"priority": 2,
-				"visibility": 1
-			},
-			"Organism": {
-				"text": "${meta.organism}",
-				"type": "text",
-				"icon": "mdi-human-child",
-				"priority": 5,
-				"visibility": 1
-			},
-			"Cell-line": {
-				"text": "${meta.cellline}",
-				"type": "text",
-				"icon": "mdi-microscope",
-				"priority": 4,
-				"visibility": 1
-			},
-			"Gene Target": {
-				"text": "${meta.clueIoGeneTargets}",
-				"type": "text",
-				"icon": "mdi-target-variant",
-				"priority": 2,
-				"visibility": 1
-			},
-			"Concentration": {
-				"text": "${meta.concentration}",
-				"type": "text",
-				"icon": "mdi-eyedropper",
-				"priority": 3,
-				"visibility": 1
-			},
-			"P-Up": {
-				"text": "${meta['p-up']}",
-				"type": "text",
-				"priority": 5,
-				"condition": {
-					"${meta['p-up']}": {
-						"ne": null
-					}
-				},
-				"columnType": "number",
-				"visibility": 1
-			},
-			"Z-Up": {
-				"text": "${meta['z-up']}",
-				"type": "text",
-				"priority": 5,
-				"condition": {
-					"${meta['z-up']}": {
-						"ne": null
-					}
-				},
-				"columnType": "number",
-				"visibility": 1
-			},
-			"P-Down": {
-				"text": "${meta['p-down']}",
-				"type": "text",
-				"priority": 5,
-				"condition": {
-					"${meta['p-down']}": {
-						"ne": null
-					}
-				},
-				"columnType": "number",
-				"visibility": 1
-			},
-			"Z-Down": {
-				"text": "${meta['z-down']}",
-				"type": "text",
-				"priority": 5,
-				"condition": {
-					"${meta['z-down']}": {
-						"ne": null
-					}
-				},
-				"columnType": "number",
-				"visibility": 1
-			},
-			"P-Value": {
-				"text": "${meta['p-value']}",
-				"type": "text",
-				"priority": 5,
-				"condition": {
-					"${meta['p-value']}": {
-						"ne": null
-					}
-				},
-				"columnType": "number",
-				"visibility": 1,
-				"columnOptions": {
-					"sort": true,
-					"sortDirection": "asc"
-				}
-			},
+			"Pubmed": {
+				"href": "${meta.publink}",
+				  "text": "${meta.publink}",
+				  "type": "display",
+				  "field": "meta.publink",
+				  "priority": 2,
+				  "visibility": 1
+			  },
+			  "GEO Link": {
+				"href": "${meta.geolink}",
+				  "text": "${meta.geolink}",
+				  "type": "display",
+				  "field": "meta.geolink",
+				  "priority": 2,
+				  "visibility": 1
+			  },
 			"Direction": {
-				"text": "${scores['direction']",
+				"text": "${direction}",
 				"type": "text",
 				"priority": 4,
 				"condition": {

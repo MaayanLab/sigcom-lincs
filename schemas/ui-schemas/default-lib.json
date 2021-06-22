@@ -5,19 +5,19 @@
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
 			"${dataset_type}": "rank_matrix",
-			"${meta['@type']}": "undefined"
+			"${meta.center}": "undefined"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
 			"Image": {
 				"alt": "${meta.title || meta.libraryName || dataset}",
-				"src": "${PREFIX}/${meta.icon || 'static/LINCS.ico'}",
+				"src": "${meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1
 			},
 			"Title": {
-				"text": "${meta.title || meta.libraryName || dataset}",
+				"text": "${meta.pert_type || meta.title || meta.libraryName || dataset}",
 				"type": "title",
 				"priority": 1,
 				"visibility": 1
@@ -40,12 +40,6 @@
 				"text": "${meta.libraryInfo}",
 				"type": "subtitle",
 				"priority": 2,
-				"visibility": 1
-			},
-			"Signature Count": {
-				"text": "${meta.signatureCount}",
-				"type": "text",
-				"priority": 3,
 				"visibility": 1
 			},
 			"Perturbation Type": {

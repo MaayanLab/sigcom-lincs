@@ -20,6 +20,7 @@
 				"text": "${meta.symbol}",
 				"type": "title",
 				"field": "meta.symbol",
+				"strategy": "upper",
 				"priority": 1,
 				"visibility": 1
 			},
@@ -27,13 +28,6 @@
 				"text": "${meta.description}",
 				"type": "subtitle",
 				"field": "meta.description",
-				"priority": 2,
-				"visibility": 2
-			},
-			"Alt ID": {
-				"text": "${meta.geneid}",
-				"type": "alternative",
-				"field": "meta.geneid",
 				"priority": 2,
 				"visibility": 2
 			},

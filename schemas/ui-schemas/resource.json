@@ -34,21 +34,6 @@
 			"field": "meta.URL",
 			"priority": 2,
 			"visibility": 1
-		},
-		"PMID": {
-			"href": "https://pubmed.ncbi.nlm.nih.gov/${meta.PMID}",
-			"text": "${meta.PMID}",
-			"type": "display",
-			"field": "meta.PMID",
-			"priority": 3,
-			"visibility": 1
-		},
-		"Signature Count": {
-		  "text": "${meta['Signature_Count']}",
-		  "type": "text",
-		  "field": "Signature_Count",
-		  "priority": 3,
-		  "visibility": 1
 		}
 	  }
 	}

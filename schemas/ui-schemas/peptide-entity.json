@@ -2,7 +2,6 @@
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	"id": "5e24eb66-2d17-476b-994b-8375957a0da0",
 	"meta": {
-		"type": "entity",
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
 			"${meta.Symbols}": "^(?!undefined$)",
@@ -27,13 +26,6 @@
 			"ID": {
 				"text": "${meta.ID}",
 				"type": "subtitle",
-				"field": "meta.ID",
-				"priority": 3,
-				"visibility": 2
-			},
-			"AltID": {
-				"text": "${meta.ID}",
-				"type": "alternative",
 				"field": "meta.ID",
 				"priority": 3,
 				"visibility": 2

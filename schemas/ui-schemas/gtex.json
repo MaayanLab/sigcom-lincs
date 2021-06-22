@@ -10,8 +10,8 @@
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
 			"Image": {
-				"alt": "${library.meta.title}",
-				"src": "${PREFIX}/${library.meta.creators[0].affiliations[0].extraProperties[0].values[0]}",
+				"alt": "${library.meta.description}",
+				"src": "${PREFIX}/${library.meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1
@@ -23,7 +23,7 @@
 				"visibility": 1
 			},
 			"Dataset": {
-				"text": "${library.meta.title}",
+				"text": "${library.meta.description}",
 				"type": "subtitle",
 				"priority": 1,
 				"visibility": 1

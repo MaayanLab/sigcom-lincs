@@ -7,34 +7,196 @@
 			"https://fonts.googleapis.com/css?family=Archivo+Narrow"
 		],
 		"favicon": {
-			"alt": "LINCS Datasets and Signatures",
-			"src": "${PREFIX}/static/LINCS.ico",
-			"title": "LINCS Datasets and Signatures"
+			"alt": "LINCS Data Portal 3.0 (LDP3)",
+			"src": "${PREFIX}/static/lincs/favicon.png",
+			"title": "LINCS Data Portal 3.0 (LDP3)"
 		},
 		"header_info": {
 			"icon": {
 				"alt": "lincs",
 				"src": "${PREFIX}/static/LINCS.ico",
 				"style": {
-					"width": 60,
-					"marginBottom": -15
+					"width": 50,
+					"marginBottom": -10
 				}
 			},
-			"header_right": " LINCS Datasets and Signatures"
+			"header_right": " LINCS Data Portal 3.0 (LDP3)"
 		},
 		"nav": {
 			"API": {
-				"active": true
+				"active": true,
+				"priority": 6
 			},
 			"Resources": {
 				"active": true,
-				"endpoint": "/DSGCs"
+				"endpoint": "/DSGCs",
+				"priority": 3
 			},
+			"About": {
+				"active": true,
+				"endpoint": "/About",
+				"navName": "About",
+				"priority": 7,
+				"props ": {
+				  "about": "./static/about-lincs.md"
+				}
+			  },
+			  "Workflows": {
+				"active": true,
+				"type": "iframe",
+				"priority": 5,
+				"props": {
+					"iframe": {
+						"Workflows": {
+							"id": "Workflows",
+							"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
+							"name": "Workflows",
+							"height": 2000,
+							"frameBorder": 0
+						}
+					}
+				},
+				"navName": "Workflows",
+				"endpoint": "/Workflows"
+			},
+			  "Downloads": {
+				"active": true,
+				"endpoint": "/Download",
+				"navName": "Download",
+				"priority": 4,
+				"props ": {
+				  "download_links": [
+					{
+					  "label": "Metadata",
+					  "links": [
+						{
+						  "label": "Data and Signature Generation Center",
+						  "date": "2021-05-04",
+						  "size": "5 KB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-resources.json",
+						  "icon": "mdi-certificate"
+						},
+						{
+						  "label": "Dataset",
+						  "date": "2021-05-04",
+						  "size": "316 KB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-libraries.json",
+						  "icon": "mdi-bookshelf"
+						},
+						{
+						  "label": "LINCS Signatures",
+						  "date": "2021-05-04",
+						  "size": "452 MB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-signatures.json",
+						  "icon": "mdi-fingerprint"
+						},
+						{
+						  "label": "Genes",
+						  "date": "2021-05-04",
+						  "size": "129 MB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-entities.json",
+						  "icon": "mdi-dna"
+						}
+					  ]
+					},
+					{
+					  "label": "Rank Matrices",
+					  "description": "Each element within the matrix represents the ranking of a gene in a signature.",
+					  "links": [
+						{
+						  "label": "L1000 chemical perturbagen signatures",
+						  "date": "2021-05-04",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_chemical_perturbagen_signatures_rank_matrix.tsv",
+						  "size": "510.2 MB",
+						  "icon": "mdi-pill"
+						},
+						{
+						  "label": "L1000 consensus gene (CGS) knockdown signatures",
+						  "date": "2021-05-04",
+						  "size": "132.3 MB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_consensus_gene_CGS_knockdown_signatures_rank_matrix.tsv",
+						  "icon": "mdi-dna"
+						},
+						{
+						  "label": "L1000 gene overexpression signatures",
+						  "date": "2021-05-04",
+						  "size": "33.1 MB",
+						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_gene_overexpression_signatures_rank_matrix.tsv",
+						  "icon": "mdi-dna"
+						}
+					  ]
+					}
+				  ],
+				  "download_list": [
+					{
+					  "model": "libraries",
+					  "label": "Other Data Packages",
+					  "sort": [
+						{
+						  "label": "Assay",
+						  "field": "meta.assay",
+						  "icon": "mdi-test-tube",
+						  "order": "ASC"
+						},
+						{
+						  "label": "Center",
+						  "field": "meta.center",
+						  "icon": "mdi-certificate",
+						  "order": "ASC"
+						},
+						{
+						  "label": "Date",
+						  "field": "meta.date",
+						  "icon": "mdi-calendar",
+						  "order": "DESC"
+						},
+						{
+						  "label": "File Size",
+						  "field": "meta.total_size",
+						  "icon": "mdi-database",
+						  "order": "DESC"
+						}
+					  ]
+					}
+				  ]
+				}
+			  },
 			"MetadataSearch": {
 				"active": true,
-				"endpoint": "/TermSearch",
-				"navName": "Term Search",
+				"landing": false,
+				"priority": 2,
+				"endpoint": "/MetadataSearch",
+				"navName": "Metadata Search",
 				"props": {
+					"types": {
+						"signatures": {
+							"active": true,
+							"examples": [
+								"Apoptosis",
+								"Interferon",
+								"Autophagy",
+								"PKN3"
+							],
+							"priority": 1
+						},
+						"libraries": {
+							"active": true,
+							"examples": [
+								"L1000",
+								"proteomics",
+								"kinase"
+							],
+							"priority": 2
+						},
+						"entities": {
+							"active": true,
+							"examples": [
+								"ACE2",
+								"STAT3"
+							],
+							"priority": 3
+						}
+					},
 					"model_tabs": [
 						"libraries",
 						"signatures",
@@ -58,13 +220,53 @@
 							"Autophagy",
 							"PKN3"
 						]
-					}
+					},
+					"tutorial": {
+						"content": [
+							{
+								"src": "./static/lincs/metasearch/metasearch.png",
+								"alt": "search",
+								
+								"ImageProps": {
+									"style": {
+										"height": "100%"
+									}
+								},
+								"caption": "Search and filter LINCS datasets and signatures"
+							},
+							{
+								"src": "./static/lincs/metasearch/download.png",
+								"alt": "download",
+								
+								"ImageProps": {
+									"style": {
+										"width": "100%"
+									}
+								},
+								"caption": "Download up and down gene sets and perform signature search with them"
+							},
+							{
+								"src": "./static/lincs/metasearch/metadatapage.png",
+								"alt": "search",
+								
+								"ImageProps": {
+									"style": {
+										"height": "100%"
+									}
+								},
+								"caption": "Explore metadata pages of signatures and datasets"
+							}
+						]
+					},
+					"description": "Explore LINCS Data Portal 3.0 (LDP3) with Term Search"
 				}
 			},
 			"SignatureSearch": {
 				"active": true,
-				"endpoint": "/EnrichmentAnalysis",
-				"navName": "Enrichment Analysis",
+				"landing": true,
+				"endpoint": "/SignatureSearch",
+				"navName": "Signature Search",
+				"priority": 1,
 				"props": {
 					"types": {
 						"Overlap": {
@@ -80,11 +282,36 @@
 								{
 									"label": "Example Up and Down Sets",
 									"input": {
-										"up_entities": "TAAR9\nEBF2\nWDR78\nRRAGA\nSPATA18\nSPINT2\nMRGPRD\nCD9\nRBP1\nCYB5RL\nMXRA8\nPM20D1\nITIH5\nEPAS1\nAHCYL2\nPANK2\nPON2\nLRP5\nSLC5A3\nNSL1\nCLDN2\nLRP8\nAQP1\nCLDN1\nTMEM72\nGNG4\nNHLH2\nS100A13\nLY6G6C\nPOF1B\nWLS\nFZD4\nCOG7\nFZD6\nFOXF1\nFZD7\nERLIN2\nTYSND1\nACADSB\nOR51I2\nPARP12\nPPFIBP2\nATP4A\nALDH7A1\nTCN2\nSLCO5A1\nSFXN4\nPRR15\nMOXD1\nCAPSL",
-										"down_entities": "GBP7\nOR8H1\nACOT8\nARL14\nGPR37L1\nPPP2R1A\nMED6\nCDC20\nNEIL3\nDDX39B\nLAP3\nKATNAL2\nZSCAN20\nUQCRC2\nRBCK1\nTMCC3\nRNF2\nCMAS\nTESK2\nZFYVE1\nIL27RA\nKIAA1328\nFRAT1\nSNRPD2\nHERC1\nVTI1B\nCHAC2\nNXNL1\nEXOSC2\nSAMD11\nSAMD5\nEPSTI1\nHABP2\nBATF3\nPLK4\nTSPYL1\nXRCC4\nRAB27A\nXRCC2\nBHLHA15\nVPS37C\nTUBG2\nDHFR\nFERMT1\nRNF144B\nBPIFB3\nSMU1\nRIPPLY3\nRNPS1\nSFXN2"
+										"up_entities": "TARBP1\nAPP\nRAP1GAP\nUFM1\nDNAJA3\nPCBD1\nCSRP1\nMBNL2\nMLEC\nDNAJB2\nCKAP4\nARNT2\nCOG7\nALDOC\nMYT1L\nHMGCS1\nSNAP25\nTIAM1\nRPN1\nVDAC1\nTCEA2\nTSPYL4\nPAFAH1B1\nATP1B1\nPCMT1\nDNM1\nUSP22\nFOXO4\nBNIP3\nMAP7D1\nTRIM2\nFBXO21\nTCEAL4\nFKBP4\nCOPG1\nKIF5C\nRPS6\nSCRN1\nSTXBP1\nPGRMC1\nPIN1\nC2CD5\nSLC25A4\nGNAS\nSACM1L\nTCTA\nGAPDH\nCIRBP\nCLTB\nSTX1A",
+										"down_entities": "CEBPA\nSTAT5B\nDSE\nEIF4EBP1\nCARD8\nHLA-DMA\nSERPINE1\nEPHB2\nNOS3\nRPL39L\nCAPN1\nSRC\nFRMD4B\nICAM1\nGATA3\nDHRS9\nFGFR4\nBLNK\nATF1\nMUC1\nDSG2\nPAX8\nHOXA10\nPTGS2\nMELK\nCSGALNACT1\nABCC9\nCASP2\nABCA6\nGLIPR1\nCDK6\nIL1B\nCYSLTR1\nSPTLC2\nTSPAN2\nSYK\nTP53\nICAM3\nCCL2\nIDE\nPAN2\nSPTAN1\nPOLE2\nCDC25A\nBTK\nSIT1\nKIF14\nFAS\nADRB2\nHMOX1"
 									}
 								}
-							]
+							],
+							"tutorial": {
+								"content": [
+									{
+										"src": "./static/lincs/sigsearch/workflow.png",
+										"alt": "input form",
+										"caption": ""
+									},
+									{
+										"src": "./static/lincs/sigsearch/validation.png",
+										"alt": "results",
+										"caption": "Validation and auto-suggestion of input genes"
+									},
+									{
+										"src": "./static/lincs/sigsearch/results.png",
+										"alt": "filter",
+										"caption": "View and download mimicker and reverser signatures"
+									},
+									{
+										"src": "./static/lincs/sigsearch/visualization.png",
+										"alt": "filter",
+										"caption": "Top results are visualized as bar charts and scatter plots"
+									}
+								]
+							},
+							"description": "Identify Mimicker and Reverser Signatures with Signature Search"
 						}
 					}
 				}
@@ -94,17 +321,17 @@
 			{
 				"type": "iframe",
 				"iframe": {
-				  "Workflows": {
-					"id": "Workflows",
-					"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
-					"name": "Workflows",
-					"height": 2000,
-					"frameBorder": 0
-				  }
+					"Workflows": {
+						"id": "Workflows",
+						"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
+						"name": "Workflows",
+						"height": 2000,
+						"frameBorder": 0
+					}
 				},
 				"navName": "Workflows",
 				"endpoint": "/Workflows"
-			  }
+			}
 		],
 		"preferred_name_singular": {
 			"libraries": "Dataset",
@@ -145,16 +372,19 @@
 					"main": "#3a5278"
 				},
 				"secondary": {
-					"main": "rgb(204, 204, 153)"
+					"main": "rgb(243, 145, 52)"
 				},
 				"defaultCard": {
 					"contrastText": "#FFF"
 				},
-				"defaultChip": {
-					"contrastText": "#FFF"
-				},
 				"defaultButton": {
 					"main": "#3a5278"
+				},
+				"primaryVisualization": {
+					"main": "#617493"
+				},
+				"secondaryVisualization": {
+					"main": "rgb(243, 145, 52)"
 				}
 			},
 			"typography": {
@@ -166,9 +396,15 @@
 				"fill": "rgb(124, 162, 206)"
 			}
 		},
+		"library_priority": {
+			"48d95361-ade4-4767-afb8-43d8c5839abd": 2,
+			"b5a4db8f-f409-43a9-91fb-57a4b58d8ca8": 3,
+			"0f7cb811-7599-46de-b891-b396081a73cd": 1
+		},
+		"results_title": "Top L1000 Matching Signatures for Small Molecules, Single Gene Knockdowns, and Single Gene Over-Expressions",
 		"about": "./static/about-lincs.md",
-		"github":  "https://github.com/MaayanLab/sigcom-lincs",
-    	"github_issues":  "https://github.com/MaayanLab/sigcom-lincs/issues",
+		"github": "https://github.com/MaayanLab/sigcom-lincs",
+		"github_issues": "https://github.com/MaayanLab/sigcom-lincs/issues",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/landing-ui.json"
 	}
 }

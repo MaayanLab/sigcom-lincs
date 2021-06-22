@@ -3,8 +3,8 @@ import requests
 import time
 import os
 
-APIURL = os.getenv("URL", "https://maayanlab.cloud/sigcom-lincs/metadata-api/")
-auth = (os.getenv("USERNAME", "admin"), os.getenv("PASSWORD", "admin"))
+APIURL = os.getenv("URL")
+auth = (os.getenv("USERNAME"), os.getenv("PASSWORD"))
 
 with open("libraries.json") as o:
 	libraries = json.loads(o.read())
