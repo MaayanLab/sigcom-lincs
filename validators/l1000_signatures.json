@@ -85,24 +85,17 @@
 				}
 			},
 			"required": [
-				"md5",
-				"sha256",
-				"tissue",
-				"anatomy",
 				"cmap_id",
-				"version",
+				"creation_time",
+				"data_level",
 				"filename",
 				"local_id",
-				"cell_line",
-				"pert_dose",
-				"pert_name",
-				"pert_time",
-				"pert_type",
-				"data_level",
-				"creation_time",
 				"persistent_id",
+				"pert_type",
+				"sha256",
 				"size_in_bytes",
-				"uncompressed_size_in_bytes"
+				"uncompressed_size_in_bytes",
+				"version"
 			],
 			"type": "object"
 		}
