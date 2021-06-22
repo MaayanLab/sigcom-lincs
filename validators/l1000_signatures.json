@@ -76,11 +76,11 @@
 					"format": "uri"
 				},
 				"size_in_bytes": {
-					"type": "string",
+					"type": "number",
 					"description": "size in bytes"
 				},
 				"uncompressed_size_in_bytes": {
-					"type": "string",
+					"type": "number",
 					"description": "uncompressed size in bytes"
 				}
 			},
