@@ -6,6 +6,9 @@
 			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
 		},
 		{
+			"$validator": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/ontology/dist/ontology.umd.js"
+		},
+		{
 			"properties": {
 				"md5": {
 					"type": "string",
@@ -74,7 +77,7 @@
 				},
 				"size_in_bytes": {
 					"type": "string",
-					"description": "size in bytes",
+					"description": "size in bytes"
 				},
 				"uncompressed_size_in_bytes": {
 					"type": "string",
