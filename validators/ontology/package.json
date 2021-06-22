@@ -1,0 +1,20 @@
+{
+	"name": "ontology-validator",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "dist/ontology.js",
+	"umd:main": "dist/foo.umd.js",
+	"module": "dist/index.m.js",
+	"source": "src/ontology.ts",
+	"scripts": {
+		"build": "microbundle build -i ontology.ts -o dist/ontology.umd.js --no-pkg-main --target node -f umd"
+	},
+	"author": "John Erol Evangelista <JohnErol.Evangelista@mssm.edu>",
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"assert": "2.0.0",
+		"@types/node": "^14.0.27",
+		"node-fetch": "^2.6.0"
+	}
+}

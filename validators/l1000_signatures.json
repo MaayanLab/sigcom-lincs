@@ -1,0 +1,107 @@
+{
+	"$id": "/maayanlab/signature-commons-schema/v5/l1000-signatures.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"properties": {
+				"md5": {
+					"type": "string",
+					"description": "md5 hash value of the file"
+				},
+				"sha256": {
+					"type": "string",
+					"description": "sha256 hash value of the file"
+				},
+				"tissue": {
+					"type": "string",
+					"description": "tissue of the sample"
+				},
+				"anatomy": {
+					"type": "string",
+					"description": "ontological id of the sample"
+				},
+				"cmap_id": {
+					"type": "string",
+					"description": "cmap id of the signature"
+				},
+				"version": {
+					"type": "number",
+					"description": "version of the data"
+				},
+				"filename": {
+					"type": "string",
+					"description": "filename of the signature"
+				},
+				"local_id": {
+					"type": "string",
+					"description": "ldp3 id of the signature"
+				},
+				"cell_line": {
+					"type": "string",
+					"description": "cell line"
+				},
+				"pert_dose": {
+					"type": "string",
+					"description": "dose concentration"
+				},
+				"pert_name": {
+					"type": "string",
+					"description": "name of the perturbation"
+				},
+				"pert_time": {
+					"type": "string",
+					"description": "timepoint"
+				},
+				"pert_type": {
+					"type": "string",
+					"description": "perturbation type"
+				},
+				"data_level": {
+					"type": "integer",
+					"description": "LINCS data level"
+				},
+				"creation_time": {
+					"type": "string",
+					"description": "creation time"
+				},
+				"persistent_id": {
+					"type": "string",
+					"description": "s3 link to the file",
+					"format": "uri"
+				},
+				"size_in_bytes": {
+					"type": "string",
+					"description": "size in bytes",
+				},
+				"uncompressed_size_in_bytes": {
+					"type": "string",
+					"description": "uncompressed size in bytes"
+				}
+			},
+			"required": [
+				"md5",
+				"sha256",
+				"tissue",
+				"anatomy",
+				"cmap_id",
+				"version",
+				"filename",
+				"local_id",
+				"cell_line",
+				"pert_dose",
+				"pert_name",
+				"pert_time",
+				"pert_type",
+				"data_level",
+				"creation_time",
+				"persistent_id",
+				"size_in_bytes",
+				"uncompressed_size_in_bytes"
+			],
+			"type": "object"
+		}
+	]
+}

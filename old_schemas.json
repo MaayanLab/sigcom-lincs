@@ -455,12 +455,6 @@
 					"visibility": 1,
 					"description": true
 				},
-				"Signature Count": {
-					"alt": "${meta.signatureCount}",
-					"type": "text",
-					"priority": 3,
-					"visibility": 1
-				},
 				"Perturbation Type": {
 					"text": "${meta.perturbation_type}",
 					"type": "text",
@@ -566,13 +560,6 @@
 					"subtitle": true,
 					"visibility": 0,
 					"description": true
-				},
-				"Signature Count": {
-					"text": "${meta['Signature_Count']}",
-					"type": "text",
-					"field": "Signature_Count",
-					"priority": 3,
-					"visibility": 1
 				}
 			}
 		}
