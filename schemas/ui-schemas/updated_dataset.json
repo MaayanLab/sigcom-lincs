@@ -1,0 +1,181 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "78c7a172-d4a2-445c-8f72-dd43c9fa9cd9",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset_type}": "rank_matrix",
+			"${meta.center}": "^(?!undefined$)"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.description}",
+				"src": "${meta.icon}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Title": {
+				"text": "${meta.description}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Center": {
+				"text": "${meta.center}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Assay": {
+				"text": "${meta.assay}",
+				"field": "meta.assay",
+				"search_field": "meta.assay",
+				"type": "text",
+				"icon": "mdi-test-tube",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Date": {
+				"text": "${meta.date}",
+				"field": "meta.date",
+				"search_field": "meta.date",
+				"type": "text",
+				"icon": "mdi-calendar",
+				"priority": 2,
+				"visibility": 1
+			},
+			"File Size": {
+				"text": "${meta.size}",
+				"field": "meta.size",
+				"search_field": "meta.size",
+				"type": "text",
+				"icon": "mdi-database",
+				"priority": 3,
+				"visibility": 1,
+				"sort": true
+			},
+			"Dataset": {
+				"icon": "mdi-download",
+				"text": "Download",
+				"type": "component",
+				"props": {
+					"data": {
+						"type": "prop-array",
+						"items": [
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta['datalevel 1'].file_url}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Data Level 1",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta['datalevel 2'].file_url}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Data Level 2",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta['datalevel 3'].file_url}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Data Level 3",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta['datalevel 4'].file_url}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Data Level 4",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"url": {
+										"text": "${meta['datalevel 5'].file_url}",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"text": {
+										"text": "Download Data Level 5",
+										"type": "text"
+									}
+								}
+							}
+						]
+					}
+				},
+				"location": "chip",
+				"priority": 10,
+				"component": "download",
+				"visibility": 1
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "${meta['datalevel 1'].file_url || meta['datalevel 2'].file_url || meta['datalevel 3'].file_url || meta['datalevel 4'].file_url || meta['datalevel 5'].file_url}",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			}
+		}
+	}
+}
