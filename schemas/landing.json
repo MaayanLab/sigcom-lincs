@@ -64,45 +64,114 @@
 				"endpoint": "/Download",
 				"navName": "Download",
 				"priority": 4,
-				"props ": {
+				"props": {
 				  "download_links": [
 					{
-					  "label": "Metadata",
-					  "links": [
-						{
-						  "label": "Data and Signature Generation Center",
-						  "date": "2021-05-04",
-						  "size": "5 KB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-resources.json",
-						  "icon": "mdi-certificate"
-						},
-						{
-						  "label": "Dataset",
-						  "date": "2021-05-04",
-						  "size": "316 KB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-libraries.json",
-						  "icon": "mdi-bookshelf"
-						},
-						{
-						  "label": "LINCS Signatures",
-						  "date": "2021-05-04",
-						  "size": "452 MB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-signatures.json",
-						  "icon": "mdi-fingerprint"
-						},
-						{
-						  "label": "Genes",
-						  "date": "2021-05-04",
-						  "size": "129 MB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/lincs-entities.json",
-						  "icon": "mdi-dna"
-						}
-					  ]
+						"label": "Coefficient Matrices",
+						"links": [
+							{
+								"label": "LINCS L1000 siRNA Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/siRNA_coeff_mat.gctx",
+								"size": "9.6 MB",
+								"icon": "mdi-tilde"
+							},
+							{
+								"label": "LINCS L1000 Antibody Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/aby_coeff_mat.gctx",
+								"size": "27.7 MB",
+								"icon": "mdi-alpha-y-circle"
+							},
+							{
+								"label": "LINCS L1000 Ligand Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/lig_coeff_mat.gctx",
+								"size": "357 MB",
+								"icon": "mdi-octagram"
+							},
+							{
+								"label": "LINCS L1000 CRISPR Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
+								"size": "6.5 GB",
+								"icon": "mdi-scissors-cutting"
+							},
+							{
+								"label": "LINCS L1000 Overexpression Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/oe_coeff_mat.gctx",
+								"size": "1.6 GB",
+								"icon": "mdi-tray-full"
+							},
+							{
+								"label": "LINCS L1000 shRNA Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/shRNA_coeff_mat.gctx",
+								"size": "7.3 GB",
+								"icon": "mdi-alpha-u"
+							},
+							{
+								"label": "LINCS L1000 Chemical Perturbations (2021)",
+								"date": "2021-06-23",
+								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
+								"size": "33.1 GB",
+								"icon": "mdi-hexagon-multiple"
+							}		
+						]
 					},
 					{
 					  "label": "Rank Matrices",
-					  "description": "Each element within the matrix represents the ranking of a gene in a signature.",
 					  "links": [
+						{
+							"label": "LINCS L1000 siRNA Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/siRNA_rank_mat.gctx",
+							"size": "8.1 MB",
+							"icon": "mdi-tilde"
+						},
+						{
+							"label": "LINCS L1000 Antibody Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/aby_rank_mat.gctx",
+							"size": "27.6 MB",
+							"icon": "mdi-alpha-y-circle"
+						},
+						{
+							"label": "LINCS L1000 Ligand Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/lig_rank_mat.gctx",
+							"size": "356 MB",
+							"icon": "mdi-octagram"
+						},
+						{
+							"label": "LINCS L1000 CRISPR Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/xpr_rank_mat.gctx",
+							"size": "6.5 GB",
+							"icon": "mdi-scissors-cutting"
+						},
+						{
+							"label": "LINCS L1000 Overexpression Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/oe_rank_mat.gctx",
+							"size": "1.6 GB",
+							"icon": "mdi-tray-full"
+						},
+						{
+							"label": "LINCS L1000 shRNA Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/shRNA_rank_mat.gctx",
+							"size": "7.3 GB",
+							"icon": "mdi-alpha-u"
+						},
+						{
+							"label": "LINCS L1000 Chemical Perturbations (2021)",
+							"date": "2021-06-23",
+							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/cp_rank_mat.gctx",
+							"size": "33.0 GB",
+							"icon": "mdi-hexagon-multiple"
+						},
 						{
 						  "label": "L1000 chemical perturbagen signatures",
 						  "date": "2021-05-04",
@@ -131,6 +200,13 @@
 					{
 					  "model": "libraries",
 					  "label": "Other Data Packages",
+					  "fields": [
+						"meta.datalevel_1.file_url",
+						"meta.datalevel_2.file_url",
+						"meta.datalevel_3.file_url",
+						"meta.datalevel_4.file_url",
+						"meta.datalevel_5.file_url"
+					  ],
 					  "sort": [
 						{
 						  "label": "Assay",
@@ -157,7 +233,28 @@
 						  "order": "DESC"
 						}
 					  ]
-					}
+					},
+					{
+						"model": "signatures",
+						"label": "Other Data Packages",
+						"fields": [
+							"meta.persistent_id"
+						  ],
+						"sort": [
+						  {
+							"label": "Data Level",
+							"field": "meta.data_level",
+							"icon": "mdi-certificate",
+							"order": "ASC"
+						  },
+						  {
+							"label": "Creation Time",
+							"field": "meta.creation_time",
+							"icon": "mdi-calendar",
+							"order": "DESC"
+						  }
+						]
+					  }
 				  ]
 				}
 			  },

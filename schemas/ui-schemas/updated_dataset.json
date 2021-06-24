@@ -68,7 +68,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta['datalevel 1'].file_url}",
+										"text": "${meta['datalevel_1'].file_url}",
 										"type": "text"
 									},
 									"icon": {
@@ -85,7 +85,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta['datalevel 2'].file_url}",
+										"text": "${meta['datalevel_2'].file_url}",
 										"type": "text"
 									},
 									"icon": {
@@ -102,7 +102,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta['datalevel 3'].file_url}",
+										"text": "${meta['datalevel_3'].file_url}",
 										"type": "text"
 									},
 									"icon": {
@@ -119,7 +119,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta['datalevel 4'].file_url}",
+										"text": "${meta['datalevel_4'].file_url}",
 										"type": "text"
 									},
 									"icon": {
@@ -136,7 +136,7 @@
 								"type": "prop-object",
 								"properties": {
 									"url": {
-										"text": "${meta['datalevel 5'].file_url}",
+										"text": "${meta['datalevel_5'].file_url}",
 										"type": "text"
 									},
 									"icon": {
@@ -152,8 +152,8 @@
 						]
 					}
 				},
-				"location": "chip",
-				"priority": 10,
+				"location": "right",
+				"priority": 11,
 				"component": "download",
 				"visibility": 1
 			},
@@ -166,13 +166,22 @@
 						"type": "prop-object",
 						"properties": {
 							"url": {
-								"text": "${meta['datalevel 1'].file_url || meta['datalevel 2'].file_url || meta['datalevel 3'].file_url || meta['datalevel 4'].file_url || meta['datalevel 5'].file_url}",
+								"text": "${meta.url_prefix || (meta['datalevel_1'] || meta['datalevel_2'] || meta['datalevel_3'] || meta['datalevel_4'] || meta['datalevel_5'] || {}).link || 'https://ldp3.cloud/#/Datasets/' + id}",
+								"type": "text"
+							}
+						}
+					},
+					"styles": {
+						"type": "prop-object",
+						"properties": {
+							"margin": {
+								"text": "auto",
 								"type": "text"
 							}
 						}
 					}
 				},
-				"location": "right",
+				"location": "left",
 				"priority": 10,
 				"visibility": 1
 			}

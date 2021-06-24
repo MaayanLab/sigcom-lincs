@@ -68,16 +68,30 @@
 	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	  "id": "453fd8ea-2b13-4611-bd23-624281c26554",
 	  "meta": {
-		"icon": "mdi-test-tube",
-		"text": "Platform",
+		"icon": "mdi-microscope",
+		"text": "Cell Line",
 		"type": "filter",
-		"field": "meta.platform",
-		"search_field": "meta.platform",
+		"field": "meta.cell_line",
+		"search_field": "meta.cell_line",
 		"model": "signatures",
 		"priority": 2,
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
 	  }
 	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "3c05cee0-ab15-4fe9-8607-349e05f10ffb",
+		"meta": {
+		  "icon": "mdi-flask",
+		  "text": "Perturbation",
+		  "type": "filter",
+		  "field": "meta.pert_name",
+		  "search_field": "meta.pert_name",
+		  "model": "signatures",
+		  "priority": 4,
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
+		}
+	  },
 	{
 		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 		"id": "dfe210fd-627e-416a-b64b-5c872b4729fb",
@@ -89,6 +103,20 @@
 		"search_field": "resource",
 		"model": "libraries",
 		"priority": 2,
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
+		}
+	  },
+	  {
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "a3443d70-4fb8-484e-a600-b63bed761960",
+		"meta": {
+		"text": "Assay",
+		"type": "filter",
+		"field": "meta.assay",
+
+		"search_field": "meta.assay",
+		"model": "libraries",
+		"priority": 3,
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
 		}
 	  },
@@ -127,12 +155,26 @@
 		"model": "signatures",
 		"icon": "mdi-microscope",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.cellline",
-		"search_field": "meta.cellline",
+		"field": "meta.cell_line",
+		"search_field": "meta.cell_line",
 		"text": "Cell Lines",
 		"priority": 4
 	  }
 	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "bc3c4411-f48b-4375-a637-24f092c3813a",
+		"meta": {
+		  "type": "word",
+		  "model": "signatures",
+		  "icon": "mdi-test-tube",
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+		  "field": "meta.tissue",
+		  "search_field": "meta.tissue",
+		  "text": "Tissue",
+		  "priority": 4
+		}
+	  },
 	{
 	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	  "id": "9a06c324-c6b0-4e72-a3fa-015ea447a8ff",
@@ -174,5 +216,31 @@
 		"text": "MoA",
 		"priority": 7
 	  }
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "2596a326-0ff6-41d0-9e20-64e585a06192",
+		"meta": {
+			"type": "pie",
+			"model": "signatures",
+			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+			"field": "meta.pert_type",
+			"search_field": "meta.pert_type",
+			"text": "Signatures per Perturbation Type",
+			"priority": 1
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "e6e668a8-5386-4a2f-b04e-88e5dd1d6bed",
+		"meta": {
+			"type": "pie",
+			"model": "signatures",
+			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+			"field": "meta.pert_type",
+			"search_field": "meta.pert_type",
+			"text": "Signatures per Perturbation Type",
+			"priority": 1
+		}
 	}
   ]

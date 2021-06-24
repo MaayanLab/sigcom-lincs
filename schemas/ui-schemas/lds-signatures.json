@@ -56,7 +56,7 @@
 						]
 					}
 				},
-				"location": "chip",
+				"location": "right",
 				"priority": 10,
 				"component": "download",
 				"visibility": 1

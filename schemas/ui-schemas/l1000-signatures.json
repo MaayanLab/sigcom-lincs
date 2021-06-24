@@ -79,6 +79,22 @@
 				"visibility": 1,
 				"secondary": true
 			},
+			"Data Level": {
+				"text": "${meta.data_level}",
+				"field": "meta.data_level",
+				"type": "text",
+				"icon": "mdi-certificate",
+				"priority": 5,
+				"visibility": 1
+			},
+			"Creation Time": {
+				"text": "${meta.creation_time}",
+				"field": "meta.creation_time",
+				"type": "text",
+				"icon": "mdi-calendar",
+				"priority": 6,
+				"visibility": 1
+			},
 			"Download": {
 				"icon": "mdi-download",
 				"text": "Download",
@@ -99,7 +115,7 @@
 										"type": "text"
 									},
 									"url": {
-										"text": "${meta.file_url}",
+										"text": "${meta.persistent_id}",
 										"type": "text"
 									}
 								}
@@ -107,7 +123,7 @@
 						]
 					}
 				},
-				"location": "chip",
+				"location": "right",
 				"priority": 10,
 				"component": "download",
 				"visibility": 1
@@ -215,42 +231,6 @@
 									"href": {
 										"text": "#SignatureSearch/Rank/${id}",
 										"type": "text"
-									}
-								}
-							},
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Download Signature",
-										"type": "text"
-									},
-									"icon": {
-										"text": "mdi-download",
-										"type": "text"
-									},
-									"onClick": {
-										"function": "download_signature",
-										"type": "internal-function",
-										"props": {
-											"type": "prop-object",
-											"properties": {
-												"entry": {
-													"type": "text",
-													"text": "${id}"
-												},
-												"schemas": {
-													"type": "schemas"
-												},
-												"resolver": {
-													"type": "resolver"
-												},
-												"model": {
-													"type": "text",
-													"text": "signatures"
-												}
-											}
-										}
 									}
 								}
 							}
