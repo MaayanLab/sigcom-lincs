@@ -4,7 +4,7 @@
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
-			"${library.dataset}": "LDS*",
+			"${library.dataset}": "LIDS*",
 			"${library.dataset_type}": "rank_matrix"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
@@ -48,7 +48,7 @@
 										"type": "text"
 									},
 									"url": {
-										"text": "${meta.file_url}",
+										"text": "${meta.persistent_id}",
 										"type": "text"
 									}
 								}

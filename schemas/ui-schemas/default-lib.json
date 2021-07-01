@@ -48,6 +48,34 @@
 				"icon": "mdi-flask-outline",
 				"priority": 3,
 				"visibility": 1
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "https://ldp3.cloud/#/Datasets/${id}",
+								"type": "text"
+							}
+						}
+					},
+					"styles": {
+						"type": "prop-object",
+						"properties": {
+							"margin": {
+								"text": "auto",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "left",
+				"priority": 10,
+				"visibility": 1
 			}
 		}
 	}

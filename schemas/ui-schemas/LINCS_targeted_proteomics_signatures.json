@@ -1,0 +1,69 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "ff1193a4-68bb-4847-90b7-9bb525ddd923",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
+			"${library.dataset}": "LINCS targeted proteomics signatures"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${library.meta.libraryName}",
+				"src": "${PREFIX}/${library.meta.icon}",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Signature ID": {
+				"text": "${meta.signatureid}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 0
+			},
+			"Dataset": {
+				"text": "${library.meta.libraryName}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Perturbation": {
+				"text": "${meta.compound}",
+				"type": "text",
+				"field": "meta.compound",
+				"icon": "mdi-magnify",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Cell Line": {
+				"text": "${meta.cell_line}",
+				"type": "text",
+				"field": "meta.cell_line",
+				"icon": "mdi-flask",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Direction": {
+				"text": "${direction}",
+				"type": "text",
+				"priority": 4,
+				"condition": {
+					"${meta['logp-fisher']}": {
+						"ne": "undefined"
+					}
+				},
+				"visibility": 1
+			},
+			"Log(p) Fisher": {
+				"text": "${Number.parseFloat(scores['logp-fisher']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			},
+			"Log(p) Ave": {
+				"text": "${Number.parseFloat(scores['logp-avg']).toPrecision(4)}",
+				"type": "text",
+				"priority": 5
+			}
+		}
+	}
+}

@@ -38,8 +38,8 @@
 				"primary_label": "Genes"
 			},
 			"Cell Line": {
-				"text": "${meta.cellline}",
-				"field": "meta.cellline",
+				"text": "${meta.cell_line}",
+				"field": "meta.cell_line",
 				"type": "text",
 				"icon": "mdi-microscope",
 				"priority": 2,

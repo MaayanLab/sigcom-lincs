@@ -9,7 +9,7 @@
 	  "properties": {
 		"Image": {
 		  "alt": "${meta.name}",
-		  "src": "${PREFIX}/${meta.extraProperties[0].values[0]}",
+		  "src": "${PREFIX}/${meta.icon}",
 		  "type": "img",
 		  "priority": 1,
 		  "visibility": 1
@@ -21,15 +21,15 @@
 			"visibility": 1
 		  },
 		"Description": {
-		  "text": "${meta['description']}",
+		  "text": "${meta.description}",
 		  "type": "subtitle",
 		  "field": "meta.description",
 		  "priority": 2,
 		  "visibility": 1
 		},
-		"URL": {
-		  "href": "${meta['URL']}",
-			"text": "${meta['URL']}",
+		"Landing Page": {
+		   "href": "${meta.landing_page}",
+			"text": "${meta.landing_page}",
 			"type": "display",
 			"field": "meta.URL",
 			"priority": 2,

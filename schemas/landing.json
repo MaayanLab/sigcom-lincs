@@ -37,227 +37,131 @@
 				"endpoint": "/About",
 				"navName": "About",
 				"priority": 7,
-				"props ": {
-				  "about": "./static/about-lincs.md"
-				}
-			  },
-			  "Workflows": {
-				"active": true,
-				"type": "iframe",
-				"priority": 5,
 				"props": {
-					"iframe": {
-						"Workflows": {
-							"id": "Workflows",
-							"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
-							"name": "Workflows",
-							"height": 2000,
-							"frameBorder": 0
-						}
-					}
-				},
-				"navName": "Workflows",
-				"endpoint": "/Workflows"
+					"about": "./static/about-lincs.md"
+				}
 			},
-			  "Downloads": {
+			"Downloads": {
 				"active": true,
 				"endpoint": "/Download",
 				"navName": "Download",
 				"priority": 4,
 				"props": {
-				  "download_links": [
-					{
-						"label": "Coefficient Matrices",
-						"links": [
-							{
-								"label": "LINCS L1000 siRNA Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/siRNA_coeff_mat.gctx",
-								"size": "9.6 MB",
-								"icon": "mdi-tilde"
-							},
-							{
-								"label": "LINCS L1000 Antibody Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/aby_coeff_mat.gctx",
-								"size": "27.7 MB",
-								"icon": "mdi-alpha-y-circle"
-							},
-							{
-								"label": "LINCS L1000 Ligand Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/lig_coeff_mat.gctx",
-								"size": "357 MB",
-								"icon": "mdi-octagram"
-							},
-							{
-								"label": "LINCS L1000 CRISPR Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
-								"size": "6.5 GB",
-								"icon": "mdi-scissors-cutting"
-							},
-							{
-								"label": "LINCS L1000 Overexpression Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/oe_coeff_mat.gctx",
-								"size": "1.6 GB",
-								"icon": "mdi-tray-full"
-							},
-							{
-								"label": "LINCS L1000 shRNA Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/shRNA_coeff_mat.gctx",
-								"size": "7.3 GB",
-								"icon": "mdi-alpha-u"
-							},
-							{
-								"label": "LINCS L1000 Chemical Perturbations (2021)",
-								"date": "2021-06-23",
-								"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
-								"size": "33.1 GB",
-								"icon": "mdi-hexagon-multiple"
-							}		
-						]
-					},
-					{
-					  "label": "Rank Matrices",
-					  "links": [
+					"download_links": [
 						{
-							"label": "LINCS L1000 siRNA Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/siRNA_rank_mat.gctx",
-							"size": "8.1 MB",
-							"icon": "mdi-tilde"
-						},
-						{
-							"label": "LINCS L1000 Antibody Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/aby_rank_mat.gctx",
-							"size": "27.6 MB",
-							"icon": "mdi-alpha-y-circle"
-						},
-						{
-							"label": "LINCS L1000 Ligand Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/lig_rank_mat.gctx",
-							"size": "356 MB",
-							"icon": "mdi-octagram"
-						},
-						{
-							"label": "LINCS L1000 CRISPR Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/xpr_rank_mat.gctx",
-							"size": "6.5 GB",
-							"icon": "mdi-scissors-cutting"
-						},
-						{
-							"label": "LINCS L1000 Overexpression Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/oe_rank_mat.gctx",
-							"size": "1.6 GB",
-							"icon": "mdi-tray-full"
-						},
-						{
-							"label": "LINCS L1000 shRNA Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/shRNA_rank_mat.gctx",
-							"size": "7.3 GB",
-							"icon": "mdi-alpha-u"
-						},
-						{
-							"label": "LINCS L1000 Chemical Perturbations (2021)",
-							"date": "2021-06-23",
-							"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-rank/cp_rank_mat.gctx",
-							"size": "33.0 GB",
-							"icon": "mdi-hexagon-multiple"
-						},
-						{
-						  "label": "L1000 chemical perturbagen signatures",
-						  "date": "2021-05-04",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_chemical_perturbagen_signatures_rank_matrix.tsv",
-						  "size": "510.2 MB",
-						  "icon": "mdi-pill"
-						},
-						{
-						  "label": "L1000 consensus gene (CGS) knockdown signatures",
-						  "date": "2021-05-04",
-						  "size": "132.3 MB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_consensus_gene_CGS_knockdown_signatures_rank_matrix.tsv",
-						  "icon": "mdi-dna"
-						},
-						{
-						  "label": "L1000 gene overexpression signatures",
-						  "date": "2021-05-04",
-						  "size": "33.1 MB",
-						  "href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/LINCS_gene_overexpression_signatures_rank_matrix.tsv",
-						  "icon": "mdi-dna"
+							"label": "L1000 Characteristic Direction Coefficient Tables",
+							"links": [
+								{
+									"label": "LINCS L1000 Chemical Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
+									"size": "33.1 GB",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "LINCS L1000 shRNA Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/shRNA_coeff_mat.gctx",
+									"size": "7.3 GB",
+									"icon": "mdi-alpha-u"
+								},
+								{
+									"label": "LINCS L1000 CRISPR Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
+									"size": "6.5 GB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "LINCS L1000 Overexpression Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/oe_coeff_mat.gctx",
+									"size": "1.6 GB",
+									"icon": "mdi-tray-full"
+								},
+								{
+									"label": "LINCS L1000 Ligand Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/lig_coeff_mat.gctx",
+									"size": "357 MB",
+									"icon": "mdi-octagram"
+								},
+								{
+									"label": "LINCS L1000 Antibody Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/aby_coeff_mat.gctx",
+									"size": "27.7 MB",
+									"icon": "mdi-alpha-y-circle"
+								},
+								{
+									"label": "LINCS L1000 siRNA Perturbations (2021)",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/siRNA_coeff_mat.gctx",
+									"size": "9.6 MB",
+									"icon": "mdi-tilde"
+								}
+							]
 						}
-					  ]
-					}
-				  ],
-				  "download_list": [
-					{
-					  "model": "libraries",
-					  "label": "Other Data Packages",
-					  "fields": [
-						"meta.datalevel_1.file_url",
-						"meta.datalevel_2.file_url",
-						"meta.datalevel_3.file_url",
-						"meta.datalevel_4.file_url",
-						"meta.datalevel_5.file_url"
-					  ],
-					  "sort": [
+					],
+					"download_list": [
 						{
-						  "label": "Assay",
-						  "field": "meta.assay",
-						  "icon": "mdi-test-tube",
-						  "order": "ASC"
+							"model": "libraries",
+							"label": "Other Data Packages",
+							"fields": [
+								"meta.datalevel_1.file_url",
+								"meta.datalevel_2.file_url",
+								"meta.datalevel_3.file_url",
+								"meta.datalevel_4.file_url",
+								"meta.datalevel_5.file_url"
+							],
+							"sort": [
+								{
+									"label": "Assay",
+									"field": "meta.assay",
+									"icon": "mdi-test-tube",
+									"order": "ASC"
+								},
+								{
+									"label": "Center",
+									"field": "meta.center",
+									"icon": "mdi-certificate",
+									"order": "ASC"
+								},
+								{
+									"label": "Date",
+									"field": "meta.date",
+									"icon": "mdi-calendar",
+									"order": "DESC"
+								},
+								{
+									"label": "File Size",
+									"field": "meta.total_size",
+									"icon": "mdi-database",
+									"order": "DESC"
+								}
+							]
 						},
 						{
-						  "label": "Center",
-						  "field": "meta.center",
-						  "icon": "mdi-certificate",
-						  "order": "ASC"
-						},
-						{
-						  "label": "Date",
-						  "field": "meta.date",
-						  "icon": "mdi-calendar",
-						  "order": "DESC"
-						},
-						{
-						  "label": "File Size",
-						  "field": "meta.total_size",
-						  "icon": "mdi-database",
-						  "order": "DESC"
+							"model": "signatures",
+							"label": "Other Data Packages",
+							"sort": [
+								{
+									"label": "Data Level",
+									"field": "meta.data_level",
+									"icon": "mdi-certificate",
+									"order": "ASC"
+								},
+								{
+									"label": "Creation Time",
+									"field": "meta.creation_time",
+									"icon": "mdi-calendar",
+									"order": "DESC"
+								}
+							]
 						}
-					  ]
-					},
-					{
-						"model": "signatures",
-						"label": "Other Data Packages",
-						"fields": [
-							"meta.persistent_id"
-						  ],
-						"sort": [
-						  {
-							"label": "Data Level",
-							"field": "meta.data_level",
-							"icon": "mdi-certificate",
-							"order": "ASC"
-						  },
-						  {
-							"label": "Creation Time",
-							"field": "meta.creation_time",
-							"icon": "mdi-calendar",
-							"order": "DESC"
-						  }
-						]
-					  }
-				  ]
+					]
 				}
-			  },
+			},
 			"MetadataSearch": {
 				"active": true,
 				"landing": false,
@@ -323,7 +227,6 @@
 							{
 								"src": "./static/lincs/metasearch/metasearch.png",
 								"alt": "search",
-								
 								"ImageProps": {
 									"style": {
 										"height": "100%"
@@ -334,7 +237,6 @@
 							{
 								"src": "./static/lincs/metasearch/download.png",
 								"alt": "download",
-								
 								"ImageProps": {
 									"style": {
 										"width": "100%"
@@ -345,7 +247,6 @@
 							{
 								"src": "./static/lincs/metasearch/metadatapage.png",
 								"alt": "search",
-								
 								"ImageProps": {
 									"style": {
 										"height": "100%"
@@ -365,6 +266,11 @@
 				"navName": "Signature Search",
 				"priority": 1,
 				"props": {
+					"ignore": [
+						"LINCS consensus gene (CGS) knockdown signatures",
+						"LINCS gene overexpression signatures",
+						"LINCS chemical perturbagen signatures"
+					],
 					"types": {
 						"Overlap": {
 							"active": false
@@ -414,22 +320,7 @@
 				}
 			}
 		},
-		"extraNav": [
-			{
-				"type": "iframe",
-				"iframe": {
-					"Workflows": {
-						"id": "Workflows",
-						"src": "https://maayanlab.cloud/signature-commons-graph/lincsworkflows.html",
-						"name": "Workflows",
-						"height": 2000,
-						"frameBorder": 0
-					}
-				},
-				"navName": "Workflows",
-				"endpoint": "/Workflows"
-			}
-		],
+		"extraNav": [],
 		"preferred_name_singular": {
 			"libraries": "Dataset",
 			"resources": "Data and Signature Generation Center"
@@ -494,9 +385,16 @@
 			}
 		},
 		"library_priority": {
-			"48d95361-ade4-4767-afb8-43d8c5839abd": 2,
-			"b5a4db8f-f409-43a9-91fb-57a4b58d8ca8": 3,
-			"0f7cb811-7599-46de-b891-b396081a73cd": 1
+			"48d95361-ade4-4767-afb8-43d8c5839abd": 9,
+			"b5a4db8f-f409-43a9-91fb-57a4b58d8ca8": 10,
+			"0f7cb811-7599-46de-b891-b396081a73cd": 8,
+			"b759a653-0877-549a-a76a-3a8914b73106": 7,
+			"54198d6e-fe17-5ef8-91ac-02b425761653": 1,
+			"b953025a-4356-5cc8-b6e3-dcf2f4f85420": 4,
+			"e24989ba-5258-511c-9c6a-00634f74857b": 6,
+			"ef9389a8-53d3-50db-90cc-57e7d150b76c": 5,
+			"96c7b8c5-1eca-5764-88e4-e4ccaee6603f": 2,
+			"8f1ff550-ece8-591d-a213-2763f854c008": 3
 		},
 		"results_title": "Top L1000 Matching Signatures for Small Molecules, Single Gene Knockdowns, and Single Gene Over-Expressions",
 		"about": "./static/about-lincs.md",

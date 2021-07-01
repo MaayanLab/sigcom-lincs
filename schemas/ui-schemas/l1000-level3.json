@@ -1,10 +1,11 @@
 {
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	"id": "d1b6e8c4-433c-43b5-ae51-02d9f2b7cff9",
+	"id": "9c3ac779-44d9-4453-aa67-7ca1b2e96f95",
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
-			"${library.dataset}": "LINCS chemical perturbagen signatures"
+			"${meta.$validator}": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_signatures.json",
+			"${meta.data_level}": "3"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
@@ -16,34 +17,50 @@
 				"visibility": 1
 			},
 			"Signature Name": {
-				"text": "${meta.sig_name}",
+				"text": "${meta.local_id}",
 				"type": "title",
 				"priority": 1,
 				"visibility": 0
 			},
-			"Perturbation Type": {
-				"text": "${meta.pert_type}",
+			"Dataset": {
+				"text": "${library.meta.description}",
 				"type": "subtitle",
 				"priority": 1,
 				"visibility": 1
 			},
-			"Drug": {
-				"text": "${meta.compound}",
-				"field": "meta.compound",
+			"Perturbation Type": {
+				"text": "${meta.pert_type}",
 				"type": "text",
-				"icon": "mdi-pill",
+				"priority": 1,
+				"visibility": 1,
+				"icon": "mdi-hexagon-multiple-outline"
+			},
+			"Perturbation": {
+				"text": "${meta.pert_name}",
+				"field": "meta.pert_name",
+				"type": "text",
+				"icon": "mdi-flask",
 				"priority": 1,
 				"visibility": 1,
 				"primary": true,
-				"primary_label": "Drugs"
+				"primary_label": "Perturbation"
 			},
-			"Concentration": {
-				"text": "${meta.concentration}",
-				"field": "meta.concentration",
+			"Dose": {
+				"text": "${meta.pert_dose}",
+				"field": "meta.pert_dose",
 				"type": "text",
 				"icon": "mdi-eyedropper",
 				"priority": 2,
 				"visibility": 1
+			},
+			"Tissue": {
+				"text": "${meta.tissue}",
+				"field": "meta.tissue",
+				"type": "text",
+				"icon": "mdi-test-tube",
+				"priority": 3,
+				"visibility": 1,
+				"secondary": true
 			},
 			"Cell Line": {
 				"text": "${meta.cell_line}",
@@ -55,11 +72,28 @@
 				"secondary": true
 			},
 			"Timepoint": {
-				"text": "${meta.time}",
-				"field": "meta.time",
+				"text": "${meta.pert_time}",
+				"field": "meta.pert_time",
 				"type": "text",
 				"icon": "mdi-clock-time-three",
 				"priority": 4,
+				"visibility": 1,
+				"secondary": true
+			},
+			"Data Level": {
+				"text": "${meta.data_level}",
+				"field": "meta.data_level",
+				"type": "text",
+				"icon": "mdi-certificate",
+				"priority": 5,
+				"visibility": 1
+			},
+			"Creation Time": {
+				"text": "${meta.creation_time}",
+				"field": "meta.creation_time",
+				"type": "text",
+				"icon": "mdi-calendar",
+				"priority": 6,
 				"visibility": 1
 			},
 			"log p-val (Fisher)": {
@@ -142,65 +176,28 @@
 				"priority": 14,
 				"visibility": 0
 			},
-			"Options": {
-				"icon": "mdi-dots-vertical",
-				"text": "More options",
+			"Download": {
+				"icon": "mdi-download",
+				"text": "Download",
 				"type": "component",
-				"component": "options",
 				"props": {
-					"options": {
+					"data": {
 						"type": "prop-array",
 						"items": [
 							{
 								"type": "prop-object",
 								"properties": {
-									"label": {
-										"text": "Perform Signature Search",
-										"type": "text"
-									},
-									"icon": {
-										"text": "mdi-magnify-scan",
-										"type": "text"
-									},
-									"href": {
-										"text": "#SignatureSearch/Rank/${id}",
-										"type": "text"
-									}
-								}
-							},
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Download Signature",
+									"text": {
+										"text": "Download Full Signature",
 										"type": "text"
 									},
 									"icon": {
 										"text": "mdi-download",
 										"type": "text"
 									},
-									"onClick": {
-										"function": "download_signature",
-										"type": "internal-function",
-										"props": {
-											"type": "prop-object",
-											"properties": {
-												"entry": {
-													"type": "text",
-													"text": "${id}"
-												},
-												"schemas": {
-													"type": "schemas"
-												},
-												"resolver": {
-													"type": "resolver"
-												},
-												"model": {
-													"type": "text",
-													"text": "signatures"
-												}
-											}
-										}
+									"url": {
+										"text": "${meta.persistent_id}",
+										"type": "text"
 									}
 								}
 							}
@@ -208,7 +205,8 @@
 					}
 				},
 				"location": "right",
-				"priority": 10,
+				"priority": 11,
+				"component": "download",
 				"visibility": 1
 			}
 		}
