@@ -1,10 +1,10 @@
 {
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	"id": "60b61554-fbcc-4e52-b348-0c45d6bab613",
+	"id": "fecc6c85-0971-40c6-824f-37b6ecdd562b",
 	"meta": {
 		"match": {
-			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
-			"${library.dataset}": ".*A375_f53da3.*"
+			"${$validator}": "/dcic/signature-commons-schema/v5/core/signature.json",
+			"${meta.level1}": "^(?!undefined$)"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
@@ -16,7 +16,7 @@
 				"visibility": 1
 			},
 			"Signature ID": {
-				"text": "${meta.local_id}",
+				"text": "${meta.signatureid}",
 				"type": "title",
 				"priority": 1,
 				"visibility": 0
@@ -27,18 +27,26 @@
 				"priority": 1,
 				"visibility": 1
 			},
-			"Perturbation": {
-				"text": "${meta.pert_name}",
+			"Factor": {
+				"text": "${meta.factor}",
 				"type": "text",
 				"field": "meta.pert_name",
 				"icon": "mdi-magnify",
 				"priority": 2,
 				"visibility": 1
 			},
-			"Cell Line": {
-				"text": "${meta.cell_line}",
+			"Level 1": {
+				"text": "${meta.level1}",
 				"type": "text",
-				"field": "meta.cell_line",
+				"field": "meta.level1",
+				"icon": "mdi-flask",
+				"priority": 2,
+				"visibility": 1
+			},
+			"Level 2": {
+				"text": "${meta.level2}",
+				"type": "text",
+				"field": "meta.level2",
 				"icon": "mdi-flask",
 				"priority": 2,
 				"visibility": 1

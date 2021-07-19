@@ -5,7 +5,7 @@
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
 			"${dataset_type}": "rank_matrix",
-			"${meta.center}": "^(?!undefined$)"
+			"${meta.$validator}": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/lincs_datasets.json"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
@@ -55,6 +55,20 @@
 				"priority": 3,
 				"visibility": 1,
 				"sort": true
+			},
+			"Cell Line": {
+				"icon": "mdi-microscope",
+				"text": "Cell Line",
+				"type": "filter",
+				"field": "meta.cell_line",
+				"priority": 3
+			},
+			"Perturbation": {
+				"icon": "mdi-flask",
+				"text": "Perturbation",
+				"type": "filter",
+				"field": "meta.pert_name",
+				"priority": 4
 			},
 			"Dataset": {
 				"icon": "mdi-download",

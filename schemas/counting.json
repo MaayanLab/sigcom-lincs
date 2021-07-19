@@ -19,7 +19,7 @@
 		  "icon": "mdi-fingerprint",
 		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 		  "model": "signatures",
-		  "text": "LINCS Signatures",
+		  "text": "Signatures",
 		  "priority": 2
 		}
 	  },
@@ -129,8 +129,9 @@
 			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 			"field": "resource",
 			"search_field": "meta.name",
-			"text": "Signatures per DSGC",
-			"priority": 3
+			"text": "Signatures per DSGC (log scaled)",
+			"scale": "log",
+			"priority": 2
 		}
 	},
 	{
@@ -144,102 +145,50 @@
 		"field": "meta.assay",
 		"search_field": "meta.assay",
 		"text": "Dataset Assays",
-		"priority": 1
+		"priority": 3
 	  }
 	},
 	{
 	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 	  "id": "29e6c6d6-6a91-4015-8f6d-20d17bbb3851",
 	  "meta": {
-		"type": "word",
+		"type": "bar",
 		"model": "signatures",
 		"icon": "mdi-microscope",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 		"field": "meta.cell_line",
 		"search_field": "meta.cell_line",
-		"text": "Cell Lines",
-		"priority": 4
+		"text": "Top 15 Cell Lines",
+		"priority": 4,
+		"limit": 15
 	  }
 	},
 	{
 		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 		"id": "bc3c4411-f48b-4375-a637-24f092c3813a",
 		"meta": {
-		  "type": "word",
+		  "type": "bar",
 		  "model": "signatures",
 		  "icon": "mdi-test-tube",
 		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 		  "field": "meta.tissue",
 		  "search_field": "meta.tissue",
-		  "text": "Tissue",
-		  "priority": 4
+		  "text": "Top 15 Tissue",
+		  "priority": 5,
+		  "limit": 15
 		}
 	  },
-	{
-	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	  "id": "9a06c324-c6b0-4e72-a3fa-015ea447a8ff",
-	  "meta": {
-		"type": "word",
-		"model": "signatures",
-		"icon": "mdi-hexagon-multiple",
-		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.clueIoCompound",
-		"search_field": "meta.clueIoCompound",
-		"text": "Compounds",
-		"priority": 5
-	  }
-	},
-	{
-	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	  "id": "44b4c01e-5c52-44a3-91b7-da39e457ae6d",
-	  "meta": {
-		"type": "word",
-		"model": "signatures",
-		"icon": "mdi-target-variant",
-		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.clueIoGeneTargets",
-		"search_field": "meta.clueIoGeneTargets",
-		"text": "Targets",
-		"priority": 6
-	  }
-	},
-	{
-	  "$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	  "id": "b6aca2c5-29eb-4531-a43d-17d53cb04989",
-	  "meta": {
-		"type": "word",
-		"model": "signatures",
-		"icon": "mdi-settings-outline",
-		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-		"field": "meta.clueIoMOA",
-		"search_field": "meta.clueIoMOA",
-		"text": "MoA",
-		"priority": 7
-	  }
-	},
 	{
 		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 		"id": "2596a326-0ff6-41d0-9e20-64e585a06192",
 		"meta": {
-			"type": "pie",
+			"type": "bar",
 			"model": "signatures",
 			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 			"field": "meta.pert_type",
 			"search_field": "meta.pert_type",
-			"text": "Signatures per Perturbation Type",
-			"priority": 1
-		}
-	},
-	{
-		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-		"id": "e6e668a8-5386-4a2f-b04e-88e5dd1d6bed",
-		"meta": {
-			"type": "pie",
-			"model": "signatures",
-			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-			"field": "meta.pert_type",
-			"search_field": "meta.pert_type",
-			"text": "Signatures per Perturbation Type",
+			"text": "Signatures per Perturbation Type (log scaled)",
+			"scale": "log",
 			"priority": 1
 		}
 	}

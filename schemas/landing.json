@@ -38,7 +38,20 @@
 				"navName": "About",
 				"priority": 7,
 				"props": {
-					"about": "./static/about-lincs.md"
+					"about": "./static/about-lincs.md",
+					"ignore_bar": {
+						"Signatures per Perturbation Type (log scaled)": [
+							"Control (vehicle)",
+							"Control (vector)",
+							"Control (untreated)"
+						]
+					},
+					"scale_bar": [
+						"Signatures per Perturbation Type (log scaled)"
+					],
+					"scale_pie": [
+						"Signatures per DSGC (log scaled)"
+					]
 				}
 			},
 			"Downloads": {
@@ -49,55 +62,184 @@
 				"props": {
 					"download_links": [
 						{
-							"label": "L1000 Characteristic Direction Coefficient Tables",
+							"label": "L1000 Characteristic Direction Coefficient Tables (Level 5)",
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
-									"size": "33.1 GB",
+									"size": "33.1GB",
+									"shape": "12327x720216",
 									"icon": "mdi-hexagon-multiple"
 								},
 								{
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/shRNA_coeff_mat.gctx",
-									"size": "7.3 GB",
+									"size": "7.3GB",
+									"shape": "12327x177263",
 									"icon": "mdi-alpha-u"
 								},
 								{
 									"label": "LINCS L1000 CRISPR Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
-									"size": "6.5 GB",
+									"size": "6.5GB",
+									"shape": "12327x141368",
 									"icon": "mdi-scissors-cutting"
 								},
 								{
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/oe_coeff_mat.gctx",
-									"size": "1.6 GB",
+									"size": "1.6GB",
+									"shape": "12327x34171",
 									"icon": "mdi-tray-full"
 								},
 								{
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/lig_coeff_mat.gctx",
-									"size": "357 MB",
+									"size": "357MB",
+									"shape": "12327x7546",
 									"icon": "mdi-octagram"
 								},
 								{
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/aby_coeff_mat.gctx",
-									"size": "27.7 MB",
+									"size": "27.7MB",
+									"shape": "12327x575",
 									"icon": "mdi-alpha-y-circle"
 								},
 								{
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/siRNA_coeff_mat.gctx",
-									"size": "9.6 MB",
+									"size": "9.6MB",
+									"shape": "12327x162",
+									"icon": "mdi-tilde"
+								}
+							]
+						},
+						{
+							"label": "L1000 Up and Down Gene Sets (Level 5)",
+							"links": [
+								{
+									"label": "LINCS L1000 Chemical Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_cp.gmt",
+									"size": "2.25GB",
+									"terms": "1436110",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "LINCS L1000 shRNA Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_shRNA.gmt",
+									"size": "501.7MB",
+									"terms": "316006",
+									"icon": "mdi-alpha-u"
+								},
+								{
+									"label": "LINCS L1000 CRISPR Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_xpr.gmt",
+									"size": "438.4MB",
+									"terms": "281890",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "LINCS L1000 Overexpression Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_oe.gmt",
+									"size": "106MB",
+									"terms": "68328",
+									"icon": "mdi-tray-full"
+								},
+								{
+									"label": "LINCS L1000 Ligand Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_lig.gmt",
+									"size": "23.6MB",
+									"terms": "15092",
+									"icon": "mdi-octagram"
+								},
+								{
+									"label": "LINCS L1000 Antibody Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_aby.gmt",
+									"size": "1.8MB",
+									"terms": "1150",
+									"icon": "mdi-alpha-y-circle"
+								},
+								{
+									"label": "LINCS L1000 siRNA Perturbations (2021)",
+									"date": "2021-07-01",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_siRNA.gmt",
+									"size": "506KB",
+									"terms": "324",
+									"icon": "mdi-tilde"
+								}
+							]
+						},
+						{
+							"label": "Predicted RNA-Seq profiles of L1000 Signatures (Level 3)",
+							"links": [
+								{
+									"label": "LINCS L1000 Chemical Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/cp_predicted_RNAseq_profiles.gctx",
+									"size": "154.7GB",
+									"shape": "1635796x23614",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "LINCS L1000 shRNA Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/shRNA_predicted_RNAseq_profiles.gctx",
+									"size": "41.1GB",
+									"shape": "434088x23614",
+									"icon": "mdi-alpha-u"
+								},
+								{
+									"label": "LINCS L1000 Overexpression Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/oe_predicted_RNAseq_profiles.gctx",
+									"size": "9.28GB",
+									"shape": "98063x23614",
+									"icon": "mdi-tray-full"
+								},
+								{
+									"label": "LINCS L1000 Ligand Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/lig_predicted_RNAseq_profiles.gctx",
+									"size": "2.3GB",
+									"shape": "24253x23614",
+									"icon": "mdi-octagram"
+								},
+								{
+									"label": "LINCS L1000 CRISPR Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/xpr_predicted_RNAseq_profiles.gctx",
+									"size": "669.8MB",
+									"shape": "7050x23614",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "LINCS L1000 Antibody Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/aby_predicted_RNAseq_profiles.gctx",
+									"size": "158.4MB",
+									"shape": "1655x23614",
+									"icon": "mdi-alpha-y-circle"
+								},
+								{
+									"label": "LINCS L1000 siRNA Perturbations (2021)",
+									"date": "2021-07-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/siRNA_predicted_RNAseq_profiles.gctx",
+									"size": "46.4MB",
+									"shape": "472x23614",
 									"icon": "mdi-tilde"
 								}
 							]
@@ -169,14 +311,22 @@
 				"endpoint": "/MetadataSearch",
 				"navName": "Metadata Search",
 				"props": {
+					"metadata_page": {
+						"entities": {
+							"query": "?query={\"filters\":{\"resource\":[\"LINCS Transcriptomics\"]}}"
+						},
+						"resources": {
+							"child_text": "${name} produced ${count} datasets"
+						}
+					},
 					"types": {
 						"signatures": {
 							"active": true,
 							"examples": [
-								"Apoptosis",
-								"Interferon",
-								"Autophagy",
-								"PKN3"
+								"dexamethasone",
+								"MAPK1",
+								"STAT3",
+								"blood"
 							],
 							"priority": 1
 						},

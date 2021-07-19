@@ -173,7 +173,7 @@
 									},
 									"onClick": {
 										"function": "download_signature",
-										"type": "internal-function",
+										"type": "function",
 										"props": {
 											"type": "prop-object",
 											"properties": {
@@ -190,6 +190,94 @@
 												"model": {
 													"type": "text",
 													"text": "signatures"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 250 up to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "./static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "up"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 250 down to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "./static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "down"
 												}
 											}
 										}

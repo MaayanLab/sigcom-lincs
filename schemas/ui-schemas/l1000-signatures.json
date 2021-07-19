@@ -32,7 +32,7 @@
 				"text": "${meta.pert_type}",
 				"type": "text",
 				"priority": 1,
-				"visibility": 1,
+				"visibility": 0,
 				"icon": "mdi-hexagon-multiple-outline"
 			},
 			"Perturbation": {
@@ -86,7 +86,7 @@
 				"type": "text",
 				"icon": "mdi-certificate",
 				"priority": 5,
-				"visibility": 1
+				"visibility": 0
 			},
 			"Creation Time": {
 				"text": "${meta.creation_time}",
@@ -94,14 +94,14 @@
 				"type": "text",
 				"icon": "mdi-calendar",
 				"priority": 6,
-				"visibility": 1
+				"visibility": 0
 			},
 			"log p-val (Fisher)": {
 				"text": "${scores['log p (Fisher)']}",
 				"type": "score",
 				"field": "scores['log p (Fisher)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 5,
+				"priority": 7,
 				"visibility": 1
 			},
 			"log p-val (avg)": {
@@ -109,31 +109,31 @@
 				"type": "score",
 				"field": "scores['log p (avg)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 6,
-				"visibility": 1
+				"priority": 8,
+				"visibility": 0
 			},
 			"p-value (up)": {
 				"text": "${scores['p-value (up)']}",
 				"type": "score",
 				"field": "scores['p-value (up)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 7,
-				"visibility": 1
+				"priority": 9,
+				"visibility": 0
 			},
 			"p-value (down)": {
 				"text": "${scores['p-value (down)']}",
 				"type": "score",
 				"field": "scores['p-value (down)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 8,
-				"visibility": 1
+				"priority": 10,
+				"visibility": 0
 			},
 			"z-score (up)": {
 				"text": "${scores['z-score (up)']}",
 				"type": "score",
 				"field": "scores['z-score (up)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 9,
+				"priority": 5,
 				"visibility": 1
 			},
 			"z-score (down)": {
@@ -141,7 +141,7 @@
 				"type": "score",
 				"field": "scores['z-score (down)']",
 				"icon": "mdi-notebook-multiple",
-				"priority": 10,
+				"priority": 6,
 				"visibility": 1
 			},
 			"FDR (up)": {
@@ -215,7 +215,7 @@
 									},
 									"onClick": {
 										"function": "download_signature",
-										"type": "internal-function",
+										"type": "function",
 										"props": {
 											"type": "prop-object",
 											"properties": {
@@ -254,6 +254,94 @@
 										"type": "text"
 									}
 								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 100 up to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "./static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "up"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 100 down to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "./static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "down"
+												}
+											}
+										}
+									}
+								}
 							}
 						]
 					}
@@ -283,7 +371,7 @@
 									},
 									"onClick": {
 										"function": "download_signature",
-										"type": "internal-function",
+										"type": "function",
 										"props": {
 											"type": "prop-object",
 											"properties": {

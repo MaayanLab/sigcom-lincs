@@ -1,0 +1,28 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "b45ab5f9-4ea6-400f-94b5-3b6123e23e77",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/entity.json",
+			"${meta.geneid}": "^(?!undefined$)",
+			"${meta.symbol}": "undefined"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.geneid}",
+				"src": "${PREFIX}/static/images/RNA-seq.png",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Name": {
+				"text": "${meta.geneid}",
+				"type": "title",
+				"field": "meta.geneid",
+				"priority": 1,
+				"visibility": 1
+			}
+		}
+	}
+}

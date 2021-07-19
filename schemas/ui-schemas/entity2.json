@@ -53,6 +53,34 @@
 				"field": "meta.taxid",
 				"priority": 3,
 				"visibility": 2
+			},
+			"Data and Signature Generation Center": {
+				"icon": "mdi-certificate",
+				"text": "Data and Signature Generation Center",
+				"type": "filter",
+				"field": "resource",
+				"priority": 1
+			},
+			"Dataset": {
+				"icon": "mdi-bookshelf",
+				"text": "Dataset",
+				"type": "filter",
+				"field": "library",
+				"priority": 2
+			},
+			"Cell Line": {
+				"icon": "mdi-microscope",
+				"text": "Cell Line",
+				"type": "filter",
+				"field": "meta.cell_line",
+				"priority": 3
+			},
+			"Perturbation": {
+				"icon": "mdi-flask",
+				"text": "Perturbation",
+				"type": "filter",
+				"field": "meta.pert_name",
+				"priority": 4
 			}
 		}
 	}
