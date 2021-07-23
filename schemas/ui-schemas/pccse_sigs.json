@@ -27,7 +27,7 @@
 				"priority": 1,
 				"visibility": 1
 			},
-			"Perturbation": {
+			"Perturbagen": {
 				"text": "${meta.pert_name}",
 				"type": "text",
 				"field": "meta.pert_name",

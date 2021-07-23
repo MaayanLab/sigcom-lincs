@@ -83,7 +83,7 @@
 		"id": "3c05cee0-ab15-4fe9-8607-349e05f10ffb",
 		"meta": {
 		  "icon": "mdi-flask",
-		  "text": "Perturbation",
+		  "text": "Perturbagen",
 		  "type": "filter",
 		  "field": "meta.pert_name",
 		  "search_field": "meta.pert_name",

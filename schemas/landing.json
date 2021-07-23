@@ -14,7 +14,7 @@
 		"header_info": {
 			"icon": {
 				"alt": "lincs",
-				"src": "${PREFIX}/static/LINCS.ico",
+				"src": "${PREFIX}/static/lincslogo.svg",
 				"style": {
 					"width": 50,
 					"marginBottom": -10
@@ -25,7 +25,7 @@
 		"nav": {
 			"API": {
 				"active": true,
-				"priority": 6
+				"priority": 5
 			},
 			"Resources": {
 				"active": true,
@@ -52,6 +52,24 @@
 					"scale_pie": [
 						"Signatures per DSGC (log scaled)"
 					]
+				}
+			},
+			"Tutorial": {
+				"active": true,
+				"endpoint": "/Help",
+				"navName": "Help",
+				"priority": 6,
+				"type": "iframe",
+				"props": {
+					"pages": {
+						"tutorial": {
+							"id": "tutorial",
+							"src": "./static/tutorial/ldp3/LDP3Tutorial.html",
+							"name": "Tutorial",
+							"height": 29300,
+							"frameBorder": 0
+						  }
+					}
 				}
 			},
 			"Downloads": {
@@ -328,6 +346,7 @@
 								"STAT3",
 								"blood"
 							],
+							"placeholder": "Search over 1.5 million LINCS signatures using any term, i.e. drug, gene, or a cell line",
 							"priority": 1
 						},
 						"libraries": {
@@ -337,6 +356,7 @@
 								"proteomics",
 								"kinase"
 							],
+							"placeholder": "Search over 400 LINCS datasets using any term, i.e. assay or a DSGC",
 							"priority": 2
 						},
 						"entities": {
@@ -345,6 +365,7 @@
 								"ACE2",
 								"STAT3"
 							],
+							"placeholder": "Search for genes to view LINCS signatures that maximally up- or down-regulate it",
 							"priority": 3
 						}
 					},
@@ -464,7 +485,7 @@
 									}
 								]
 							},
-							"description": "Identify Mimicker and Reverser Signatures with Signature Search"
+							"description": "Identify Mimickers and Reversers by Querying 1.5 Million LINCS Signatures"
 						}
 					}
 				}

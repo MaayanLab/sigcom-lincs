@@ -27,7 +27,7 @@
 				"priority": 1,
 				"visibility": 1
 			},
-			"Perturbation": {
+			"Perturbagen": {
 				"text": "${meta.compound}",
 				"type": "text",
 				"field": "meta.compound",

@@ -35,7 +35,7 @@
 				"visibility": 0,
 				"icon": "mdi-hexagon-multiple-outline"
 			},
-			"Perturbation": {
+			"Perturbagen": {
 				"text": "${meta.pert_name}",
 				"field": "meta.pert_name",
 				"type": "text",
@@ -43,7 +43,7 @@
 				"priority": 1,
 				"visibility": 1,
 				"primary": true,
-				"primary_label": "Perturbation"
+				"primary_label": "Perturbagen"
 			},
 			"Dose": {
 				"text": "${meta.pert_dose}",

@@ -77,7 +77,7 @@
 				"priority": 3,
 				"visibility": 1
 			},
-			"Perturbation": {
+			"Perturbagen": {
 				"text": "${meta.pert.pert_iname}",
 				"field": "meta.pert.pert_iname",
 				"type": "text",

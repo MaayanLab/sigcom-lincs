@@ -75,9 +75,9 @@
 				"field": "meta.cell_line",
 				"priority": 3
 			},
-			"Perturbation": {
+			"Perturbagen": {
 				"icon": "mdi-flask",
-				"text": "Perturbation",
+				"text": "Perturbagen",
 				"type": "filter",
 				"field": "meta.pert_name",
 				"priority": 4
