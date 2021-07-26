@@ -68,7 +68,7 @@
 							"name": "Tutorial",
 							"height": 29300,
 							"frameBorder": 0
-						  }
+						}
 					}
 				}
 			},
@@ -202,7 +202,7 @@
 							]
 						},
 						{
-							"label": "Predicted RNA-Seq profiles of L1000 Signatures (Level 3)",
+							"label": "Predicted RNA-Seq-Like Profiles of L1000 Samples (Level 3)",
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
@@ -427,7 +427,7 @@
 							}
 						]
 					},
-					"description": "Explore LINCS Data Portal 3.0 (LDP3) with Term Search"
+					"description": "Explore the Contents of the LINCS Data Portal 3.0 (LDP3) with Term Search"
 				}
 			},
 			"SignatureSearch": {
@@ -442,6 +442,25 @@
 						"LINCS gene overexpression signatures",
 						"LINCS chemical perturbagen signatures"
 					],
+					"geneSearchProps": {
+						"radio": [
+							{
+								"value": "coexpression",
+								"label": "Gene Co-Expression Signature Search",
+								"sublabel": "Convert a single gene to an input signature based on co-expression correlations."
+							},
+							{
+								"value": "metadata",
+								"label": "Metadata Search",
+								"sublabel": "Find signatures where a single gene was perturbed."
+							},
+							{
+								"value": "gene page",
+								"label": "Up or Down-Regulate My Gene",
+								"sublabel": "Find L1000 signatures that maximally up- or down-regulate the queried gene."
+							}
+						]
+					},
 					"types": {
 						"Overlap": {
 							"active": false
@@ -569,6 +588,7 @@
 		},
 		"results_title": "Top L1000 Matching Signatures for Small Molecules, Single Gene Knockdowns, and Single Gene Over-Expressions",
 		"about": "./static/about-lincs.md",
+		"terms_url": "https://lincsproject.org/LINCS/data/release-policy",
 		"github": "https://github.com/MaayanLab/sigcom-lincs",
 		"github_issues": "https://github.com/MaayanLab/sigcom-lincs/issues",
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/landing-ui.json"
