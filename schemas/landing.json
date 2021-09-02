@@ -7,9 +7,9 @@
 			"https://fonts.googleapis.com/css?family=Archivo+Narrow"
 		],
 		"favicon": {
-			"alt": "LINCS Data Portal 3.0 (LDP3)",
+			"alt": "SigCom-LINCS",
 			"src": "${PREFIX}/static/lincs/favicon.png",
-			"title": "LINCS Data Portal 3.0 (LDP3)"
+			"title": "SigCom-LINCS"
 		},
 		"header_info": {
 			"icon": {
@@ -20,7 +20,7 @@
 					"marginBottom": -10
 				}
 			},
-			"header_right": " LINCS Data Portal 3.0 (LDP3)"
+			"header_right": " SigCom-LINCS"
 		},
 		"nav": {
 			"API": {
@@ -64,7 +64,7 @@
 					"pages": {
 						"tutorial": {
 							"id": "tutorial",
-							"src": "./static/tutorial/ldp3/LDP3Tutorial.html",
+							"src": "./static/tutorial/ldp3/SigCom LINCS Documentation.html",
 							"name": "Tutorial",
 							"height": 29300,
 							"frameBorder": 0
@@ -206,47 +206,47 @@
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/cp_predicted_RNAseq_profiles.gctx",
-									"size": "154.7GB",
-									"shape": "1635796x23614",
+									"size": "170.8GB",
+									"shape": "1805898x23614",
 									"icon": "mdi-hexagon-multiple"
 								},
 								{
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/shRNA_predicted_RNAseq_profiles.gctx",
-									"size": "41.1GB",
-									"shape": "434088x23614",
+									"size": "42.86GB",
+									"shape": "453175x23614",
 									"icon": "mdi-alpha-u"
 								},
 								{
+									"label": "LINCS L1000 CRISPR Perturbations (2021)",
+									"date": "2021-08-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/xpr_predicted_RNAseq_profiles.gctx",
+									"size": "39.23GB",
+									"shape": "414816x23614",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/oe_predicted_RNAseq_profiles.gctx",
-									"size": "9.28GB",
-									"shape": "98063x23614",
+									"size": "12.46GB",
+									"shape": "131668x23614",
 									"icon": "mdi-tray-full"
 								},
 								{
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/lig_predicted_RNAseq_profiles.gctx",
 									"size": "2.3GB",
-									"shape": "24253x23614",
+									"shape": "24301x23614",
 									"icon": "mdi-octagram"
 								},
 								{
-									"label": "LINCS L1000 CRISPR Perturbations (2021)",
-									"date": "2021-07-16",
-									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/xpr_predicted_RNAseq_profiles.gctx",
-									"size": "669.8MB",
-									"shape": "7050x23614",
-									"icon": "mdi-scissors-cutting"
-								},
-								{
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/aby_predicted_RNAseq_profiles.gctx",
 									"size": "158.4MB",
 									"shape": "1655x23614",
@@ -254,7 +254,7 @@
 								},
 								{
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
-									"date": "2021-07-16",
+									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/siRNA_predicted_RNAseq_profiles.gctx",
 									"size": "46.4MB",
 									"shape": "472x23614",
@@ -427,7 +427,7 @@
 							}
 						]
 					},
-					"description": "Explore the Contents of the LINCS Data Portal 3.0 (LDP3) with Term Search"
+					"description": "Explore the Contents of SigCom-LINCS with Term Search"
 				}
 			},
 			"SignatureSearch": {
@@ -586,7 +586,7 @@
 			"96c7b8c5-1eca-5764-88e4-e4ccaee6603f": 2,
 			"8f1ff550-ece8-591d-a213-2763f854c008": 3
 		},
-		"results_title": "Top L1000 Matching Signatures for Small Molecules, Single Gene Knockdowns, and Single Gene Over-Expressions",
+		"results_title": "Top L1000 Matching Signatures for LINCS Perturbagens",
 		"about": "./static/about-lincs.md",
 		"terms_url": "https://lincsproject.org/LINCS/data/release-policy",
 		"github": "https://github.com/MaayanLab/sigcom-lincs",
