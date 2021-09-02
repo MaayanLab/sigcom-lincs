@@ -82,13 +82,27 @@
 		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
 		"id": "3c05cee0-ab15-4fe9-8607-349e05f10ffb",
 		"meta": {
+		  "icon": "mdi-magnify",
+		  "text": "Perturbagen Type",
+		  "type": "filter",
+		  "field": "meta.pert_type",
+		  "search_field": "meta.pert_type",
+		  "model": "signatures",
+		  "priority": 4,
+		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
+		}
+	  },
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "42d8683d-e3b8-46cf-bb5c-42632e06cc78",
+		"meta": {
 		  "icon": "mdi-flask",
 		  "text": "Perturbagen",
 		  "type": "filter",
 		  "field": "meta.pert_name",
 		  "search_field": "meta.pert_name",
 		  "model": "signatures",
-		  "priority": 4,
+		  "priority": 5,
 		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json"
 		}
 	  },
@@ -131,7 +145,7 @@
 			"search_field": "meta.name",
 			"text": "Signatures per DSGC (log scaled)",
 			"scale": "log",
-			"priority": 2
+			"priority": 3
 		}
 	},
 	{
@@ -145,7 +159,7 @@
 		"field": "meta.assay",
 		"search_field": "meta.assay",
 		"text": "Dataset Assays",
-		"priority": 3
+		"priority": 4
 	  }
 	},
 	{
@@ -159,7 +173,7 @@
 		"field": "meta.cell_line",
 		"search_field": "meta.cell_line",
 		"text": "Top 15 Cell Lines",
-		"priority": 4,
+		"priority": 5,
 		"limit": 15
 	  }
 	},
@@ -174,7 +188,7 @@
 		  "field": "meta.tissue",
 		  "search_field": "meta.tissue",
 		  "text": "Top 15 Tissue",
-		  "priority": 5,
+		  "priority": 6,
 		  "limit": 15
 		}
 	  },
@@ -189,7 +203,105 @@
 			"search_field": "meta.pert_type",
 			"text": "Signatures per Perturbation Type (log scaled)",
 			"scale": "log",
-			"priority": 1
+			"priority": 2,
+			"props": {
+				"include": {
+					"Chemical": {
+						"type": "bar",
+						"text": "Small molecules"
+					},
+					"shRNA": {
+						"type": "bar",
+						"text": "shRNAs"
+					},
+					"CRISPR Knockdown": {
+						"type": "bar",
+						"text": "CRISPR knockouts"
+					},
+					"Gene Overexpression": {
+						"type": "bar",
+						"text": "Gene over-expressions"
+					},
+					"Ligand": {
+						"type": "bar",
+						"text": "Ligands"
+					},
+					"siRNA": {
+						"type": "bar",
+						"text": "siRNAs"
+					},
+					"Antibody": {
+						"type": "bar",
+						"text": "Antibodies"
+					}
+				}
+			}
+		}
+	},
+	{
+		"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+		"id": "48244073-fe76-4a00-b88a-d595a39df5a9",
+		"meta": {
+			"type": "icon",
+			"model": "signatures",
+			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
+			"field": "meta.pert_type",
+			"search_field": "meta.pert_type",
+			"text": "Unique Perturbagens",
+			"priority": 1,
+			"props": {
+				"replace": {
+					"Chemical": {
+						"type": "icon",
+						"icon": "mdi-hexagon-multiple",
+						"text": "Small molecules",
+						"priority": 1,
+						"count": 33866
+					},
+					"shRNA": {
+						"type": "icon",
+						"icon": "mdi-alpha-u",
+						"text": "shRNAs",
+						"priority": 3,
+						"count": 4957
+					},
+					"CRISPR Knockdown": {
+						"type": "icon",
+						"icon": "mdi-scissors-cutting",
+						"text": "CRISPR knockouts",
+						"priority": 2,
+						"count": 7492
+					},
+					"Gene Overexpression": {
+						"type": "icon",
+						"icon": "mdi-tray-full",
+						"text": "Gene over-expressions",
+						"priority": 4,
+						"count": 4082
+					},
+					"Ligand": {
+						"type": "icon",
+						"icon": "mdi-octagram",
+						"text": "Ligands",
+						"priority": 5,
+						"count": 329
+					},
+					"siRNA": {
+						"type": "icon",
+						"icon": "mdi-tilde",
+						"text": "siRNAs",
+						"priority": 6,
+						"count": 329
+					},
+					"Antibody": {
+						"type": "icon",
+						"icon": "mdi-alpha-y-circle",
+						"text": "Antibodies",
+						"priority": 7,
+						"count": 4
+					}
+				}
+			}
 		}
 	}
   ]
