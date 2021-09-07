@@ -1,0 +1,32 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/geo_species_datasets.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"properties": {
+				"library": {
+					"type": "string",
+					"description": "Name of dataset"
+				},
+				"species": {
+					"type": "string",
+					"description": "Species"
+				},
+				"num_sigs": {
+					"type": "number",
+					"description": "Number of signatures"
+				}
+			},
+			
+			"required": [
+				"library",
+				"species",
+				"num_sigs"
+			],
+			"type": "object"
+		}
+	]
+}

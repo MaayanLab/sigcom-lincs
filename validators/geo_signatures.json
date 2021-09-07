@@ -1,0 +1,34 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/geo_signatures.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"$validator": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/ontology/dist/ontology.umd.js"
+		},
+		{
+			"properties": {
+				"GSE": {
+					"type": "string",
+					"description": "GEO Series Accession ID"
+				},
+				"Description": {
+					"type": "string",
+					"description": "Description of the study"
+				},
+				"sig_id": {
+					"type": "string",
+					"description": "Signature ID"
+				}
+			},
+			"required": [
+				"GSE",
+				"Description",
+				"sig_id"
+			],
+			"type": "object"
+		}
+	]
+}
