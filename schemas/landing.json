@@ -7,9 +7,9 @@
 			"https://fonts.googleapis.com/css?family=Archivo+Narrow"
 		],
 		"favicon": {
-			"alt": "SigCom-LINCS",
+			"alt": "SigCom LINCS",
 			"src": "${PREFIX}/static/lincs/favicon.png",
-			"title": "SigCom-LINCS"
+			"title": "SigCom LINCS"
 		},
 		"header_info": {
 			"icon": {
@@ -20,7 +20,7 @@
 					"marginBottom": -10
 				}
 			},
-			"header_right": " SigCom-LINCS"
+			"header_right": " SigCom LINCS"
 		},
 		"nav": {
 			"API": {
@@ -28,7 +28,7 @@
 				"priority": 5
 			},
 			"Resources": {
-				"active": true,
+				"active": false,
 				"endpoint": "/DSGCs",
 				"priority": 3
 			},
@@ -427,7 +427,7 @@
 							}
 						]
 					},
-					"description": "Explore the Contents of SigCom-LINCS with Term Search"
+					"description": "Explore the Contents of SigCom LINCS with Term Search"
 				}
 			},
 			"SignatureSearch": {
