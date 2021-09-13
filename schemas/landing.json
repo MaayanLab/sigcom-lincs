@@ -529,11 +529,11 @@
 		"extraNav": [],
 		"preferred_name_singular": {
 			"libraries": "Dataset",
-			"resources": "Data and Signature Generation Center"
+			"resources": "Resource"
 		},
 		"preferred_name": {
 			"libraries": "Datasets",
-			"resources": "Data and Signature Generation Centers"
+			"resources": "Resources"
 		},
 		"footer_links": [
 			{
