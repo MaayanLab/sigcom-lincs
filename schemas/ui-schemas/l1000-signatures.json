@@ -43,7 +43,7 @@
 				"priority": 1,
 				"visibility": 1,
 				"primary": true,
-				"primary_label": "Perturbagen"
+				"primary_label": "Perturbagens"
 			},
 			"Dose": {
 				"text": "${meta.pert_dose}",
@@ -102,7 +102,7 @@
 				"field": "scores['log p (Fisher)']",
 				"icon": "mdi-notebook-multiple",
 				"priority": 7,
-				"visibility": 1
+				"visibility": 0
 			},
 			"log p-val (avg)": {
 				"text": "${scores['log p (avg)']}",
@@ -142,6 +142,14 @@
 				"field": "scores['z-score (down)']",
 				"icon": "mdi-notebook-multiple",
 				"priority": 6,
+				"visibility": 1
+			},
+			"z-score (sum)": {
+				"text": "${scores['z-score (sum)']}",
+				"type": "score",
+				"field": "scores['z-score (sum)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 9,
 				"visibility": 1
 			},
 			"FDR (up)": {
@@ -259,7 +267,7 @@
 								"type": "prop-object",
 								"properties": {
 									"label": {
-										"text": "Top 100 up to Enrichr",
+										"text": "Top 100 Up to Enrichr",
 										"type": "text"
 									},
 									"src": {
@@ -303,7 +311,7 @@
 								"type": "prop-object",
 								"properties": {
 									"label": {
-										"text": "Top 100 down to Enrichr",
+										"text": "Top 100 Down to Enrichr",
 										"type": "text"
 									},
 									"src": {

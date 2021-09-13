@@ -60,7 +60,7 @@
 				"field": "scores['log p (Fisher)']",
 				"icon": "mdi-notebook-multiple",
 				"priority": 4,
-				"visibility": 1
+				"visibility": 0
 			},
 			"log p-val (avg)": {
 				"text": "${scores['log p (avg)']}",
@@ -68,7 +68,7 @@
 				"field": "scores['log p (avg)']",
 				"icon": "mdi-notebook-multiple",
 				"priority": 5,
-				"visibility": 1
+				"visibility": 0
 			},
 			"p-value (up)": {
 				"text": "${scores['p-value (up)']}",
@@ -100,6 +100,14 @@
 				"field": "scores['z-score (down)']",
 				"icon": "mdi-notebook-multiple",
 				"priority": 9,
+				"visibility": 1
+			},
+			"z-score (sum)": {
+				"text": "${scores['z-score (sum)']}",
+				"type": "score",
+				"field": "scores['z-score (sum)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 10,
 				"visibility": 1
 			},
 			"FDR (up)": {
@@ -200,7 +208,7 @@
 								"type": "prop-object",
 								"properties": {
 									"label": {
-										"text": "Top 250 up to Enrichr",
+										"text": "Top 250 Up to Enrichr",
 										"type": "text"
 									},
 									"src": {
@@ -244,7 +252,7 @@
 								"type": "prop-object",
 								"properties": {
 									"label": {
-										"text": "Top 250 down to Enrichr",
+										"text": "Top 250 Down to Enrichr",
 										"type": "text"
 									},
 									"src": {

@@ -43,7 +43,7 @@
 				"priority": 1,
 				"visibility": 1,
 				"primary": true,
-				"primary_label": "Perturbagen"
+				"primary_label": "Perturbagens"
 			},
 			"Dose": {
 				"text": "${meta.pert_dose}",

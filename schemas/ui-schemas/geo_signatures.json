@@ -93,7 +93,7 @@
                       "type": "text"
                     },
                     "label": {
-                      "text": "Top 100 up to Enrichr",
+                      "text": "Top 100 Up to Enrichr",
                       "type": "text"
                     },
                     "onClick": {
@@ -137,7 +137,7 @@
                       "type": "text"
                     },
                     "label": {
-                      "text": "Top 100 down to Enrichr",
+                      "text": "Top 100 Down to Enrichr",
                       "type": "text"
                     },
                     "onClick": {
@@ -283,6 +283,14 @@
           "priority": 6,
           "visibility": 1
         },
+        "z-score (sum)": {
+          "text": "${scores['z-score (sum)']}",
+          "type": "score",
+          "field": "scores['z-score (sum)']",
+          "icon": "mdi-notebook-multiple",
+          "priority": 9,
+          "visibility": 1
+        },
         "log p-val (avg)": {
           "icon": "mdi-notebook-multiple",
           "text": "${scores['log p (avg)']}",
@@ -297,7 +305,7 @@
           "type": "score",
           "field": "scores['log p (Fisher)']",
           "priority": 1,
-          "visibility": 1
+          "visibility": 0
         },
         "p-value Bonferroni (up)": {
           "icon": "mdi-notebook-multiple",
