@@ -1,0 +1,62 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "42fe6196-4743-485a-b3b3-a55132c070fc",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset}": ".*GEO"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Title": {
+				"text": "${meta.library}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "Automated GEO Signatures",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Species": {
+				"text": "${meta.species}",
+				"field": "meta.species",
+				"search_field": "meta.species",
+				"type": "text",
+				"icon": "mdi-human",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Number of Signatures": {
+				"icon": "mdi-certificate",
+				"text": "${meta.num_sigs}",
+				"type": "text",
+				"visibility": 1,
+				"priority": 2,
+				"field": "meta.num_sigs",
+				"search_field": "meta.num_sigs"
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "${meta.url_prefix || 'https://maayanlab.cloud/sigcom-lincs/#/Datasets/' + id}",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			}
+		}
+	}
+}
