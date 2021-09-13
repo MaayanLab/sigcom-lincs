@@ -508,6 +508,22 @@
 						}
 					}
 				}
+			},
+			"UMAPs": {
+				"active": true,
+				"endpoint": "/UMAPs",
+				"navName": "UMAPs",
+				"priority": 5,
+				"type": "component",
+				"props": {
+					"pages": {
+						"tutorial": {
+							"id": "UMAPs",
+							"component": "umap",
+							"name": "UMAPs"
+						}
+					}
+				}
 			}
 		},
 		"extraNav": [],
