@@ -1,0 +1,42 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/gtex_age_signatures.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"$validator": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/ontology/dist/ontology.umd.js"
+		},
+		{
+			"properties": {
+				"sig_id": {
+					"type": "string",
+					"description": "Signature ID"
+				},
+				"tissue": {
+					"type": "string",
+					"description": "Tissue"
+				},
+				"age_grp": {
+					"type": "string",
+					"description": "Age group being compared to 20-29 controls"
+				},
+				"num_ctls": {
+					"type": "number",
+					"description": "Number of control samples"
+				},
+				"num_perts": {
+					"type": "number",
+					"description": "Number of case samples"
+				}
+			},
+			"required": [
+				"sig_id",
+				"tissue",
+				"age_grp"
+			],
+			"type": "object"
+		}
+	]
+}
