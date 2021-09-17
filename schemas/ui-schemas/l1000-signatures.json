@@ -71,12 +71,21 @@
 				"visibility": 1,
 				"secondary": true
 			},
+			"Disease": {
+				"text": "${meta.disease}",
+				"field": "meta.disease",
+				"type": "text",
+				"icon": "mdi-doctor",
+				"priority": 4,
+				"visibility": 1,
+				"secondary": true
+			},
 			"Timepoint": {
 				"text": "${meta.pert_time}",
 				"field": "meta.pert_time",
 				"type": "text",
 				"icon": "mdi-clock-time-three",
-				"priority": 4,
+				"priority": 5,
 				"visibility": 1,
 				"secondary": true
 			},
@@ -85,7 +94,7 @@
 				"field": "meta.data_level",
 				"type": "text",
 				"icon": "mdi-certificate",
-				"priority": 5,
+				"priority": 6,
 				"visibility": 0
 			},
 			"Creation Time": {
@@ -93,7 +102,7 @@
 				"field": "meta.creation_time",
 				"type": "text",
 				"icon": "mdi-calendar",
-				"priority": 6,
+				"priority": 7,
 				"visibility": 0
 			},
 			"log p-val (Fisher)": {
