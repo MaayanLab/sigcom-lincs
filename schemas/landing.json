@@ -261,6 +261,34 @@
 									"icon": "mdi-tilde"
 								}
 							]
+						},
+						{
+							"label": "Non-L1000 Transcriptomics Signatures",
+							"links": [
+								{
+									"label": "Human GEO Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/human_geo_sigs.tsv",
+									"size": "1.62GB",
+									"shape": "4269x35239",
+									"src": "./static/geo_main.gif"
+								},
+								{
+									"label": "Mouse GEO Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/mouse_geo_sigs.tsv",
+									"size": "1.49GB",
+									"shape": "4216x32545",
+									"src": "./static/geo_main.gif"
+								},
+								{
+									"label": "GTEx Tissue Age Comparison Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/GTEx_AgeComparison_Tissue_Signatures.zip",
+									"size": "123.2 Mb",
+									"src": "./static/gtex.ico"
+								}
+							]
 						}
 					],
 					"download_list": [
@@ -591,18 +619,17 @@
 			}
 		},
 		"library_priority": {
-			"48d95361-ade4-4767-afb8-43d8c5839abd": 9,
-			"b5a4db8f-f409-43a9-91fb-57a4b58d8ca8": 10,
-			"0f7cb811-7599-46de-b891-b396081a73cd": 8,
-			"b759a653-0877-549a-a76a-3a8914b73106": 7,
-			"54198d6e-fe17-5ef8-91ac-02b425761653": 1,
-			"b953025a-4356-5cc8-b6e3-dcf2f4f85420": 4,
-			"e24989ba-5258-511c-9c6a-00634f74857b": 6,
-			"ef9389a8-53d3-50db-90cc-57e7d150b76c": 5,
+			"908bf43c-64e1-5981-a791-0d1eb1816009": 1,
+			"cb1ae5db-e0d6-50f2-98f9-936b6de8d682": 3,
+			"b759a653-0877-549a-a76a-3a8914b73106": 8,
+			"54198d6e-fe17-5ef8-91ac-02b425761653": 2,
+			"b953025a-4356-5cc8-b6e3-dcf2f4f85420": 5,
+			"e24989ba-5258-511c-9c6a-00634f74857b": 7,
+			"ef9389a8-53d3-50db-90cc-57e7d150b76c": 6,
 			"96c7b8c5-1eca-5764-88e4-e4ccaee6603f": 2,
-			"8f1ff550-ece8-591d-a213-2763f854c008": 3
+			"8f1ff550-ece8-591d-a213-2763f854c008": 4
 		},
-		"results_title": "Top L1000 Matching Signatures for LINCS Perturbagens",
+		"results_title": "Top Mimicking and Reversing Signatures",
 		"about": "./static/about-lincs.md",
 		"terms_url": "https://lincsproject.org/LINCS/data/release-policy",
 		"github": "https://github.com/MaayanLab/sigcom-lincs",
