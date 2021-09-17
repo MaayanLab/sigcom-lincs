@@ -80,6 +80,35 @@
 				"props": {
 					"download_links": [
 						{
+							"label": "Transcriptomics Signatures",
+							"links": [
+								{
+									"label": "Human GEO Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/human_geo_sigs.tsv",
+									"size": "1.62GB",
+									"shape": "4269x35239",
+									"src": "./static/geo_main.gif"
+								},
+								{
+									"label": "Mouse GEO Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/mouse_geo_sigs.tsv",
+									"size": "1.49GB",
+									"shape": "4216x32545",
+									"src": "./static/geo_main.gif"
+								},
+								{
+									"label": "GTEx Tissue Age Comparison Signatures",
+									"date": "2021-09-16",
+									"href": "https://lincs-dcic.s3.amazonaws.com/GTEx_AgeComparison_Tissue_Signatures.zip",
+									"shape": "135xVaries",
+									"size": "123.2 Mb",
+									"src": "./static/gtex.ico"
+								}
+							]
+						},
+						{
 							"label": "L1000 Characteristic Direction Coefficient Tables (Level 5)",
 							"links": [
 								{
@@ -259,34 +288,6 @@
 									"size": "46.4MB",
 									"shape": "472x23614",
 									"icon": "mdi-tilde"
-								}
-							]
-						},
-						{
-							"label": "Non-L1000 Transcriptomics Signatures",
-							"links": [
-								{
-									"label": "Human GEO Signatures",
-									"date": "2021-09-16",
-									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/human_geo_sigs.tsv",
-									"size": "1.62GB",
-									"shape": "4269x35239",
-									"src": "./static/geo_main.gif"
-								},
-								{
-									"label": "Mouse GEO Signatures",
-									"date": "2021-09-16",
-									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/mouse_geo_sigs.tsv",
-									"size": "1.49GB",
-									"shape": "4216x32545",
-									"src": "./static/geo_main.gif"
-								},
-								{
-									"label": "GTEx Tissue Age Comparison Signatures",
-									"date": "2021-09-16",
-									"href": "https://lincs-dcic.s3.amazonaws.com/GTEx_AgeComparison_Tissue_Signatures.zip",
-									"size": "123.2 Mb",
-									"src": "./static/gtex.ico"
 								}
 							]
 						}
