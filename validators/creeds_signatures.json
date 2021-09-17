@@ -1,0 +1,106 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/creeds_signatures.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"$validator": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/ontology/dist/ontology.umd.js"
+		},
+		{
+			"properties": {
+				"sig_id": {
+					"type": "string",
+					"description": "GEO Series Accession ID"
+				},
+				"cell_type": {
+					"type": "string",
+					"description": "Cell type"
+				},
+				"chdir_norm": {
+					"type": "string",
+					"description": "Characteristic Direction coefficients"
+				},
+                "ctrl_ids": {
+                    "type": "string",
+                    "description": "GEO Sample Accession IDs of control samples"
+                },
+                "curator": {
+                    "type": "string",
+                    "description": "Individual who annotated the signature"
+                },
+                "disease_name": {
+                    "type": "string",
+                    "description": "Disease"
+                },
+                "do_id": {
+                    "type": "string",
+                    "description": "Disease Ontology ID"
+                },
+                "drug_name": {
+                    "type": "string",
+                    "description": "Drug name"
+                },
+                "drubank_id": {
+                    "type": "string",
+                    "description": "DrugBank ID"
+                },
+                "geo_id": {
+					"type": "string",
+					"description": "GEO Series Accession ID"
+                },
+                "hs_gene_symbol": {
+                    "type": "string",
+                    "description": "Human gene symbol"
+                },
+                "mm_gene_symbol": {
+                    "type": "string",
+                    "description": "Mouse gene symbol"
+                },
+                "organism": {
+                    "type": "string",
+                    "description": "Species"
+                },
+                "pert_ids": {
+                    "type": "string",
+                    "description": "GEO Sample Accession IDs of perturbation samples"
+                },
+                "pert_type": {
+                    "type": "string",
+                    "description": "Perturbation type"
+                },
+                "platform": {
+                    "type": "string",
+                    "description": "GEO Platform ID"
+                },
+                "pubchem_cid": {
+                    "type": "number",
+                    "description": "PubChem ID"
+                },
+                "smiles": {
+                    "type": "string",
+                    "description": "SMILES notation"
+                },
+                "umls_cui": {
+                    "type": "string",
+                    "description": "UMLS Concept Unique Identifier"
+                },
+                "version": {
+                    "type": "number",
+                    "description": "Signature version"
+                }
+			},
+			"required": [
+				"sig_id",
+                "ctrl_ids",
+                "geo_id",
+                "organism",
+                "pert_ids",
+                "platform",
+                "version"
+			],
+			"type": "object"
+		}
+	]
+}
