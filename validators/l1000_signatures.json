@@ -82,6 +82,14 @@
 				"uncompressed_size_in_bytes": {
 					"type": "number",
 					"description": "uncompressed size in bytes"
+				},
+				"disease": {
+					"type": "string",
+					"description": "disease associated with cell line"
+				},
+				"doid": {
+					"type": "string",
+					"description": "Disease Ontology id"
 				}
 			},
 			"required": [
