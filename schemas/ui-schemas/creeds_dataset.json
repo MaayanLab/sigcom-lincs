@@ -1,0 +1,60 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "ebc900a3-6492-4417-8b96-a4ac4cdfc549",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset}": "creeds_sg_signatures"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.library}",
+				"src": "${PREFIX}/static/images/creeds.png",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Title": {
+				"text": "${meta.library}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "CREEDS Signatures",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Number of Signatures": {
+				"icon": "mdi-certificate",
+				"text": "${meta.num_sigs}",
+				"type": "text",
+				"visibility": 1,
+				"priority": 2,
+				"field": "meta.num_sigs",
+				"search_field": "meta.num_sigs"
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "${meta.url_prefix || 'https://maayanlab.cloud/sigcom-lincs/#/Datasets/' + id}",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			}
+		}
+	}
+}

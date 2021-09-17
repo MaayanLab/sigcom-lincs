@@ -1,0 +1,60 @@
+{
+	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
+	"id": "93f68322-43ce-4c07-9afc-7a84001ae9fa",
+	"meta": {
+		"match": {
+			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
+			"${dataset}": "gtex_age_sigs"
+		},
+		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
+		"properties": {
+			"Image": {
+				"alt": "${meta.library_name}",
+				"src": "${PREFIX}/static/gtex.ico",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Title": {
+				"text": "${meta.library_name}",
+				"type": "title",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Description": {
+				"text": "${meta.description}",
+				"type": "subtitle",
+				"priority": 1,
+				"visibility": 1
+			},
+			"Number of Signatures": {
+				"icon": "mdi-certificate",
+				"text": "${meta.num_sigs}",
+				"type": "text",
+				"visibility": 1,
+				"priority": 2,
+				"field": "meta.num_sigs",
+				"search_field": "meta.num_sigs"
+			},
+			"Insignia": {
+				"text": "Insignia",
+				"type": "component",
+				"component": "insignia",
+				"props": {
+					"params": {
+						"type": "prop-object",
+						"properties": {
+							"url": {
+								"text": "${meta.url_prefix || 'https://maayanlab.cloud/sigcom-lincs/#/Datasets/' + id}",
+								"type": "text"
+							}
+						}
+					}
+				},
+				"location": "right",
+				"priority": 10,
+				"visibility": 1
+			}
+		}
+	}
+}
