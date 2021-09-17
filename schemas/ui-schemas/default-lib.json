@@ -5,7 +5,8 @@
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
 			"${dataset_type}": "rank_matrix",
-			"${meta.center}": "undefined"
+			"${meta.center}": "undefined",
+			"${meta.library}": "undefined"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
