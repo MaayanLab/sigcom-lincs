@@ -8,6 +8,13 @@
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
+			"Image": {
+				"alt": "${library.meta.library}",
+				"src": "${PREFIX}/static/geo_main.gif",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
 			"Signature Name": {
 				"text": "${meta.sig_id}",
 				"type": "title",

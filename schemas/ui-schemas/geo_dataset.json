@@ -4,10 +4,17 @@
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
-			"${dataset}": ".*GEO"
+			"${meta.$validator}": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/geo_species_datasets.json"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
+			"Image": {
+				"alt": "${meta.library}",
+				"src": "${PREFIX}/static/geo_main.gif",
+				"type": "img",
+				"priority": 1,
+				"visibility": 1
+			},
 			"Title": {
 				"text": "${meta.library}",
 				"type": "title",
