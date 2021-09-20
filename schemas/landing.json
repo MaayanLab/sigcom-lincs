@@ -80,7 +80,7 @@
 				"props": {
 					"download_links": [
 						{
-							"label": "Transcriptomics Signatures",
+							"label": "RNA-seq Transcriptomics Signatures (Level 5)",
 							"links": [
 								{
 									"label": "Human GEO Signatures",
