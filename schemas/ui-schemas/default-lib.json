@@ -6,13 +6,14 @@
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
 			"${dataset_type}": "rank_matrix",
 			"${meta.center}": "undefined",
-			"${meta.library}": "undefined"
+			"${meta.library}": "undefined",
+			"${meta.library_name}": "undefined"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
 			"Image": {
 				"alt": "${meta.title || meta.libraryName || dataset}",
-				"src": "${meta.icon}",
+				"src": "${PREFIX}/${meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1

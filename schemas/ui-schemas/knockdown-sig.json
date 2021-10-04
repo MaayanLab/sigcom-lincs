@@ -212,7 +212,7 @@
 										"type": "text"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									},
 									"alt": {
@@ -256,7 +256,7 @@
 										"type": "text"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									},
 									"alt": {

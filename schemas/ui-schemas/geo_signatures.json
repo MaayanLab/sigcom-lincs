@@ -191,7 +191,7 @@
 										"type": "text"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									},
 									"alt": {
@@ -235,7 +235,7 @@
 										"type": "text"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									},
 									"alt": {
@@ -276,6 +276,180 @@
 				},
 				"location": "right",
 				"priority": 11,
+				"visibility": 1
+			},
+			"Options": {
+				"icon": "mdi-dots-vertical",
+				"text": "More options",
+				"type": "component",
+				"component": "options",
+				"props": {
+					"options": {
+						"type": "prop-array",
+						"items": [
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Perform Signature Search",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-magnify-scan",
+										"type": "text"
+									},
+									"href": {
+										"text": "#SignatureSearch/Rank/${id}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Download Up and Down Genes",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "download_signature",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Download Full Signature",
+										"type": "text"
+									},
+									"icon": {
+										"text": "mdi-download",
+										"type": "text"
+									},
+									"href": {
+										"text": "${meta.persistent_id}",
+										"type": "text"
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 100 Up to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "${PREFIX}/static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "up"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"type": "prop-object",
+								"properties": {
+									"label": {
+										"text": "Top 100 Down to Enrichr",
+										"type": "text"
+									},
+									"src": {
+										"text": "${PREFIX}/static/images/enrichr.png",
+										"type": "text"
+									},
+									"alt": {
+										"text": "Enrichr",
+										"type": "text"
+									},
+									"onClick": {
+										"function": "send_to_enrichr",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"entry": {
+													"type": "text",
+													"text": "${id}"
+												},
+												"schemas": {
+													"type": "schemas"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"model": {
+													"type": "text",
+													"text": "signatures"
+												},
+												"direction": {
+													"type": "text",
+													"text": "down"
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					}
+				},
+				"location": "right",
+				"priority": 10,
 				"visibility": 1
 			},
 			"Download": {

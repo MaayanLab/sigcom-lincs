@@ -16,7 +16,7 @@
 				"visibility": 1
 			},
 			"Signature Name": {
-				"text": "${meta.sig_id}_${meta.pert_type}",
+				"text": "${meta.sig_id}",
 				"type": "title",
 				"priority": 1,
 				"visibility": 1

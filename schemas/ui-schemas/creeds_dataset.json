@@ -4,7 +4,7 @@
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/library.json",
-			"${dataset}": "creeds_sg_signatures"
+			"${dataset}": "creeds.*"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {

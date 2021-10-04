@@ -11,7 +11,7 @@
 		"properties": {
 			"Image": {
 				"alt": "${meta.description}",
-				"src": "${meta.icon}",
+				"src": "${PREFIX}/${meta.icon}",
 				"type": "img",
 				"priority": 1,
 				"visibility": 1

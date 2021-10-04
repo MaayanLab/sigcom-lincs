@@ -209,7 +209,7 @@
 										"type": "function"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									}
 								},
@@ -253,7 +253,7 @@
 										"type": "function"
 									},
 									"src": {
-										"text": "./static/images/enrichr.png",
+										"text": "${PREFIX}/static/images/enrichr.png",
 										"type": "text"
 									}
 								},
