@@ -46,11 +46,11 @@
 							"Control (untreated)"
 						]
 					},
-					"scale_bar": [
-						"Signatures per Perturbation Type (log scaled)"
-					],
 					"scale_pie": [
 						"Signatures per DSGC (log scaled)"
+					],
+					"scale_bar": [
+						"Signatures per Dataset (log scaled)"
 					]
 				}
 			},

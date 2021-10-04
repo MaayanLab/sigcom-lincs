@@ -199,40 +199,60 @@
 			"type": "bar",
 			"model": "signatures",
 			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
-			"field": "meta.pert_type",
-			"search_field": "meta.pert_type",
-			"text": "Signatures per Perturbation Type (log scaled)",
+			"field": "library",
+			"search_field": "library",
+			"text": "Signatures per Dataset (log scaled)",
 			"scale": "log",
 			"priority": 2,
 			"props": {
 				"include": {
-					"Chemical": {
+					"54198d6e-fe17-5ef8-91ac-02b425761653": {
 						"type": "bar",
-						"text": "Small molecules"
+						"text": "LINCS L1000 Chemical Perturbations"
 					},
-					"shRNA": {
+					"8f1ff550-ece8-591d-a213-2763f854c008": {
 						"type": "bar",
-						"text": "shRNAs"
+						"text": "LINCS L1000 shRNA Perturbations"
 					},
-					"CRISPR Knockdown": {
+					"96c7b8c5-1eca-5764-88e4-e4ccaee6603f": {
 						"type": "bar",
-						"text": "CRISPR knockouts"
+						"text": "LINCS L1000 CRISPR Perturbations"
 					},
-					"Gene Overexpression": {
+					"ef9389a8-53d3-50db-90cc-57e7d150b76c": {
 						"type": "bar",
-						"text": "Gene over-expressions"
+						"text": "LINCS L1000 Overexpression Perturbations"
 					},
-					"Ligand": {
+					"e24989ba-5258-511c-9c6a-00634f74857b": {
 						"type": "bar",
-						"text": "Ligands"
+						"text": "LINCS L1000 Ligand Perturbations"
 					},
-					"siRNA": {
+					"908bf43c-64e1-5981-a791-0d1eb1816009": {
 						"type": "bar",
-						"text": "siRNAs"
+						"text": "Automatic Human GEO RNA-seq Signatures"
 					},
-					"Antibody": {
+					"e53ad557-a112-5603-bc3c-48e4d63885d9": {
 						"type": "bar",
-						"text": "Antibodies"
+						"text": "CREEDS Manual Single Gene Perturbations"
+					},
+					"45ecfd98-165c-51c2-83c5-86e167806b42": {
+						"type": "bar",
+						"text": "CREEDS Manual Single Drug Perturbations"
+					},
+					"5dc6efd2-b26e-502b-8a93-704d328b4b32": {
+						"type": "bar",
+						"text": "CREEDS Manual Disease Signatures"
+					},
+					"b759a653-0877-549a-a76a-3a8914b73106": {
+						"type": "bar",
+						"text": "LINCS L1000 Antibody Perturbations"
+					},
+					"b953025a-4356-5cc8-b6e3-dcf2f4f85420": {
+						"type": "bar",
+						"text": "LINCS L1000 siRNA Perturbations"
+					},
+					"b263b12a-e15f-559c-a1e8-abd810d40bf3": {
+						"type": "bar",
+						"text": "GTEx Tissue-Specific Age Group Signatures"
 					}
 				}
 			}
