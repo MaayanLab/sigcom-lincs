@@ -54,10 +54,10 @@ with open("schemas/landing.json") as o:
 # print(res.text)
 
 
-# res = requests.get(APIURL + "summary/refresh", auth=auth)
+res = requests.get(APIURL + "summary/refresh", auth=auth)
 
-# res = requests.get(APIURL + "summary/status", auth=auth)
-# res = requests.get(APIURL + "summary/status", auth=auth)
-# while (not res.text=="Ready"):
-# 	time.sleep(2)
-# 	res = requests.get(APIURL + "summary/status", auth=auth)
+res = requests.get(APIURL + "summary/status", auth=auth)
+print(res.text)
+while (not res.text=="Ready"):
+	time.sleep(2)
+	res = requests.get(APIURL + "summary/status", auth=auth)
