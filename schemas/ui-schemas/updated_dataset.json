@@ -70,6 +70,13 @@
 				"field": "meta.pert_name",
 				"priority": 4
 			},
+			"Downloads": {
+				"text": "${meta.$download_counter || 0}",
+				"type": "text",
+				"icon": "mdi-download",
+				"priority": 5,
+				"visibility": 1
+			},
 			"Dataset": {
 				"icon": "mdi-download",
 				"text": "Download",
@@ -92,6 +99,34 @@
 									"text": {
 										"text": "Download Data Level 1",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "libraries",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta['datalevel_1'].file_url}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},
@@ -109,6 +144,34 @@
 									"text": {
 										"text": "Download Data Level 2",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "libraries",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta['datalevel_2'].file_url}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},
@@ -126,6 +189,34 @@
 									"text": {
 										"text": "Download Data Level 3",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "libraries",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta['datalevel_3'].file_url}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},
@@ -143,6 +234,34 @@
 									"text": {
 										"text": "Download Data Level 4",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "libraries",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta['datalevel_4'].file_url}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},
@@ -160,6 +279,34 @@
 									"text": {
 										"text": "Download Data Level 5",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "libraries",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta['datalevel_5'].file_url}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							}

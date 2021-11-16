@@ -343,6 +343,38 @@
 				"text": "${scores['z-score (up)']}",
 				"type": "score",
 				"visibility": 1
+			},
+			"z-score": {
+				"text": "${scores['z-score']}",
+				"type": "score",
+				"field": "scores['z-score']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 15,
+				"visibility": 1
+			},
+			"p-value": {
+				"text": "${scores['p-value']}",
+				"type": "score",
+				"field": "scores['p-value']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 16,
+				"visibility": 1
+			},
+			"q-value (BH)": {
+				"text": "${scores['q-value (BH)']}",
+				"type": "score",
+				"field": "scores['q-value (BH)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 17,
+				"visibility": 0
+			},
+			"q-value (Bonferroni)": {
+				"text": "${scores['q-value (Bonferroni)']}",
+				"type": "score",
+				"field": "scores['q-value (Bonferroni)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 18,
+				"visibility": 0
 			}
 		}
 	}

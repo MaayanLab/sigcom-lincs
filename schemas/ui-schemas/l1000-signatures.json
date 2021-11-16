@@ -77,7 +77,7 @@
 				"type": "text",
 				"icon": "mdi-doctor",
 				"priority": 4,
-				"visibility": 1,
+				"visibility": 0,
 				"secondary": true
 			},
 			"Timepoint": {
@@ -104,6 +104,13 @@
 				"icon": "mdi-calendar",
 				"priority": 7,
 				"visibility": 0
+			},
+			"Downloads": {
+				"text": "${meta.$download_counter}",
+				"type": "text",
+				"icon": "mdi-download",
+				"priority": 8,
+				"visibility": 1
 			},
 			"log p-val (Fisher)": {
 				"text": "${scores['log p (Fisher)']}",
@@ -193,6 +200,38 @@
 				"priority": 14,
 				"visibility": 0
 			},
+			"z-score": {
+				"text": "${scores['z-score']}",
+				"type": "score",
+				"field": "scores['z-score']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 15,
+				"visibility": 1
+			},
+			"p-value": {
+				"text": "${scores['p-value']}",
+				"type": "score",
+				"field": "scores['p-value']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 16,
+				"visibility": 1
+			},
+			"q-value (BH)": {
+				"text": "${scores['q-value (BH)']}",
+				"type": "score",
+				"field": "scores['q-value (BH)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 17,
+				"visibility": 0
+			},
+			"q-value (Bonferroni)": {
+				"text": "${scores['q-value (Bonferroni)']}",
+				"type": "score",
+				"field": "scores['q-value (Bonferroni)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 18,
+				"visibility": 0
+			},
 			"Options": {
 				"icon": "mdi-dots-vertical",
 				"text": "More options",
@@ -266,9 +305,33 @@
 										"text": "mdi-download",
 										"type": "text"
 									},
-									"href": {
-										"text": "${meta.persistent_id}",
-										"type": "text"
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "signatures",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta.persistent_id}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},

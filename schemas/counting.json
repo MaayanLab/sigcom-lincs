@@ -32,6 +32,9 @@
 		  "$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 		  "model": "resources",
 		  "text": "Data and Signature Generation Centers",
+		  "props": {
+			"url": "https://lincsproject.org/LINCS/centers/overview"
+		  },
 		  "priority": 2
 		}
 	  },
@@ -230,6 +233,10 @@
 						"type": "bar",
 						"text": "Automatic Human GEO RNA-seq Signatures"
 					},
+					"cb1ae5db-e0d6-50f2-98f9-936b6de8d682": {
+						"type": "bar",
+						"text": "Automatic Mouse GEO RNA-seq Signatures"
+					},
 					"e53ad557-a112-5603-bc3c-48e4d63885d9": {
 						"type": "bar",
 						"text": "CREEDS Manual Single Gene Perturbations"
@@ -267,7 +274,7 @@
 			"$validator": "/dcic/signature-commons-schema/v6/meta/schema/counting.json",
 			"field": "meta.pert_type",
 			"search_field": "meta.pert_type",
-			"text": "Unique Perturbagens",
+			"text": "Unique Terms",
 			"priority": 1,
 			"props": {
 				"replace": {
@@ -299,25 +306,32 @@
 						"priority": 4,
 						"count": 4082
 					},
+					"Cell Line": {
+						"type": "icon",
+						"icon": "mdi-chart-bubble",
+						"text": "Cell Lines",
+						"priority": 5,
+						"count": 353
+					},
 					"Ligand": {
 						"type": "icon",
 						"icon": "mdi-octagram",
 						"text": "Ligands",
-						"priority": 5,
+						"priority": 6,
 						"count": 329
 					},
 					"siRNA": {
 						"type": "icon",
 						"icon": "mdi-tilde",
 						"text": "siRNAs",
-						"priority": 6,
+						"priority": 7,
 						"count": 23
 					},
 					"Antibody": {
 						"type": "icon",
 						"icon": "mdi-alpha-y-circle",
 						"text": "Antibodies",
-						"priority": 7,
+						"priority": 8,
 						"count": 4
 					}
 				}

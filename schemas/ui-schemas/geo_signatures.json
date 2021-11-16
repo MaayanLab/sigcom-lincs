@@ -33,6 +33,13 @@
 				"priority": 0,
 				"visibility": 1
 			},
+			"Downloads": {
+				"text": "${meta.$download_counter}",
+				"icon": "mdi-download",
+				"type": "text",
+				"priority": 4,
+				"visibility": 1
+			},
 			"log p-val (Fisher)": {
 				"text": "${scores['log p (Fisher)']}",
 				"type": "score",
@@ -121,162 +128,37 @@
 				"priority": 10,
 				"visibility": 0
 			},
-			"Options": {
-				"icon": "mdi-dots-vertical",
-				"text": "More options",
-				"type": "component",
-				"component": "options",
-				"props": {
-					"options": {
-						"type": "prop-array",
-						"items": [
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Perform Signature Search",
-										"type": "text"
-									},
-									"icon": {
-										"text": "mdi-magnify-scan",
-										"type": "text"
-									},
-									"href": {
-										"text": "#SignatureSearch/Rank/${id}",
-										"type": "text"
-									}
-								}
-							},
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Download Up and Down Genes",
-										"type": "text"
-									},
-									"icon": {
-										"text": "mdi-download",
-										"type": "text"
-									},
-									"onClick": {
-										"function": "download_signature",
-										"type": "function",
-										"props": {
-											"type": "prop-object",
-											"properties": {
-												"entry": {
-													"type": "text",
-													"text": "${id}"
-												},
-												"schemas": {
-													"type": "schemas"
-												},
-												"resolver": {
-													"type": "resolver"
-												},
-												"model": {
-													"type": "text",
-													"text": "signatures"
-												}
-											}
-										}
-									}
-								}
-							},
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Top 100 up to Enrichr",
-										"type": "text"
-									},
-									"src": {
-										"text": "${PREFIX}/static/images/enrichr.png",
-										"type": "text"
-									},
-									"alt": {
-										"text": "Enrichr",
-										"type": "text"
-									},
-									"onClick": {
-										"function": "send_to_enrichr",
-										"type": "function",
-										"props": {
-											"type": "prop-object",
-											"properties": {
-												"entry": {
-													"type": "text",
-													"text": "${id}"
-												},
-												"schemas": {
-													"type": "schemas"
-												},
-												"resolver": {
-													"type": "resolver"
-												},
-												"model": {
-													"type": "text",
-													"text": "signatures"
-												},
-												"direction": {
-													"type": "text",
-													"text": "up"
-												}
-											}
-										}
-									}
-								}
-							},
-							{
-								"type": "prop-object",
-								"properties": {
-									"label": {
-										"text": "Top 100 down to Enrichr",
-										"type": "text"
-									},
-									"src": {
-										"text": "${PREFIX}/static/images/enrichr.png",
-										"type": "text"
-									},
-									"alt": {
-										"text": "Enrichr",
-										"type": "text"
-									},
-									"onClick": {
-										"function": "send_to_enrichr",
-										"type": "function",
-										"props": {
-											"type": "prop-object",
-											"properties": {
-												"entry": {
-													"type": "text",
-													"text": "${id}"
-												},
-												"schemas": {
-													"type": "schemas"
-												},
-												"resolver": {
-													"type": "resolver"
-												},
-												"model": {
-													"type": "text",
-													"text": "signatures"
-												},
-												"direction": {
-													"type": "text",
-													"text": "down"
-												}
-											}
-										}
-									}
-								}
-							}
-						]
-					}
-				},
-				"location": "right",
-				"priority": 11,
+			"z-score": {
+				"text": "${scores['z-score']}",
+				"type": "score",
+				"field": "scores['z-score']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 15,
 				"visibility": 1
+			},
+			"p-value": {
+				"text": "${scores['p-value']}",
+				"type": "score",
+				"field": "scores['p-value']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 16,
+				"visibility": 1
+			},
+			"q-value (BH)": {
+				"text": "${scores['q-value (BH)']}",
+				"type": "score",
+				"field": "scores['q-value (BH)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 17,
+				"visibility": 0
+			},
+			"q-value (Bonferroni)": {
+				"text": "${scores['q-value (Bonferroni)']}",
+				"type": "score",
+				"field": "scores['q-value (Bonferroni)']",
+				"icon": "mdi-notebook-multiple",
+				"priority": 18,
+				"visibility": 0
 			},
 			"Options": {
 				"icon": "mdi-dots-vertical",
@@ -354,6 +236,34 @@
 									"href": {
 										"text": "${meta.persistent_id}",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "signatures",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta.persistent_id}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							},

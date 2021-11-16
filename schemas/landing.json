@@ -66,7 +66,7 @@
 							"id": "tutorial",
 							"src": "${PREFIX}/static/tutorial/ldp3/SigCom LINCS Documentation.html",
 							"name": "Tutorial",
-							"height": 29300,
+							"height": 30500,
 							"frameBorder": 0
 						}
 					}
@@ -158,11 +158,20 @@
 									"terms": "4352",
 									"size": "8.4MB",
 									"src": "${PREFIX}/static/images/creeds.png"
+								},
+								{
+									"label": "SARS-CoV-2 Differential Gene Expression Signatures",
+									"date": "2021-10-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/SARS-CoV-2_RNAseq_Datasets_11-09-20.gmt",
+									"terms": "248",
+									"size": "846KB",
+									"src": "${PREFIX}/static/lincs/covid19.png"
 								}
 							]
 						},
 						{
 							"label": "L1000 Characteristic Direction Coefficient Tables (Level 5)",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
@@ -223,7 +232,8 @@
 							]
 						},
 						{
-							"label": "L1000 Up and Down Gene Sets (Level 5)",
+							"label": "L1000 Characteristic Direction Up and Down Gene Sets (Level 5)",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
@@ -284,7 +294,8 @@
 							]
 						},
 						{
-							"label": "Predicted RNA-Seq-Like Profiles of L1000 Samples (Level 3)",
+							"label": "CycleGAN Predicted RNA-Seq-Like Profiles of L1000 Samples (Level 3)",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
 							"links": [
 								{
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
@@ -345,7 +356,69 @@
 							]
 						},
 						{
-							"label": "LINCS Metadata",
+							"label": "Computed Signatures for CycleGAN Predicted RNA-Seq-Like Profiles of L1000 Samples (Level 5)",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
+							"links": [
+								{
+									"label": "LINCS L1000 Chemical Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_ChemicalPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "68.07GB",
+									"shape": "718055x23614",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "LINCS L1000 shRNA Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_shRNAPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "14.97GB",
+									"shape": "158003x23614",
+									"icon": "mdi-alpha-u"
+								},
+								{
+									"label": "LINCS L1000 CRISPR Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_CRISPRPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "13.35GB",
+									"shape": "140945x23614",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "LINCS L1000 Overexpression Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_OverexpressionPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "3.24GB",
+									"shape": "34164x23614",
+									"icon": "mdi-tray-full"
+								},
+								{
+									"label": "LINCS L1000 Ligand Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_LigandPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "716.0MB",
+									"shape": "7546x23614",
+									"icon": "mdi-octagram"
+								},
+								{
+									"label": "LINCS L1000 Antibody Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_AntibodyPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "55.49MB",
+									"shape": "575x23614",
+									"icon": "mdi-alpha-y-circle"
+								},
+								{
+									"label": "LINCS L1000 siRNA Perturbations (2021)",
+									"date": "2021-10-11",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_siRNAPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"size": "16.33MB",
+									"shape": "162x23614",
+									"icon": "mdi-tilde"
+								}
+							]
+						},
+						{
+							"label": "LINCS Small Molecules Metadata",
 							"links": [
 								{
 									"label": "LINCS Small Molecules Metadata",
@@ -424,9 +497,6 @@
 				"navName": "Metadata Search",
 				"props": {
 					"metadata_page": {
-						"entities": {
-							"query": "?query={\"filters\":{\"resource\":[\"LINCS Transcriptomics\"]}}"
-						},
 						"resources": {
 							"child_text": "${name} produced ${count} datasets"
 						}
@@ -608,7 +678,7 @@
 				"endpoint": "/UMAPs",
 				"subendpoints": [
 					"/UMAPs/:name"
-				], 
+				],
 				"navName": "UMAPs",
 				"priority": 5,
 				"type": "component",
@@ -627,7 +697,7 @@
 											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/ldp3-umap-CD-all-zoomed.png",
 											"alt": "ldp3-umap-CD-all-zoomed"
 										},
-										"description": "Normalized L1000 signatures colored by assay type.",
+										"description": "Normalized L1000 signatures colored by perturbation type.",
 										"priority": 1,
 										"cols": 1,
 										"rows": 2
@@ -638,7 +708,7 @@
 											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/ldp3-umap-CD-chem-cell-zoomed.png",
 											"alt": "ldp3-umap-CD-chem-cell-zoomed"
 										},
-										"description": "Normalized L1000 signatures colored by top 50 most represented cell types.",
+										"description": "Normalized L1000 chemical perturbation signatures colored by top 50 most represented cell types.",
 										"priority": 2,
 										"cols": 1,
 										"rows": 2
@@ -649,8 +719,8 @@
 											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/ldp3-umap-CD-chem-moa-zoomed.png",
 											"alt": "ldp3-umap-CD-chem-moa-zoomed"
 										},
-										"description": "Normalized L1000 signatures colored by top 50 most represented mechanism of drug mechanisms of action.",
-										"priority": 5,
+										"description": "Normalized L1000 chemical perturbation signatures colored by top 50 most represented mechanism of drug mechanisms of action.",
+										"priority": 3,
 										"cols": 1,
 										"rows": 2
 									},
@@ -661,7 +731,7 @@
 											"alt": "ldp3-umap-CD-CRISPR-cell"
 										},
 										"description": "Normalized landmark CRISPR Perturbation signatures visualized with UMAP, colored by cell type.",
-										"priority": 6,
+										"priority": 4,
 										"cols": 1,
 										"rows": 2
 									},
@@ -672,7 +742,7 @@
 											"alt": "092421_GTEx_AgeSigs_UMAP_byAge"
 										},
 										"description": "Normalized GTEx tissue-specific aging signatures visualized with UMAP, colored by age group.",
-										"priority": 3,
+										"priority": 5,
 										"cols": 1,
 										"rows": 2
 									},
@@ -683,13 +753,88 @@
 											"alt": "092421_GTEx_AgeSigs_UMAP_byTissue"
 										},
 										"description": "Normalized GTEx tissue-specific aging signatures visualized with UMAP, colored by tissue type. ",
-										"priority": 4,
+										"priority": 6,
 										"cols": 1,
 										"rows": 2
 									},
 									{
-										"description": "A375-specific Chemical Perturbation Signatures",
+										"description": "Automatic Human GEO RNA-seq Signatures",
 										"priority": 7,
+										"cols": 1,
+										"rows": 2,
+										"plot": {
+											"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_human.png",
+											"alt": "100521_GEO_human"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.html",
+											"alt": "100521_GEO_human"
+										}
+									},
+									{
+										"description": "Automatic Mouse GEO RNA-seq Signatures",
+										"priority": 8,
+										"cols": 1,
+										"rows": 2,
+										"plot": {
+											"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_mouse.png",
+											"alt": "100521_GEO_mouse"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.html",
+											"alt": "100521_GEO_mouse"
+										}
+									},
+									{
+										"description": "CREEDS Manual Disease Signatures",
+										"priority": 9,
+										"cols": 1,
+										"rows": 2,
+										"plot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_creeds_disease_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_disease_static.png",
+											"alt": "100621_creeds_disease_static"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_CREEDS_disease.html",
+											"alt": "100621_creeds_disease_static"
+										}
+									},
+									{
+										"description": "CREEDS Manual Single Drug Perturbations",
+										"priority": 10,
+										"cols": 1,
+										"rows": 2,
+										"plot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_creeds_singledrug_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_singledrug_static.png",
+											"alt": "100621_creeds_singledrug_static"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_CREEDS_single_drug.html",
+											"alt": "100621_creeds_singledrug_static"
+										}
+									},
+									{
+										"description": "CREEDS Manual Single Gene Perturbations",
+										"priority": 11,
+										"cols": 1,
+										"rows": 2,
+										"plot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_creeds_singlegene_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_singlegene_static.png",
+											"alt": "100621_creeds_singlegene_static"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/100621_CREEDS_single_gene.html",
+											"alt": "100621_creeds_singlegene_static"
+										}
+									},
+									{
+										"description": "A375-specific Chemical Perturbation Signatures",
+										"priority": 12,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "A375",
@@ -706,7 +851,7 @@
 									},
 									{
 										"description": "A549-specific Chemical Perturbation Signatures",
-										"priority": 8,
+										"priority": 13,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "A549",
@@ -723,7 +868,7 @@
 									},
 									{
 										"description": "HA1E-specific Chemical Perturbation Signatures",
-										"priority": 9,
+										"priority": 14,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "HA1E",
@@ -740,7 +885,7 @@
 									},
 									{
 										"description": "HELA-specific Chemical Perturbation Signatures",
-										"priority": 10,
+										"priority": 15,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "HELA",
@@ -757,7 +902,7 @@
 									},
 									{
 										"description": "HT29-specific Chemical Perturbation Signatures",
-										"priority": 11,
+										"priority": 16,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "HT29",
@@ -774,7 +919,7 @@
 									},
 									{
 										"description": "MCF10A-specific Chemical Perturbation Signatures",
-										"priority": 12,
+										"priority": 17,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "MCF10A",
@@ -791,7 +936,7 @@
 									},
 									{
 										"description": "MCF7-specific Chemical Perturbation Signatures",
-										"priority": 13,
+										"priority": 18,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "MCF7",
@@ -808,7 +953,7 @@
 									},
 									{
 										"description": "U2OS-specific Chemical Perturbation Signatures",
-										"priority": 14,
+										"priority": 19,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "U2OS",
@@ -825,7 +970,7 @@
 									},
 									{
 										"description": "PC3-specific Chemical Perturbation Signatures",
-										"priority": 15,
+										"priority": 20,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "PC3",
@@ -842,7 +987,7 @@
 									},
 									{
 										"description": "VCAP-specific Chemical Perturbation Signatures",
-										"priority": 16,
+										"priority": 21,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "VCAP",
@@ -859,7 +1004,7 @@
 									},
 									{
 										"description": "A375-specific CRISPR Knockout Signatures",
-										"priority": 17,
+										"priority": 22,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "A375",
@@ -876,7 +1021,7 @@
 									},
 									{
 										"description": "A549-specific CRISPR Knockout Signatures",
-										"priority": 18,
+										"priority": 23,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "A549",
@@ -893,7 +1038,7 @@
 									},
 									{
 										"description": "AGS-specific CRISPR Knockout Signatures",
-										"priority": 19,
+										"priority": 24,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "AGS",
@@ -910,7 +1055,7 @@
 									},
 									{
 										"description": "BICR6-specific CRISPR Knockout Signatures",
-										"priority": 20,
+										"priority": 25,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "BICR6",
@@ -927,7 +1072,7 @@
 									},
 									{
 										"description": "ES2-specific CRISPR Knockout Signatures",
-										"priority": 21,
+										"priority": 26,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "ES2",
@@ -944,7 +1089,7 @@
 									},
 									{
 										"description": "HT29-specific CRISPR Knockout Signatures",
-										"priority": 22,
+										"priority": 27,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "HT29",
@@ -961,7 +1106,7 @@
 									},
 									{
 										"description": "MCF7-specific CRISPR Knockout Signatures",
-										"priority": 23,
+										"priority": 28,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "MCF7",
@@ -978,7 +1123,7 @@
 									},
 									{
 										"description": "PC3-specific CRISPR Knockout Signatures",
-										"priority": 25,
+										"priority": 29,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "PC3",
@@ -995,7 +1140,7 @@
 									},
 									{
 										"description": "U251MG-specific CRISPR Knockout Signatures",
-										"priority": 25,
+										"priority": 30,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "U251MG",
@@ -1012,7 +1157,7 @@
 									},
 									{
 										"description": "YAPC-specific CRISPR Knockout Signatures",
-										"priority": 26,
+										"priority": 31,
 										"cols": 1,
 										"rows": 1,
 										"cell_line": "YAPC",
@@ -1114,6 +1259,54 @@
 			{
 				"component": "umap",
 				"props": [
+					{
+						"src": "${PREFIX}/static/lincs/umap/100621_creeds_disease_static.png",
+						"alt": "100621_creeds_disease_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_disease_static.png",
+						"alt": "thumb-100621_creeds_disease_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/100621_creeds_singledrug_static.png",
+						"alt": "100621_creeds_singledrug_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_singledrug_static.png",
+						"alt": "thumb-100621_creeds_singledrug_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/100621_creeds_singlegene_static.png",
+						"alt": "100621_creeds_singlegene_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/100621_creeds_singlegene_static.png",
+						"alt": "thumb-100621_creeds_singlegene_static"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.png",
+						"alt": "100521_GEO_human"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_human.png",
+						"alt": "thumb-100521_GEO_human"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.png",
+						"alt": "100521_GEO_mouse"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_mouse.png",
+						"alt": "thumb-100521_GEO_mouse"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/ldp3-umap-CD-chem-cell-zoomed.jpg",
+						"alt": "ldp3-umap-CD-chem-cell-zoomed"
+					},
+					{
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/ldp3-umap-CD-chem-cell-zoomed.png",
+						"alt": "thumb-ldp3-umap-CD-chem-cell-zoomed"
+					},
 					{
 						"src": "${PREFIX}/static/lincs/umap/ldp3-umap-CD-all-zoomed.jpg",
 						"alt": "ldp3-umap-CD-all-zoomed"
@@ -1325,7 +1518,7 @@
 				]
 			}
 		],
-		"results_title": "Top Mimicking and Reversing Signatures",
+		"results_title": "Signature Similarity Search Results",
 		"about": "${PREFIX}/static/about-lincs.md",
 		"terms_url": "https://lincsproject.org/LINCS/data/release-policy",
 		"github": "https://github.com/MaayanLab/sigcom-lincs",

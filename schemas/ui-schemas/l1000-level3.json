@@ -96,6 +96,13 @@
 				"priority": 6,
 				"visibility": 1
 			},
+			"Downloads": {
+				"text": "${meta.$download_counter}",
+				"type": "text",
+				"icon": "mdi-download",
+				"priority": 7,
+				"visibility": 1
+			},
 			"log p-val (Fisher)": {
 				"text": "${scores['log p (Fisher)']}",
 				"type": "score",
@@ -198,6 +205,34 @@
 									"url": {
 										"text": "${meta.persistent_id}",
 										"type": "text"
+									},
+									"onClick": {
+										"function": "download_link",
+										"type": "function",
+										"props": {
+											"type": "prop-object",
+											"properties": {
+												"id": {
+													"text": "${id}",
+													"type": "text"
+												},
+												"type": {
+													"text": "signatures",
+													"type": "text"
+												},
+												"clicktype": {
+													"text": "download_counter",
+													"type": "text"
+												},
+												"resolver": {
+													"type": "resolver"
+												},
+												"link": {
+													"text": "${meta.persistent_id}",
+													"type": "text"
+												}
+											}
+										}
 									}
 								}
 							}
