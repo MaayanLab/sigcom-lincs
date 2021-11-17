@@ -626,15 +626,28 @@
 						]
 					},
 					"types": {
-						"Overlap": {
-							"active": false
+						"Set": {
+							"active": true,
+							"placeholder": "Genes that are regulated in a signature",
+							"switch": "Gene Set Enrichment",
+							"icon": "mdi-set-merge",
+							"endpoint": "/Set",
+							"examples": [
+								{
+									"label": "Example Crisp Gene Set",
+									"input": {
+										"entities": "UTP14A\nS100A6\nSCAND1\nRRP12\nCIAPIN1\nADH5\nMTERF3\nSPR\nCHMP4A\nUFM1\nVAT1\nHACD3\nRFC5\nCOTL1\nNPRL2\nTRIB3\nPCCB\nTLE1\nCD58\nBACE2\nKDM3A\nTARBP1\nRNH1\nCHAC1\nMBNL2\nVDAC1\nTES\nOXA1L\nNOP56\nHAT1\nCPNE3\nDNMT1\nARHGAP1\nVPS28\nEIF2S2\nBAG3\nCDCA4\nNPDC1\nRPS6KA1\nFIS1\nSYPL1\nSARS\nCDC45\nCANT1\nHERPUD1\nSORBS3\nMRPS2\nTOR1A\nTNIP1\nSLC25A46\nMAL\nEPCAM\nHDAC6\nCAPN1\nTNRC6B\nPKD1\nRRS1\nHP\nANO10\nCEP170B\nIDE\nDENND2D\nCAMK2B\nZNF358\nRPP38\nMRPL19\nNUCB2\nGNAI1\nLSR\nADGRE2\nPKMYT1\nCDK5R1\nABL1\nPILRB\nAXIN1\nFBXL8\nMCF2L\nDBNDD1\nIGHMBP2\nWIPF2\nWFS1\nOGFOD2\nMAPK1IP1L\nCOL11A1\nREG3A\nSERPINA1\nMYCBP2\nPIGK\nTCAP\nCRADD\nELK1\nDNAJB2\nZBTB16\nDAZAP1\nMAPKAPK2\nEDRF1\nCRIP1\nUCP3\nAGR2\nP4HA2"
+									}
+								}
+							]
 						},
-						"Rank": {
+						"UpDown": {
 							"active": true,
 							"switch": "Up-Down Enrichment",
 							"up_placeholder": "Up-regulated genes",
 							"down_placeholder": "Down-regulated genes",
 							"icon": "mdi-menu-swap",
+							"endpoint": "/UpDown",
 							"examples": [
 								{
 									"label": "Example Up and Down Sets",
@@ -737,9 +750,13 @@
 									},
 									{
 										"plot": {
-											"src": "${PREFIX}/static/lincs/umap/092421_GTEx_AgeSigs_UMAP_byAge.jpg",
-											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/092421_GTEx_AgeSigs_UMAP_byAge.png",
-											"alt": "092421_GTEx_AgeSigs_UMAP_byAge"
+											"src": "${PREFIX}/static/lincs/umap/gtex_byage_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/gtex_byage_thumb.png",
+											"alt": "gtex_byage"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/gtex_byage_interactive.html",
+											"alt": "gtex_byage"
 										},
 										"description": "Normalized GTEx tissue-specific aging signatures visualized with UMAP, colored by age group.",
 										"priority": 5,
@@ -748,9 +765,13 @@
 									},
 									{
 										"plot": {
-											"src": "${PREFIX}/static/lincs/umap/092421_GTEx_AgeSigs_UMAP_byTissue.jpg",
-											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/092421_GTEx_AgeSigs_UMAP_byTissue.png",
-											"alt": "092421_GTEx_AgeSigs_UMAP_byTissue"
+											"src": "${PREFIX}/static/lincs/umap/gtex_bytissue_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/gtex_bytissue_thumb.png",
+											"alt": "gtex_bytissue"
+										},
+										"iplot": {
+											"src": "${PREFIX}/static/lincs/umap/gtex_bytissue_interactive.html",
+											"alt": "gtex_bytissue"
 										},
 										"description": "Normalized GTEx tissue-specific aging signatures visualized with UMAP, colored by tissue type. ",
 										"priority": 6,
@@ -763,13 +784,13 @@
 										"cols": 1,
 										"rows": 2,
 										"plot": {
-											"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.png",
-											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_human.png",
-											"alt": "100521_GEO_human"
+											"src": "${PREFIX}/static/lincs/umap/GEO_human_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/GEO_human_thumb.png",
+											"alt": "GEO_human"
 										},
 										"iplot": {
-											"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.html",
-											"alt": "100521_GEO_human"
+											"src": "${PREFIX}/static/lincs/umap/GEO_human_interactive.html",
+											"alt": "GEO_human"
 										}
 									},
 									{
@@ -778,13 +799,13 @@
 										"cols": 1,
 										"rows": 2,
 										"plot": {
-											"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.png",
-											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_mouse.png",
-											"alt": "100521_GEO_mouse"
+											"src": "${PREFIX}/static/lincs/umap/GEO_mouse_static.png",
+											"thumb-src": "${PREFIX}/static/lincs/umap/thumbnails/GEO_mouse_thumb.png",
+											"alt": "GEO_mouse"
 										},
 										"iplot": {
-											"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.html",
-											"alt": "100521_GEO_mouse"
+											"src": "${PREFIX}/static/lincs/umap/GEO_mouse_interactive.html",
+											"alt": "GEO_mouse"
 										}
 									},
 									{
@@ -1284,20 +1305,20 @@
 						"alt": "thumb-100621_creeds_singlegene_static"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/100521_GEO_human.png",
-						"alt": "100521_GEO_human"
+						"src": "${PREFIX}/static/lincs/umap/GEO_human_static.png",
+						"alt": "GEO_human"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_human.png",
-						"alt": "thumb-100521_GEO_human"
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/GEO_human_thumb.png",
+						"alt": "thumb-GEO_human"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/100521_GEO_mouse.png",
-						"alt": "100521_GEO_mouse"
+						"src": "${PREFIX}/static/lincs/umap/GEO_mouse_static.png",
+						"alt": "GEO_mouse"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/thumbnails/100521_GEO_mouse.png",
-						"alt": "thumb-100521_GEO_mouse"
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/GEO_mouse_thumb.png",
+						"alt": "thumb-GEO_mouse"
 					},
 					{
 						"src": "${PREFIX}/static/lincs/umap/ldp3-umap-CD-chem-cell-zoomed.jpg",
@@ -1340,20 +1361,20 @@
 						"alt": "thumb-ldp3-umap-CD-CRISPR-cell"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/092421_GTEx_AgeSigs_UMAP_byAge.jpg",
-						"alt": "092421_GTEx_AgeSigs_UMAP_byAge"
+						"src": "${PREFIX}/static/lincs/umap/gtex_byage_static.png",
+						"alt": "gtex_byage"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/thumbnails/092421_GTEx_AgeSigs_UMAP_byAge.png",
-						"alt": "thumb-092421_GTEx_AgeSigs_UMAP_byAge"
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/gtex_byage_thumb.png",
+						"alt": "thumb-gtex_byage"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/092421_GTEx_AgeSigs_UMAP_byTissue.jpg",
-						"alt": "092421_GTEx_AgeSigs_UMAP_byTissue"
+						"src": "${PREFIX}/static/lincs/umap/gtex_bytissue_static.png",
+						"alt": "gtex_bytissue"
 					},
 					{
-						"src": "${PREFIX}/static/lincs/umap/thumbnails/092421_GTEx_AgeSigs_UMAP_byTissue.png",
-						"alt": "thumb-092421_GTEx_AgeSigs_UMAP_byTissue"
+						"src": "${PREFIX}/static/lincs/umap/thumbnails/gtex_bytissue_thumb.png",
+						"alt": "thumb-gtex_bytissue"
 					},
 					{
 						"src": "${PREFIX}/static/lincs/umap/cp/plot/cp-A375.jpg",
