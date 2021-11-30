@@ -322,6 +322,14 @@
 									"icon": "mdi-scissors-cutting"
 								},
 								{
+									"label": "LINCS L1000 Controls (2021)",
+									"date": "2021-11-30",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/ctl_predicted_RNAseq_profiles.gctx",
+									"size": "14.07GB",
+									"shape": "148678x23614",
+									"icon": "mdi-file-compare"
+								},
+								{
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/oe_predicted_RNAseq_profiles.gctx",
@@ -510,8 +518,9 @@
 								"STAT3",
 								"blood"
 							],
-							"placeholder": "Search over 1.5 million LINCS signatures using any term, i.e. drug, gene, or a cell line",
-							"priority": 1
+							"placeholder": "The search will return matches from a collection of over 1.5 million signatures",
+							"priority": 1,
+							"description": "Query SigCom LINCS signatures with any search term"
 						},
 						"libraries": {
 							"active": true,
@@ -520,26 +529,17 @@
 								"proteomics",
 								"kinase"
 							],
-							"placeholder": "Search over 400 LINCS datasets using any term, i.e. assay or a DSGC",
-							"priority": 2
-						},
-						"entities": {
-							"active": true,
-							"examples": [
-								"ACE2",
-								"STAT3"
-							],
-							"placeholder": "Search for genes to view LINCS signatures that maximally up- or down-regulate it",
-							"priority": 3
+							"placeholder": "The search will return matches from a collection of over 400 datasets",
+							"priority": 2,
+							"description": "Query SigCom LINCS datasets with any search term"
 						}
 					},
 					"model_tabs": [
 						"libraries",
-						"signatures",
-						"entities"
+						"signatures"
 					],
 					"entry_model": "signatures",
-					"placeholder": "Search for any term, i.e. drug, gene, or a cell line",
+					"placeholder": "Search the collection of over 1.5 million signatures and 400 datasets",
 					"examples": {
 						"entities": [
 							"ACE2",
@@ -591,7 +591,7 @@
 							}
 						]
 					},
-					"description": "Explore the Contents of SigCom LINCS with Term Search"
+					"description": "Query SigCom LINCS with any search term"
 				}
 			},
 			"SignatureSearch": {
@@ -629,59 +629,50 @@
 						"Set": {
 							"active": true,
 							"placeholder": "Genes that are regulated in a signature",
-							"switch": "Gene Set Enrichment",
+							"switch": "Single Gene Set",
 							"icon": "mdi-set-merge",
 							"endpoint": "/Set",
 							"examples": [
 								{
-									"label": "Example Crisp Gene Set",
+									"label": "Try this example gene set",
 									"input": {
 										"entities": "UTP14A\nS100A6\nSCAND1\nRRP12\nCIAPIN1\nADH5\nMTERF3\nSPR\nCHMP4A\nUFM1\nVAT1\nHACD3\nRFC5\nCOTL1\nNPRL2\nTRIB3\nPCCB\nTLE1\nCD58\nBACE2\nKDM3A\nTARBP1\nRNH1\nCHAC1\nMBNL2\nVDAC1\nTES\nOXA1L\nNOP56\nHAT1\nCPNE3\nDNMT1\nARHGAP1\nVPS28\nEIF2S2\nBAG3\nCDCA4\nNPDC1\nRPS6KA1\nFIS1\nSYPL1\nSARS\nCDC45\nCANT1\nHERPUD1\nSORBS3\nMRPS2\nTOR1A\nTNIP1\nSLC25A46\nMAL\nEPCAM\nHDAC6\nCAPN1\nTNRC6B\nPKD1\nRRS1\nHP\nANO10\nCEP170B\nIDE\nDENND2D\nCAMK2B\nZNF358\nRPP38\nMRPL19\nNUCB2\nGNAI1\nLSR\nADGRE2\nPKMYT1\nCDK5R1\nABL1\nPILRB\nAXIN1\nFBXL8\nMCF2L\nDBNDD1\nIGHMBP2\nWIPF2\nWFS1\nOGFOD2\nMAPK1IP1L\nCOL11A1\nREG3A\nSERPINA1\nMYCBP2\nPIGK\nTCAP\nCRADD\nELK1\nDNAJB2\nZBTB16\nDAZAP1\nMAPKAPK2\nEDRF1\nCRIP1\nUCP3\nAGR2\nP4HA2"
 									}
 								}
-							]
+							],
+							"description": "Query for signatures that up- or down-regulate the expression of a gene set",
+							"linked_form": {
+								"active": true,
+								"label": "Alternatively, you can fetch gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying search terms:",
+								"placeholder": "Enter search term",
+								"type": "enrichr",
+								"button_text": "Fetch annotated gene sets from Enrichr"
+							}
 						},
 						"UpDown": {
 							"active": true,
-							"switch": "Up-Down Enrichment",
+							"switch": "Up/Down Gene Sets",
 							"up_placeholder": "Up-regulated genes",
 							"down_placeholder": "Down-regulated genes",
 							"icon": "mdi-menu-swap",
 							"endpoint": "/UpDown",
 							"examples": [
 								{
-									"label": "Example Up and Down Sets",
+									"label": "Try this example up and down gene set",
 									"input": {
 										"up_entities": "TARBP1\nAPP\nRAP1GAP\nUFM1\nDNAJA3\nPCBD1\nCSRP1\nMBNL2\nMLEC\nDNAJB2\nCKAP4\nARNT2\nCOG7\nALDOC\nMYT1L\nHMGCS1\nSNAP25\nTIAM1\nRPN1\nVDAC1\nTCEA2\nTSPYL4\nPAFAH1B1\nATP1B1\nPCMT1\nDNM1\nUSP22\nFOXO4\nBNIP3\nMAP7D1\nTRIM2\nFBXO21\nTCEAL4\nFKBP4\nCOPG1\nKIF5C\nRPS6\nSCRN1\nSTXBP1\nPGRMC1\nPIN1\nC2CD5\nSLC25A4\nGNAS\nSACM1L\nTCTA\nGAPDH\nCIRBP\nCLTB\nSTX1A",
 										"down_entities": "CEBPA\nSTAT5B\nDSE\nEIF4EBP1\nCARD8\nHLA-DMA\nSERPINE1\nEPHB2\nNOS3\nRPL39L\nCAPN1\nSRC\nFRMD4B\nICAM1\nGATA3\nDHRS9\nFGFR4\nBLNK\nATF1\nMUC1\nDSG2\nPAX8\nHOXA10\nPTGS2\nMELK\nCSGALNACT1\nABCC9\nCASP2\nABCA6\nGLIPR1\nCDK6\nIL1B\nCYSLTR1\nSPTLC2\nTSPAN2\nSYK\nTP53\nICAM3\nCCL2\nIDE\nPAN2\nSPTAN1\nPOLE2\nCDC25A\nBTK\nSIT1\nKIF14\nFAS\nADRB2\nHMOX1"
 									}
 								}
 							],
-							"tutorial": {
-								"content": [
-									{
-										"src": "${PREFIX}/static/lincs/sigsearch/workflow.png",
-										"alt": "input form",
-										"caption": ""
-									},
-									{
-										"src": "${PREFIX}/static/lincs/sigsearch/validation.png",
-										"alt": "results",
-										"caption": "Validation and auto-suggestion of input genes"
-									},
-									{
-										"src": "${PREFIX}/static/lincs/sigsearch/results.png",
-										"alt": "filter",
-										"caption": "View and download mimicker and reverser signatures"
-									},
-									{
-										"src": "${PREFIX}/static/lincs/sigsearch/visualization.png",
-										"alt": "filter",
-										"caption": "Top results are visualized as bar charts and scatter plots"
-									}
-								]
-							},
-							"description": "Identify Mimickers and Reversers by Querying 1.5 Million LINCS Signatures"
+							"description": "Enter up and down gene sets to identify reversers and mimickers from over 1.5 million signatures",
+							"linked_form": {
+								"active": true,
+								"label": "Alternatively, you can query a single gene by identifying the top genes that mostly positively or negatively correlatethe queried gene based on [ARCHS4](https://maayanlab.cloud/archs4/) coexpression matrix:",
+								"placeholder": "Enter gene",
+								"type": "archs4",
+								"button_text": "Fetch up/down genes from ARCHS4 for gene"
+							}
 						}
 					}
 				}
