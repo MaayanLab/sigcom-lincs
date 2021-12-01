@@ -942,7 +942,7 @@
 											"alt": "cp-MCF10A"
 										},
 										"iplot": {
-											"src": "${PREFIX}/static/lincs/umap/cp/iplot/cp-MCF10A0A.html",
+											"src": "${PREFIX}/static/lincs/umap/cp/iplot/cp-MCF10A.html",
 											"alt": "cp-MCF10A"
 										}
 									},
