@@ -532,11 +532,23 @@
 							"placeholder": "The search will return matches from a collection of over 400 datasets",
 							"priority": 2,
 							"description": "Query SigCom LINCS datasets with any search term"
+						},
+						"entities": {
+							"active": true,
+							"examples": [
+								"MAPK1",
+								"STAT3",
+								"ACE3"
+							],
+							"placeholder": "The search will return matches from all genes",
+							"priority": 2,
+							"description": "Query SigCom LINCS genes with any search term"
 						}
 					},
 					"model_tabs": [
 						"libraries",
-						"signatures"
+						"signatures",
+						"entities"
 					],
 					"entry_model": "signatures",
 					"placeholder": "Search the collection of over 1.5 million signatures and 400 datasets",
@@ -668,7 +680,7 @@
 							"description": "Enter up and down gene sets to identify reversers and mimickers from over 1.5 million signatures",
 							"linked_form": {
 								"active": true,
-								"label": "Alternatively, you can query a single gene by identifying the top genes that mostly positively or negatively correlatethe queried gene based on [ARCHS4](https://maayanlab.cloud/archs4/) coexpression matrix:",
+								"label": "Alternatively, you can query a single gene by identifying the top genes that mostly positively or negatively correlate the queried gene based on [ARCHS4](https://maayanlab.cloud/archs4/) coexpression matrix:",
 								"placeholder": "Enter gene",
 								"type": "archs4",
 								"button_text": "Fetch up/down genes from ARCHS4 for gene"
