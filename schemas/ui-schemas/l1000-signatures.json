@@ -43,7 +43,10 @@
 				"priority": 1,
 				"visibility": 1,
 				"primary": true,
-				"primary_label": "Perturbagens"
+				"primary_label": "Perturbagens",
+				"scatter_description": "This scatter plot shows the z-scores of the mimicking and reversing signatures of the input gene set",
+				"line_description_ranktwosided": "These ROC curves provide an insight on how well ${pert_name} mimics or reverses the input up and down gene sets. A large AUC means that ${pert_name} signatures are ranked high compared to other mimickers (or reversers).",
+				"line_description_rank": "These ROC curves provide an insight on how well ${pert_name} up- or down-regulates the input gene set. A large AUC means that ${pert_name} signatures are ranked high compared to other signatures that up-regulate (or down-regulate) the input gene set."
 			},
 			"Dose": {
 				"text": "${meta.pert_dose}",
