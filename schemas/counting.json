@@ -188,20 +188,6 @@
 						"text": "Ligands",
 						"priority": 6,
 						"count": 329
-					},
-					"siRNA": {
-						"type": "icon",
-						"icon": "mdi-tilde",
-						"text": "siRNAs",
-						"priority": 7,
-						"count": 23
-					},
-					"Antibody": {
-						"type": "icon",
-						"icon": "mdi-alpha-y-circle",
-						"text": "Antibodies",
-						"priority": 8,
-						"count": 4
 					}
 				}
 			}
