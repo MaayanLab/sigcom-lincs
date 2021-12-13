@@ -25,7 +25,7 @@
 		"nav": {
 			"API": {
 				"active": true,
-				"priority": 5
+				"priority": 6
 			},
 			"Resources": {
 				"active": false,
@@ -36,7 +36,7 @@
 				"active": true,
 				"endpoint": "/About",
 				"navName": "About",
-				"priority": 7,
+				"priority": 8,
 				"props": {
 					"about": "${PREFIX}/static/about-lincs.md",
 					"ignore_bar": {
@@ -58,7 +58,7 @@
 				"active": true,
 				"endpoint": "/Help",
 				"navName": "Help",
-				"priority": 6,
+				"priority": 7,
 				"type": "iframe",
 				"props": {
 					"pages": {
@@ -76,7 +76,7 @@
 				"active": true,
 				"endpoint": "/Download",
 				"navName": "Download",
-				"priority": 4,
+				"priority": 5,
 				"props": {
 					"download_links": [
 						{
@@ -86,6 +86,7 @@
 									"label": "Automatic Human GEO RNA-seq Signatures",
 									"date": "2021-09-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/human_geo_sigs.tsv",
+									"file type": "tsv",
 									"size": "1.62GB",
 									"shape": "4269x35239",
 									"src": "${PREFIX}/static/geo_main.gif"
@@ -94,6 +95,7 @@
 									"label": "Automatic Mouse GEO RNA-seq Signatures",
 									"date": "2021-09-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/mouse_geo_sigs.tsv",
+									"file type": "tsv",
 									"size": "1.49GB",
 									"shape": "4216x32545",
 									"src": "${PREFIX}/static/geo_main.gif"
@@ -102,6 +104,7 @@
 									"label": "GTEx Tissue Age Comparison Signatures",
 									"date": "2021-09-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/GTEx_AgeComparison_Tissue_Signatures.zip",
+									"file type": "tsv/zip",
 									"shape": "135xVaries",
 									"size": "123.2MB",
 									"src": "${PREFIX}/static/gtex.ico"
@@ -115,6 +118,7 @@
 									"label": "Automatic Human GEO RNA-seq Signatures",
 									"date": "2021-09-20",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/human_GEO.gmt",
+									"file type": "gmt",
 									"size": "7.6MB",
 									"terms": "8538",
 									"src": "${PREFIX}/static/geo_main.gif"
@@ -123,6 +127,7 @@
 									"label": "Automatic Mouse GEO RNA-seq Signatures",
 									"date": "2021-09-20",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/mouse_GEO.gmt",
+									"file type": "gmt",
 									"size": "6.9MB",
 									"terms": "8432",
 									"src": "${PREFIX}/static/geo_main.gif"
@@ -131,6 +136,7 @@
 									"label": "GTEx Tissue Age Comparison Signatures",
 									"date": "2021-09-20",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/GTEx_age_signatures.gmt",
+									"file type": "gmt",
 									"terms": "270",
 									"size": "199KB",
 									"src": "${PREFIX}/static/gtex.ico"
@@ -139,6 +145,7 @@
 									"label": "CREEDS Manual Disease Signatures",
 									"date": "2021-10-04",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/CREEDS/disease_signatures-v1.0.gmt",
+									"file type": "gmt",
 									"terms": "1656",
 									"size": "3.2MB",
 									"src": "${PREFIX}/static/images/creeds.png"
@@ -147,6 +154,7 @@
 									"label": "CREEDS Manual Single Drug Perturbations",
 									"date": "2021-10-04",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/CREEDS/single_drug_perturbations-v1.0.gmt",
+									"file type": "gmt",
 									"terms": "1750",
 									"size": "3.4MB",
 									"src": "${PREFIX}/static/images/creeds.png"
@@ -155,6 +163,7 @@
 									"label": "CREEDS Manual Single Gene Perturbations",
 									"date": "2021-10-04",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/CREEDS/single_gene_perturbations-v1.0.gmt",
+									"file type": "gmt",
 									"terms": "4352",
 									"size": "8.4MB",
 									"src": "${PREFIX}/static/images/creeds.png"
@@ -163,6 +172,7 @@
 									"label": "SARS-CoV-2 Differential Gene Expression Signatures",
 									"date": "2021-10-05",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-data/SARS-CoV-2_RNAseq_Datasets_11-09-20.gmt",
+									"file type": "gmt",
 									"terms": "248",
 									"size": "846KB",
 									"src": "${PREFIX}/static/lincs/covid19.png"
@@ -177,6 +187,7 @@
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "33.1GB",
 									"shape": "12327x720216",
 									"icon": "mdi-hexagon-multiple"
@@ -185,6 +196,7 @@
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/shRNA_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "7.3GB",
 									"shape": "12327x177263",
 									"icon": "mdi-alpha-u"
@@ -193,6 +205,7 @@
 									"label": "LINCS L1000 CRISPR Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "6.5GB",
 									"shape": "12327x141368",
 									"icon": "mdi-scissors-cutting"
@@ -201,6 +214,7 @@
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/oe_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "1.6GB",
 									"shape": "12327x34171",
 									"icon": "mdi-tray-full"
@@ -209,6 +223,7 @@
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/lig_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "357MB",
 									"shape": "12327x7546",
 									"icon": "mdi-octagram"
@@ -217,6 +232,7 @@
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/aby_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "27.7MB",
 									"shape": "12327x575",
 									"icon": "mdi-alpha-y-circle"
@@ -225,6 +241,7 @@
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
 									"date": "2021-06-23",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/siRNA_coeff_mat.gctx",
+									"file type": "gctx",
 									"size": "9.6MB",
 									"shape": "12327x162",
 									"icon": "mdi-tilde"
@@ -239,6 +256,7 @@
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_cp.gmt",
+									"file type": "gmt",
 									"size": "2.25GB",
 									"terms": "1436110",
 									"icon": "mdi-hexagon-multiple"
@@ -247,6 +265,7 @@
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_shRNA.gmt",
+									"file type": "gmt",
 									"size": "501.7MB",
 									"terms": "316006",
 									"icon": "mdi-alpha-u"
@@ -255,6 +274,7 @@
 									"label": "LINCS L1000 CRISPR Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_xpr.gmt",
+									"file type": "gmt",
 									"size": "438.4MB",
 									"terms": "281890",
 									"icon": "mdi-scissors-cutting"
@@ -263,6 +283,7 @@
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_oe.gmt",
+									"file type": "gmt",
 									"size": "106MB",
 									"terms": "68328",
 									"icon": "mdi-tray-full"
@@ -271,6 +292,7 @@
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_lig.gmt",
+									"file type": "gmt",
 									"size": "23.6MB",
 									"terms": "15092",
 									"icon": "mdi-octagram"
@@ -279,6 +301,7 @@
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_aby.gmt",
+									"file type": "gmt",
 									"size": "1.8MB",
 									"terms": "1150",
 									"icon": "mdi-alpha-y-circle"
@@ -287,6 +310,7 @@
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
 									"date": "2021-07-01",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gmt/l1000_siRNA.gmt",
+									"file type": "gmt",
 									"size": "506KB",
 									"terms": "324",
 									"icon": "mdi-tilde"
@@ -301,6 +325,7 @@
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/cp_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "170.8GB",
 									"shape": "1805898x23614",
 									"icon": "mdi-hexagon-multiple"
@@ -309,6 +334,7 @@
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/shRNA_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "42.86GB",
 									"shape": "453175x23614",
 									"icon": "mdi-alpha-u"
@@ -317,6 +343,7 @@
 									"label": "LINCS L1000 CRISPR Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/xpr_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "39.23GB",
 									"shape": "414816x23614",
 									"icon": "mdi-scissors-cutting"
@@ -325,6 +352,7 @@
 									"label": "LINCS L1000 Controls (2021)",
 									"date": "2021-11-30",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/ctl_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "14.07GB",
 									"shape": "148678x23614",
 									"icon": "mdi-file-compare"
@@ -333,6 +361,7 @@
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/oe_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "12.46GB",
 									"shape": "131668x23614",
 									"icon": "mdi-tray-full"
@@ -341,6 +370,7 @@
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/lig_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "2.3GB",
 									"shape": "24301x23614",
 									"icon": "mdi-octagram"
@@ -349,6 +379,7 @@
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/aby_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "158.4MB",
 									"shape": "1655x23614",
 									"icon": "mdi-alpha-y-circle"
@@ -357,6 +388,7 @@
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
 									"date": "2021-08-16",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/siRNA_predicted_RNAseq_profiles.gctx",
+									"file type": "gctx",
 									"size": "46.4MB",
 									"shape": "472x23614",
 									"icon": "mdi-tilde"
@@ -371,6 +403,7 @@
 									"label": "LINCS L1000 Chemical Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_ChemicalPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "68.07GB",
 									"shape": "718055x23614",
 									"icon": "mdi-hexagon-multiple"
@@ -379,6 +412,7 @@
 									"label": "LINCS L1000 shRNA Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_shRNAPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "14.97GB",
 									"shape": "158003x23614",
 									"icon": "mdi-alpha-u"
@@ -387,6 +421,7 @@
 									"label": "LINCS L1000 CRISPR Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_CRISPRPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "13.35GB",
 									"shape": "140945x23614",
 									"icon": "mdi-scissors-cutting"
@@ -395,6 +430,7 @@
 									"label": "LINCS L1000 Overexpression Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_OverexpressionPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "3.24GB",
 									"shape": "34164x23614",
 									"icon": "mdi-tray-full"
@@ -403,6 +439,7 @@
 									"label": "LINCS L1000 Ligand Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_LigandPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "716.0MB",
 									"shape": "7546x23614",
 									"icon": "mdi-octagram"
@@ -411,6 +448,7 @@
 									"label": "LINCS L1000 Antibody Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_AntibodyPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "55.49MB",
 									"shape": "575x23614",
 									"icon": "mdi-alpha-y-circle"
@@ -419,6 +457,7 @@
 									"label": "LINCS L1000 siRNA Perturbations (2021)",
 									"date": "2021-10-11",
 									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/RNA-seq/LINCS_DCIC_2021_siRNAPert_PredictedRNAseq_ChDir_Sigs.gctx",
+									"file type": "gctx",
 									"size": "16.33MB",
 									"shape": "162x23614",
 									"icon": "mdi-tilde"
@@ -432,6 +471,7 @@
 									"label": "LINCS Small Molecules Metadata",
 									"date": "2021-09-20",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-metadata/LINCS_small_molecules.tsv",
+									"file type": "tsv",
 									"size": "3.7MB",
 									"icon": "mdi-hexagon-multiple"
 								}
@@ -652,10 +692,10 @@
 									}
 								}
 							],
-							"description": "Query for signatures that up- or down-regulate the expression of a gene set",
+							"description": "Enter a gene set to identify perturbations to maximally up- or down-regulate the expression of these genes from over 1.5 million signatures.",
 							"linked_form": {
 								"active": true,
-								"label": "Alternatively, you can fetch gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying search terms:",
+								"label": "Alternatively, fetch annotated gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying any search term:",
 								"placeholder": "Enter search term",
 								"type": "enrichr",
 								"button_text": "Fetch annotated gene sets from Enrichr"
@@ -680,13 +720,47 @@
 							"description": "Enter up and down gene sets to identify reversers and mimickers from over 1.5 million signatures",
 							"linked_form": {
 								"active": true,
-								"label": "Alternatively, you can query a single gene by identifying the top genes that mostly positively or negatively correlate the queried gene based on [ARCHS4](https://maayanlab.cloud/archs4/) coexpression matrix:",
+								"label": "Alternatively, query a single gene to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
 								"placeholder": "Enter gene",
 								"type": "archs4",
 								"button_text": "Fetch up/down genes from ARCHS4 for gene"
 							}
 						}
 					}
+				}
+			},
+			"EntitySearch": {
+				"active": true,
+				"landing": true,
+				"endpoint": "/GeneSearch",
+				"navName": "Gene Search",
+				"priority": 3,
+				"props": {
+					"placeholder": "Query single genes to receive signatures that maximally up- or down-regulate its expression",
+					"examples": [
+						"ACE2",
+						"STAT3",
+						"MAPK1"
+					],
+					"description": "Find Signatures that up- or down-regulate a single gene",
+					"options": [
+						{
+							"type": "appyter",
+							"url": "https://appyters.maayanlab.cloud/Gene_Centric_GEO_Reverse_Search/",
+							"default_form_data": {},
+							"input_name": "human_gene",
+							"label": "GEO Reverse Search Appyter",
+							"icon": "./static/appyters_logo.png"
+						},
+						{
+							"type": "appyter",
+							"url": "https://appyters.maayanlab.cloud/L1000_RNAseq_Gene_Search/",
+							"default_form_data": {},
+							"input_name": "gene",
+							"label": "RNA-seq-like Reverse Search Appyter",
+							"icon": "./static/appyters_logo.png"
+						}
+					]
 				}
 			},
 			"UMAPs": {
@@ -696,7 +770,7 @@
 					"/UMAPs/:name"
 				],
 				"navName": "UMAPs",
-				"priority": 5,
+				"priority": 4,
 				"type": "component",
 				"props": {
 					"pages": {
