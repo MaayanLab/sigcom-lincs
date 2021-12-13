@@ -151,9 +151,18 @@
 								"type": "text"
 							}
 						}
+					},
+					"styles": {
+						"type": "prop-object",
+						"properties": {
+							"margin": {
+								"text": "auto",
+								"type": "text"
+							}
+						}
 					}
 				},
-				"location": "right",
+				"location": "left",
 				"priority": 10,
 				"visibility": 1
 			},
