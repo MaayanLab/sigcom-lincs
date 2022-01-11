@@ -680,7 +680,7 @@
 					"types": {
 						"Set": {
 							"active": true,
-							"placeholder": "Genes that are regulated in a signature",
+							"placeholder": "Input a set of newline-separated Entrez gene symbols.",
 							"switch": "Single Gene Set",
 							"icon": "mdi-set-merge",
 							"endpoint": "/Set",
@@ -692,10 +692,10 @@
 									}
 								}
 							],
-							"description": "Enter a gene set to identify perturbations to maximally up- or down-regulate the expression of these genes from over 1.5 million signatures.",
+							"description": "Identify perturbations from over 1.5 million signatures that maximally up- or down-regulate the expression of a gene set. Enter a set of genes or fetch a gene set using the term search form at the bottom.",
 							"linked_form": {
 								"active": true,
-								"label": "Alternatively, fetch annotated gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying any search term:",
+								"label": "Fetch annotated gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying any search term:",
 								"placeholder": "Enter search term",
 								"type": "enrichr",
 								"button_text": "Fetch annotated gene sets from Enrichr"
@@ -704,8 +704,8 @@
 						"UpDown": {
 							"active": true,
 							"switch": "Up/Down Gene Sets",
-							"up_placeholder": "Up-regulated genes",
-							"down_placeholder": "Down-regulated genes",
+							"up_placeholder": "Input a set of newline-separated Entrez gene symbols (up gene set).",
+							"down_placeholder": "Input a set of newline-separated Entrez gene symbols (down gene set).",
 							"icon": "mdi-menu-swap",
 							"endpoint": "/UpDown",
 							"examples": [
@@ -717,10 +717,10 @@
 									}
 								}
 							],
-							"description": "Enter up and down gene sets to identify reversers and mimickers from over 1.5 million signatures",
+							"description": "Identify reversers and mimickers from over 1.5 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form at the bottom.",
 							"linked_form": {
 								"active": true,
-								"label": "Alternatively, query a single gene to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
+								"label": "Query a single gene to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
 								"placeholder": "Enter gene",
 								"type": "archs4",
 								"button_text": "Fetch up/down genes from ARCHS4 for gene"
