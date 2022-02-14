@@ -720,7 +720,7 @@
 							"description": "Identify reversers and mimickers from over 1.5 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form at the bottom.",
 							"linked_form": {
 								"active": true,
-								"label": "Query a single gene to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
+								"label": "Query a single gene or a variant to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
 								"placeholder": "Enter gene",
 								"type": "archs4",
 								"button_text": "Fetch up/down genes from ARCHS4 for gene"
@@ -763,6 +763,24 @@
 					]
 				}
 			},
+			"DrugSearch": {
+				"active": true,
+				"landing": true,
+				"endpoint": "/DrugSearch",
+				"navName": "Drug Search",
+				"priority": 3,
+				"props": {
+				  "verb_placeholder": "induce/inhibit",
+				  "pert_placeholder": "tissue, disease, phenotype...",
+				  "description": "Search for annotated gene sets and use them to query for up- or down-regulating L1000 small-molecule signatures",
+				  "examples": [ "wound healing", "autophagy", "tyrosine kinase"],
+				  "library": "54198d6e-fe17-5ef8-91ac-02b425761653",
+				  "verb_term_mapper": {
+					"induce": "up",
+					"inhibit": "down"
+				  }
+				}
+			  },
 			"UMAPs": {
 				"active": true,
 				"endpoint": "/UMAPs",
