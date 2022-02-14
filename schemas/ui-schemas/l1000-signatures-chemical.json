@@ -1,12 +1,11 @@
 {
 	"$validator": "/dcic/signature-commons-schema/v6/core/schema.json",
-	"id": "e7574480-5a68-4f8a-bafa-517be2c7e674",
+	"id": "da496175-1057-4390-9ec4-38a1013db157",
 	"meta": {
 		"match": {
 			"${$validator}": "/@?dcic/signature-commons-schema/(v[0-9]+/)?core/signature.json",
 			"${meta.$validator}": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_signatures.json",
-			"${meta.data_level}": "5",
-			"${meta.pubchem_id}": "undefined"
+			"${meta.pubchem_id}": "^(?!undefined$)"
 		},
 		"$validator": "/dcic/signature-commons-schema/v6/meta/schema/ui-schema.json",
 		"properties": {
@@ -38,8 +37,9 @@
 			},
 			"Perturbagen": {
 				"text": "${meta.pert_name}",
+				"url": "https://pubchem.ncbi.nlm.nih.gov/compound/${meta.pubchem_id}",
 				"field": "meta.pert_name",
-				"type": "text",
+				"type": "url",
 				"icon": "mdi-flask",
 				"priority": 1,
 				"visibility": 1,
