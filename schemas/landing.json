@@ -38,7 +38,7 @@
 				"navName": "About",
 				"priority": 8,
 				"props": {
-					"about": "${PREFIX}/static/about-lincs.md",
+					"about": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/about.md",
 					"ignore_bar": {
 						"Signatures per Perturbation Type (log scaled)": [
 							"Control (vehicle)",
@@ -558,7 +558,7 @@
 								"STAT3",
 								"blood"
 							],
-							"placeholder": "The search will return matches from a collection of over 1.5 million signatures",
+							"placeholder": "The search will return matches from a collection of over 1 million signatures",
 							"priority": 1,
 							"description": "Query SigCom LINCS signatures with any search term"
 						},
@@ -591,7 +591,7 @@
 						"entities"
 					],
 					"entry_model": "signatures",
-					"placeholder": "Search the collection of over 1.5 million signatures and 400 datasets",
+					"placeholder": "Search the collection of over 1 million signatures and 400 datasets",
 					"examples": {
 						"entities": [
 							"ACE2",
@@ -692,7 +692,7 @@
 									}
 								}
 							],
-							"description": "Identify perturbations from over 1.5 million signatures that maximally up- or down-regulate the expression of a gene set. Enter a set of genes or fetch a gene set using the term search form at the bottom.",
+							"description": "Identify perturbations from over 1 million signatures that maximally up- or down-regulate the expression of a gene set. Enter a set of genes or fetch a gene set using the term search form at the bottom.",
 							"linked_form": {
 								"active": true,
 								"label": "Fetch annotated gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying any search term:",
@@ -717,7 +717,7 @@
 									}
 								}
 							],
-							"description": "Identify reversers and mimickers from over 1.5 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form at the bottom.",
+							"description": "Identify reversers and mimickers from over 1 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form at the bottom.",
 							"linked_form": {
 								"active": true,
 								"label": "Query a single gene or a variant to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
@@ -766,8 +766,8 @@
 			"DrugSearch": {
 				"active": true,
 				"landing": true,
-				"endpoint": "/DrugSearch",
-				"navName": "Drug Search",
+				"endpoint": "/GeneSetSearch",
+				"navName": "Gene Set Search",
 				"priority": 3,
 				"props": {
 				  "verb_placeholder": "induce/inhibit",
@@ -1635,7 +1635,7 @@
 			}
 		],
 		"results_title": "Signature Similarity Search Results",
-		"about": "${PREFIX}/static/about-lincs.md",
+		"about": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/about.md",
 		"terms_url": "https://lincsproject.org/LINCS/data/release-policy",
 		"github": "https://github.com/MaayanLab/sigcom-lincs",
 		"github_issues": "https://github.com/MaayanLab/sigcom-lincs/issues",
