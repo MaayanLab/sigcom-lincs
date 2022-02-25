@@ -1,0 +1,66 @@
+{
+	"$id": "lincs/gene.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "Gene metadata as described on sigcom-lincs",
+	"allOf": [
+	  {
+		"$ref": "/dcic/signature-commons-schema/v6/core/meta.json"
+	  },
+	  {
+		"type": "object",
+		"properties": {
+		  "dbxrefs": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			  }
+		  },
+		  "description": {
+			"type": "string"
+		  },
+		  "geneid": {
+			"type": "number",
+			"format": "double"
+		  },
+		  "homologeneid": {
+			"type": "number",
+			"format": "double"
+		  },
+		  "locustag": {
+			"type": "string"
+		  },
+		  "maplocation": {
+			"type": "string"
+		  },
+		  "namenomauth": {
+			"type": "string"
+		  },
+		  "nomstatus": {
+			"type": "string"
+		  },
+		  "symbol": {
+			"type": "string"
+		  },
+		  "symbonomauth": {
+			"type": "string"
+		  },
+		  "synonyms": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			  }
+		  },
+		  "taxid": {
+			"type": "number",
+			"format": "double"
+		  },
+		  "typeofgene": {
+			"type": "string"
+		  }
+		},
+		"required": [
+		  "geneid"
+		]
+	  }
+	]
+  }
