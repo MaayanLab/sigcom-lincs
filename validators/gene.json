@@ -22,8 +22,7 @@
 			"type": "string"
 		  },
 		  "homologeneid": {
-			"type": "number",
-			"format": "double"
+			"type": "string"
 		  },
 		  "locustag": {
 			"type": "string"
@@ -50,8 +49,7 @@
 			  }
 		  },
 		  "taxid": {
-			"type": "number",
-			"format": "double"
+			"type": "string"
 		  },
 		  "typeofgene": {
 			"type": "string"
