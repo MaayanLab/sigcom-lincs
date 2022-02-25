@@ -1,5 +1,5 @@
 {
-	"$id": "lincs/gene.json",
+	"$id": "sigcom-lincs/gene.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"description": "Gene metadata as described on sigcom-lincs",
 	"allOf": [
@@ -19,8 +19,7 @@
 			"type": "string"
 		  },
 		  "geneid": {
-			"type": "number",
-			"format": "double"
+			"type": "string"
 		  },
 		  "homologeneid": {
 			"type": "number",
