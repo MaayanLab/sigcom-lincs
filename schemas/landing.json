@@ -25,7 +25,9 @@
 		"nav": {
 			"API": {
 				"active": true,
-				"priority": 6
+				"priority": 6,
+				"navName": "API",
+				"endpoint": "/API"
 			},
 			"Resources": {
 				"active": false,
@@ -465,6 +467,74 @@
 							]
 						},
 						{
+							"label": "LINCS MCF10A Molecular Deep Dive (MDD)",
+							"links": [
+								{
+									"label": "MCF10A MDD GCP Data (Level 3)",
+									"date": "2019-08-05",
+									"size": "70.4KB",
+									"shape": "63x89",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn18804314.4",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD RNAseq Data (Level 3)",
+									"date": "2019-08-05",
+									"size": "26.8MB",
+									"shape": "57367x48",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn15574167.4",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD ATACseq Data (Level 3)",
+									"date": "2019-08-08",
+									"size": "84.2MB",
+									"shape": "134435x36",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn18485480.5",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD IF Data (Level 3)",
+									"date": "2020-02-28",
+									"size": "65.7KB",
+									"shape": "77x99",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn21498854.1",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD RPPA Data (Level 3)",
+									"date": "2019-08-05",
+									"size": "639.9KB",
+									"shape": "295x109",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn12555331",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD cycIF Data (Level 3)",
+									"date": "2019-06-05",
+									"size": "7.5MB",
+									"shape": "3640x109",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn18811162.1",
+									"icon": "mdi-chart-bubble"
+								},
+								{
+									"label": "MCF10A MDD L1000 Data (Level 3)",
+									"date": "2019-08-05",
+									"size": "4.3MB",
+									"shape": "978x255",
+									"filetype": "csv",
+									"href": "https://www.synapse.org/#!Synapse:syn18918362.2",
+									"icon": "mdi-chart-bubble"
+								}
+							]
+						},
+						{
 							"label": "LINCS Small Molecules Metadata",
 							"links": [
 								{
@@ -540,6 +610,7 @@
 			"MetadataSearch": {
 				"active": true,
 				"landing": false,
+				"search_tab": true,
 				"priority": 2,
 				"endpoint": "/MetadataSearch",
 				"navName": "Metadata Search",
@@ -560,7 +631,9 @@
 							],
 							"placeholder": "The search will return matches from a collection of over 1 million signatures",
 							"priority": 1,
-							"description": "Query SigCom LINCS signatures with any search term"
+							"description": "Query SigCom LINCS signatures with any search term",
+							"endpoint": "/Signatures",
+							"label": "Signatures"
 						},
 						"libraries": {
 							"active": true,
@@ -571,7 +644,9 @@
 							],
 							"placeholder": "The search will return matches from a collection of over 400 datasets",
 							"priority": 2,
-							"description": "Query SigCom LINCS datasets with any search term"
+							"description": "Query SigCom LINCS datasets with any search term",
+							"endpoint": "/Datasets",
+							"label": "Datasets"
 						},
 						"entities": {
 							"active": true,
@@ -582,7 +657,9 @@
 							],
 							"placeholder": "The search will return matches from all genes",
 							"priority": 2,
-							"description": "Query SigCom LINCS genes with any search term"
+							"description": "Query SigCom LINCS genes with any search term",
+							"endpoint": "/Genes",
+							"label": "Genes"
 						}
 					},
 					"model_tabs": [
@@ -649,6 +726,7 @@
 			"SignatureSearch": {
 				"active": true,
 				"landing": true,
+				"search_tab": true,
 				"endpoint": "/SignatureSearch",
 				"navName": "Signature Search",
 				"priority": 1,
@@ -682,6 +760,7 @@
 							"active": true,
 							"placeholder": "Input a set of newline-separated Entrez gene symbols.",
 							"switch": "Single Gene Set",
+							"label": "Single Gene Set",
 							"icon": "mdi-set-merge",
 							"endpoint": "/Set",
 							"examples": [
@@ -704,6 +783,7 @@
 						"UpDown": {
 							"active": true,
 							"switch": "Up/Down Gene Sets",
+							"label": "Up/Down Gene Sets",
 							"up_placeholder": "Input a set of newline-separated Entrez gene symbols (up gene set).",
 							"down_placeholder": "Input a set of newline-separated Entrez gene symbols (down gene set).",
 							"icon": "mdi-menu-swap",
@@ -732,8 +812,9 @@
 			"EntitySearch": {
 				"active": true,
 				"landing": true,
-				"endpoint": "/GeneSearch",
-				"navName": "Gene Search",
+				"search_tab": true,
+				"endpoint": "/GenePages",
+				"navName": "Gene Pages",
 				"priority": 3,
 				"props": {
 					"placeholder": "Query single genes to receive signatures that maximally up- or down-regulate its expression",
@@ -766,21 +847,26 @@
 			"DrugSearch": {
 				"active": true,
 				"landing": true,
-				"endpoint": "/GeneSetSearch",
-				"navName": "Gene Set Search",
+				"search_tab": true,
+				"endpoint": "/FetchGeneSet",
+				"navName": "Fetch Gene Set",
 				"priority": 3,
 				"props": {
-				  "verb_placeholder": "induce/inhibit",
-				  "pert_placeholder": "tissue, disease, phenotype...",
-				  "description": "Search for annotated gene sets and use them to query for up- or down-regulating L1000 small-molecule signatures",
-				  "examples": [ "wound healing", "autophagy", "tyrosine kinase"],
-				  "library": "54198d6e-fe17-5ef8-91ac-02b425761653",
-				  "verb_term_mapper": {
-					"induce": "up",
-					"inhibit": "down"
-				  }
+					"verb_placeholder": "induce/inhibit",
+					"pert_placeholder": "tissue, disease, phenotype...",
+					"description": "Search for annotated gene sets and use them to query for up- or down-regulating L1000 small-molecule signatures",
+					"examples": [
+						"wound healing",
+						"autophagy",
+						"tyrosine kinase"
+					],
+					"library": "54198d6e-fe17-5ef8-91ac-02b425761653",
+					"verb_term_mapper": {
+						"induce": "up",
+						"inhibit": "down"
+					}
 				}
-			  },
+			},
 			"UMAPs": {
 				"active": true,
 				"endpoint": "/UMAPs",
