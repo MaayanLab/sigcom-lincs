@@ -152,42 +152,48 @@
 						"icon": "mdi-hexagon-multiple",
 						"text": "Small molecules",
 						"priority": 1,
-						"count": 33866
+						"count": 33866,
+						"href": "/MetadataSearch/Signatures?example=[\"imatinib\", \"dexamethasone\"]" 
 					},
 					"shRNA": {
 						"type": "icon",
 						"icon": "mdi-alpha-u",
 						"text": "shRNAs",
 						"priority": 3,
-						"count": 4957
+						"count": 4957,
+						"href": "/MetadataSearch/Signatures?example=[\"MAPK1\", \"XBP1\", \"E2F1\"]" 
 					},
 					"CRISPR Knockdown": {
 						"type": "icon",
 						"icon": "mdi-scissors-cutting",
 						"text": "CRISPR knockouts",
 						"priority": 2,
-						"count": 7492
+						"count": 7492,
+						"href": "/MetadataSearch/Signatures?example=[\"MAPK1\", \"ACE2\", \"SMC3\"]" 
 					},
 					"Gene Overexpression": {
 						"type": "icon",
 						"icon": "mdi-tray-full",
 						"text": "Gene over-expressions",
 						"priority": 4,
-						"count": 4082
+						"count": 4082,
+						"href": "/MetadataSearch/Signatures?example=[\"IDH2\", \"MET\", \"TP53\"]" 
 					},
 					"Cell Line": {
 						"type": "icon",
 						"icon": "mdi-chart-bubble",
 						"text": "Cell Lines",
 						"priority": 5,
-						"count": 353
+						"count": 353,
+						"href": "/MetadataSearch/Signatures?example=[\"MCF10A\", \"A375\", \"HELA\"]" 
 					},
 					"Ligand": {
 						"type": "icon",
 						"icon": "mdi-octagram",
 						"text": "Ligands",
 						"priority": 6,
-						"count": 329
+						"count": 329,
+						"href": "/MetadataSearch/Signatures?example=[\"TNF\", \"HGF\"]" 
 					}
 				}
 			}
