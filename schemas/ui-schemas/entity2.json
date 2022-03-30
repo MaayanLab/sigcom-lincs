@@ -24,6 +24,14 @@
 				"priority": 1,
 				"visibility": 1
 			},
+			"ENSEMBL ID": {
+				"text": "${meta.ensemblid}",
+				"type": "alternative",
+				"field": "meta.ensemblid",
+				"strategy": "upper",
+				"priority": 1,
+				"visibility": 1
+			},
 			"Description": {
 				"text": "${meta.description}",
 				"type": "subtitle",
