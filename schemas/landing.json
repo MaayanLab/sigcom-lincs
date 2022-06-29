@@ -68,7 +68,7 @@
 							"id": "tutorial",
 							"src": "${PREFIX}/static/tutorial/ldp3/SigCom LINCS Documentation.html",
 							"name": "Tutorial",
-							"height": 30500,
+							"height": 16500,
 							"frameBorder": 0
 						}
 					}
@@ -535,6 +535,96 @@
 							]
 						},
 						{
+							"label": "L1000 Consensus Signatures Coefficient Tables (Level 5)",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
+							"links": [
+								{
+									"label": "Chemical Perturbations Consensus Signatures",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/means/cp_mean_coeff_mat.tsv.gz",
+									"file type": "tsv",
+									"size": "1.9GB",
+									"shape": "12327x33608",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "CRISPR KO Consensus Signatures",
+									"date": "2021-06-23",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/means/xpr_mean_coeff_mat.tsv.gz",
+									"file type": "tsv",
+									"size": "455.7MB",
+									"shape": "12327x7502",
+									"icon": "mdi-scissors-cutting"
+								}
+							]
+						},
+						{
+							"label": "RNA-seq Transcriptomics Signatures using Characteristic Direction (Level 5)",
+							"links": [
+								{
+									"label": "Automatic Human GEO RNA-seq Signatures",
+									"date": "2022-04-03",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/human_geo_cd_sigs.tsv",
+									"file type": "tsv",
+									"size": "1.62GB",
+									"shape": "4269x35239",
+									"src": "${PREFIX}/static/geo_main.gif"
+								},
+								{
+									"label": "Automatic Mouse GEO RNA-seq Signatures",
+									"date": "2022-04-03",
+									"href": "https://lincs-dcic.s3.amazonaws.com/auto-geo-sigs/mouse_geo_cd_sigs.tsv",
+									"file type": "tsv",
+									"size": "1.49GB",
+									"shape": "4216x32545",
+									"src": "${PREFIX}/static/geo_main.gif"
+								}
+							]
+						},
+						{
+							"label": "L1000 Similarity Matrices",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
+							"links": [
+								{
+									"label": "L1000 Drug-Drug Similarity Matrix",
+									"date": "2022-06-28",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/similarity/L1000_2021_cosine_drug_similarity_lm.h5",
+									"file type": "h5",
+									"size": "4.52GB",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "L1000 Gene-Gene Similarity Matrix",
+									"date": "2022-06-28",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-data-2020/similarity/L1000_2021_cosine_gene_similarity_lm.h5",
+									"file type": "h5",
+									"size": "225.8MB",
+									"icon": "mdi-dna"
+								}
+							]
+						},
+						{
+							"label": "GEO Signatures Metadata",
+							"links": [
+								{
+									"label": "Automatic Human GEO RNA-seq Signatures",
+									"date": "2022-04-02",
+									"href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/human_gsm4sig_v1.csv",
+									"file type": "csv",
+									"size": "767KB",
+									"src": "${PREFIX}/static/geo_main.gif"
+								},
+								{
+									"label": "Automatic Mouse GEO RNA-seq Signatures",
+									"date": "2022-04-02",
+									"href": "https://lincs-dcic.s3.amazonaws.com/sigcom-lincs-metadata/mouse_gsm4sig_v1.csv",
+									"file type": "csv",
+									"size": "594KB",
+									"src": "${PREFIX}/static/geo_main.gif"
+								}
+							]
+						},
+						{
 							"label": "LINCS Small Molecules Metadata",
 							"links": [
 								{
@@ -824,14 +914,69 @@
 						"MAPK1"
 					],
 					"description": "Find Signatures that up- or down-regulate a single gene",
-					"options": [
+					"entity_names": "${PREFIX}/static/sigcom_lincs_gene_names.json",
+					"radio_options": [
+						{
+							"type": "page",
+							"label": "Gene Page",
+							"name_field": [
+								"meta.symbol",
+								"meta.ensemblid"
+							],
+							"datasets": {
+								"gtex_age_sigs": {
+									"priority": 4,
+									"url": "${PREFIX}/static/lincs/embeddings/gtex_age_sigs_UMAP_embedding.tsv"
+								},
+								"l1000_aby": {
+									"priority": 8,
+									"url": "${PREFIX}/static/lincs/embeddings/aby_UMAP_embedding.tsv"
+								},
+								"l1000_lig": {
+									"priority": 7,
+									"url": "${PREFIX}/static/lincs/embeddings/lig_UMAP_embedding.tsv"
+								},
+								"l1000_siRNA": {
+									"priority": 9,
+									"url": "${PREFIX}/static/lincs/embeddings/siRNA_UMAP_embedding.tsv"
+								},
+								"l1000_oe": {
+									"priority": 6,
+									"url": "${PREFIX}/static/lincs/embeddings/oe_UMAP_embedding.tsv"
+								},
+								"human_GEO": {
+									"priority": 3,
+									"url": "${PREFIX}/static/lincs/embeddings/human_GEO_UMAP_embedding.tsv"
+								},
+								"l1000_xpr": {
+									"priority": 2,
+									"url": "${PREFIX}/static/lincs/embeddings/xpr_UMAP_embedding.tsv"
+								},
+								"l1000_shRNA": {
+									"priority": 5,
+									"url": "${PREFIX}/static/lincs/embeddings/shRNA_UMAP_embedding.tsv"
+								},
+								"l1000_cp": {
+									"priority": 1,
+									"url": "${PREFIX}/static/lincs/embeddings/cp_UMAP_embedding.tsv"
+								},
+								"l1000_mean_cp": {
+									"priority": 10,
+									"url": "${PREFIX}/static/lincs/embeddings/cp_UMAP_embedding.tsv"
+								},
+								"l1000_mean_xpr": {
+									"priority": 11,
+									"url": "${PREFIX}/static/lincs/embeddings/cp_UMAP_embedding.tsv"
+								}
+							}
+						},
 						{
 							"type": "appyter",
 							"url": "https://appyters.maayanlab.cloud/Gene_Centric_GEO_Reverse_Search/",
 							"default_form_data": {},
 							"input_name": "human_gene",
 							"label": "GEO Reverse Search Appyter",
-							"icon": "./static/appyters_logo.png"
+							"icon": "${PREFIX}/static/appyters_logo.png"
 						},
 						{
 							"type": "appyter",
@@ -839,7 +984,7 @@
 							"default_form_data": {},
 							"input_name": "gene",
 							"label": "RNA-seq-like Reverse Search Appyter",
-							"icon": "./static/appyters_logo.png"
+							"icon": "${PREFIX}/static/appyters_logo.png"
 						}
 					]
 				}
@@ -1379,6 +1524,84 @@
 						}
 					}
 				}
+			},
+			"Concierge": {
+				"active": true,
+				"endpoint": "/",
+				"navName": "Concierge",
+				"priority": 4,
+				"props": {
+					"title": "SigCom LINCS Concierge",
+					"icon": "${PREFIX}/static/concierge.jpeg",
+					"abstract": "./static/about.md",
+					"image": "${PREFIX}/static/Endpoints.svg",
+					"caption": "SigCom LINCS Workflows",
+					"start": [
+						{
+							"type": "start node",
+							"label": "Up/Down Gene Sets",
+							"endpoint": "#/SignatureSearch/UpDown"
+						},
+						{
+							"type": "start node",
+							"label": "Gene Set",
+							"endpoint": "#/SignatureSearch/Set"
+						},
+						{
+							"type": "start node",
+							"label": "Single Gene",
+							"end": [
+								"coexpression",
+								"genesearch"
+							]
+						},
+						{
+							"type": "start node",
+							"label": "Single Variant",
+							"end": [
+								"coexpression",
+								"genesearch"
+							]
+						},
+						{
+							"type": "start node",
+							"label": "Any Search Term (e.g. Drug, Disease, Cell Line)",
+							"end": [
+								"metadata",
+								"pubmed",
+								"enrichr"
+							]
+						},
+						{
+						  "type": "youtube",
+						  "endpoint": "https://www.youtube.com/watch?v=mupAIqTXceE", 
+						  "label": "tutorial",
+						  "thumbnail": "${PREFIX}/static/tutorial-thumbnail.png"
+						}
+					],
+					"end": {
+						"coexpression": {
+							"label": "Perform Signature Search Using Co-Expressed Genes",
+							"endpoint": "#/SignatureSearch/UpDown"
+						},
+						"genesearch": {
+							"label": "Retrieve Signatures that Maximally Up- or Down-Regulate the Gene",
+							"endpoint": "#/GenePages"
+						},
+						"metadata": {
+							"label": "Perform Metadata Search",
+							"endpoint": "#/MetadataSearch/Signatures"
+						},
+						"pubmed": {
+							"label": "Signature Search of Top Co-Mentioned Genes in Literature",
+							"endpoint": "#/FetchGeneSet/Literature"
+						},
+						"enrichr": {
+							"label": "Search Annotated Gene Sets and Use Them for Signature Search",
+							"endpoint": "#/FetchGeneSet/Annotated"
+						}
+					}
+				}
 			}
 		},
 		"extraNav": [],
@@ -1455,7 +1678,9 @@
 			"e24989ba-5258-511c-9c6a-00634f74857b": 9,
 			"ef9389a8-53d3-50db-90cc-57e7d150b76c": 8,
 			"96c7b8c5-1eca-5764-88e4-e4ccaee6603f": 4,
-			"8f1ff550-ece8-591d-a213-2763f854c008": 6
+			"8f1ff550-ece8-591d-a213-2763f854c008": 6,
+			"98c6a1ef-e3b7-5a96-9913-480acf78a577": 11,
+			"42cd56da-0ad8-5dad-b27c-fe1d135401b2": 12
 		},
 		"static_images": [
 			{
