@@ -1527,7 +1527,7 @@
 			},
 			"Concierge": {
 				"active": true,
-				"endpoint": "/",
+				"endpoint": "/Concierge",
 				"navName": "Concierge",
 				"priority": 4,
 				"props": {
