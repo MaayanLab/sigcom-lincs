@@ -467,6 +467,20 @@
 							]
 						},
 						{
+							"label": "CycleGAN Models for Predicting RNA-Seq-Like Profiles of L1000 Samples",
+							"markdown_sublabel": "**All L1000 data that is provided here are derivative work that is significantly different from what is provided at [clue.io](https://clue.io), the original source of these data. The original data and signatures profiled and computed by the LINCS Broad Transcriptomics Data and Signature Generation Center (DSGC) are available from [clue.io](https://clue.io).**",
+							"links": [
+								{
+									"label": "LINCS L1000 CycleGAN models",
+									"date": "2022-09-20",
+									"href": "https://lincs-dcic.s3.amazonaws.com/LINCS-L1000-Transformed/models.zip",
+									"file type": "zip",
+									"size": "784.03MB",
+									"icon": "mdi-brain"
+								}
+							]
+						},
+						{
 							"label": "LINCS MCF10A Molecular Deep Dive (MDD)",
 							"links": [
 								{
@@ -634,6 +648,20 @@
 									"file type": "tsv",
 									"size": "3.7MB",
 									"icon": "mdi-hexagon-multiple"
+								}
+							]
+						},
+						{
+							"label": "Other Gene Sets",
+							"links": [
+								{
+									"label": "Mitchell Proteomics Drug Atlas 2023",
+									"date": "2023-01-03",
+									"href": "https://maayanlab-public.s3.amazonaws.com/enrichr/Mitchell_Proteomics_Drug_Atlas_2023.txt",
+									"file type": "gmt",
+									"size": "1.5MB",
+									"terms": "1748",
+									"icon": "mdi-pill"
 								}
 							]
 						}
@@ -855,13 +883,13 @@
 							"endpoint": "/Set",
 							"examples": [
 								{
-									"label": "Try this example gene set",
+									"label": "Click here to try an example of a gene set",
 									"input": {
 										"entities": "UTP14A\nS100A6\nSCAND1\nRRP12\nCIAPIN1\nADH5\nMTERF3\nSPR\nCHMP4A\nUFM1\nVAT1\nHACD3\nRFC5\nCOTL1\nNPRL2\nTRIB3\nPCCB\nTLE1\nCD58\nBACE2\nKDM3A\nTARBP1\nRNH1\nCHAC1\nMBNL2\nVDAC1\nTES\nOXA1L\nNOP56\nHAT1\nCPNE3\nDNMT1\nARHGAP1\nVPS28\nEIF2S2\nBAG3\nCDCA4\nNPDC1\nRPS6KA1\nFIS1\nSYPL1\nSARS\nCDC45\nCANT1\nHERPUD1\nSORBS3\nMRPS2\nTOR1A\nTNIP1\nSLC25A46\nMAL\nEPCAM\nHDAC6\nCAPN1\nTNRC6B\nPKD1\nRRS1\nHP\nANO10\nCEP170B\nIDE\nDENND2D\nCAMK2B\nZNF358\nRPP38\nMRPL19\nNUCB2\nGNAI1\nLSR\nADGRE2\nPKMYT1\nCDK5R1\nABL1\nPILRB\nAXIN1\nFBXL8\nMCF2L\nDBNDD1\nIGHMBP2\nWIPF2\nWFS1\nOGFOD2\nMAPK1IP1L\nCOL11A1\nREG3A\nSERPINA1\nMYCBP2\nPIGK\nTCAP\nCRADD\nELK1\nDNAJB2\nZBTB16\nDAZAP1\nMAPKAPK2\nEDRF1\nCRIP1\nUCP3\nAGR2\nP4HA2"
 									}
 								}
 							],
-							"description": "Identify perturbations from over 1 million signatures that maximally up- or down-regulate the expression of a gene set. Enter a set of genes or fetch a gene set using the term search form at the bottom.",
+							"description": "Identify perturbations from over 1 million signatures that maximally up- or down-regulate the expression of a gene set. Enter a set of genes or fetch a gene set using the term search form below.",
 							"linked_form": {
 								"active": true,
 								"label": "Fetch annotated gene sets from [Enrichr](https://maayanlab.cloud/Enrichr/) by querying any search term:",
@@ -880,14 +908,14 @@
 							"endpoint": "/UpDown",
 							"examples": [
 								{
-									"label": "Try this example up and down gene set",
+									"label": "Click here to try an example of up and down gene sets",
 									"input": {
 										"up_entities": "TARBP1\nAPP\nRAP1GAP\nUFM1\nDNAJA3\nPCBD1\nCSRP1\nMBNL2\nMLEC\nDNAJB2\nCKAP4\nARNT2\nCOG7\nALDOC\nMYT1L\nHMGCS1\nSNAP25\nTIAM1\nRPN1\nVDAC1\nTCEA2\nTSPYL4\nPAFAH1B1\nATP1B1\nPCMT1\nDNM1\nUSP22\nFOXO4\nBNIP3\nMAP7D1\nTRIM2\nFBXO21\nTCEAL4\nFKBP4\nCOPG1\nKIF5C\nRPS6\nSCRN1\nSTXBP1\nPGRMC1\nPIN1\nC2CD5\nSLC25A4\nGNAS\nSACM1L\nTCTA\nGAPDH\nCIRBP\nCLTB\nSTX1A",
 										"down_entities": "CEBPA\nSTAT5B\nDSE\nEIF4EBP1\nCARD8\nHLA-DMA\nSERPINE1\nEPHB2\nNOS3\nRPL39L\nCAPN1\nSRC\nFRMD4B\nICAM1\nGATA3\nDHRS9\nFGFR4\nBLNK\nATF1\nMUC1\nDSG2\nPAX8\nHOXA10\nPTGS2\nMELK\nCSGALNACT1\nABCC9\nCASP2\nABCA6\nGLIPR1\nCDK6\nIL1B\nCYSLTR1\nSPTLC2\nTSPAN2\nSYK\nTP53\nICAM3\nCCL2\nIDE\nPAN2\nSPTAN1\nPOLE2\nCDC25A\nBTK\nSIT1\nKIF14\nFAS\nADRB2\nHMOX1"
 									}
 								}
 							],
-							"description": "Identify reversers and mimickers from over 1 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form at the bottom.",
+							"description": "Identify reversers and mimickers from over 1 million signatures by entering up and down gene sets or by performing single gene search for co-expressed genes using the input form below.",
 							"linked_form": {
 								"active": true,
 								"label": "Query a single gene or a variant to identify other genes that mostly positively or negatively correlate with the queried gene based on RNA-seq co-expression data from [ARCHS4](https://maayanlab.cloud/archs4/):",
