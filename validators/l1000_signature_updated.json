@@ -1,0 +1,108 @@
+{
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_signature_updated.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"allOf": [
+		{
+			"$ref": "/dcic/signature-commons-schema/v5/core/meta.json"
+		},
+		{
+			"properties": {
+				"md5": {
+					"type": "string",
+					"description": "md5 hash value of the file"
+				},
+				"sha256": {
+					"type": "string",
+					"description": "sha256 hash value of the file"
+				},
+				"tissue": {
+					"type": "string",
+					"description": "tissue of the sample"
+				},
+				"anatomy": {
+					"type": "string",
+					"description": "ontological id of the sample"
+				},
+				"cmap_id": {
+					"type": "string",
+					"description": "cmap id of the signature"
+				},
+				"version": {
+					"type": "number",
+					"description": "version of the data"
+				},
+				"filename": {
+					"type": "string",
+					"description": "filename of the signature"
+				},
+				"local_id": {
+					"type": "string",
+					"description": "ldp3 id of the signature"
+				},
+				"cell_line": {
+					"type": "string",
+					"description": "cell line"
+				},
+				"pert_dose": {
+					"type": "string",
+					"description": "dose concentration"
+				},
+				"pert_name": {
+					"type": "string",
+					"description": "name of the perturbation"
+				},
+				"pert_time": {
+					"type": "string",
+					"description": "timepoint"
+				},
+				"pert_type": {
+					"type": "string",
+					"description": "perturbation type"
+				},
+				"data_level": {
+					"type": "integer",
+					"description": "LINCS data level"
+				},
+				"creation_time": {
+					"type": "string",
+					"description": "creation time"
+				},
+				"persistent_id": {
+					"type": "string",
+					"description": "s3 link to the file",
+					"format": "uri"
+				},
+				"size_in_bytes": {
+					"type": "number",
+					"description": "size in bytes"
+				},
+				"uncompressed_size_in_bytes": {
+					"type": "number",
+					"description": "uncompressed size in bytes"
+				},
+				"disease": {
+					"type": "string",
+					"description": "disease associated with cell line"
+				},
+				"doid": {
+					"type": "string",
+					"description": "Disease Ontology id"
+				}
+			},
+			"required": [
+				"cmap_id",
+				"creation_time",
+				"data_level",
+				"filename",
+				"local_id",
+				"persistent_id",
+				"pert_type",
+				"sha256",
+				"size_in_bytes",
+				"uncompressed_size_in_bytes",
+				"version"
+			],
+			"type": "object"
+		}
+	]
+}
