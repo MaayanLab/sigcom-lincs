@@ -1,5 +1,5 @@
 {
-	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_signature_updated.json",
+	"$id": "https://raw.githubusercontent.com/MaayanLab/sigcom-lincs/main/validators/l1000_consensus_signature.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"allOf": [
 		{
@@ -90,9 +90,6 @@
 				}
 			},
 			"required": [
-				"cmap_id",
-				"creation_time",
-				"data_level",
 				"filename",
 				"local_id",
 				"persistent_id",
