@@ -643,7 +643,7 @@
 							"links": [
 								{
 									"label": "LINCS Small Molecules Metadata",
-									"date": "2021-09-20",
+									"date": "2023-09-19",
 									"href": "https://s3.amazonaws.com/lincs-dcic/sigcom-lincs-metadata/LINCS_small_molecules.tsv",
 									"file type": "tsv",
 									"size": "3.7MB",
@@ -655,9 +655,9 @@
 							"label": "Mass-Spec Proteomics Signatures",
 							"links": [
 								{
-									"label": "Mitchell Proteomics Drug Atlas 2023",
+									"label": "Proteomics Drug Atlas 2023",
 									"date": "2023-01-03",
-									"href": "https://maayanlab-public.s3.amazonaws.com/enrichr/Mitchell_Proteomics_Drug_Atlas_2023.txt",
+									"href": "https://maayanlab-public.s3.amazonaws.com/enrichr/Proteomics_Drug_Atlas_2023.txt",
 									"file type": "gmt",
 									"size": "1.5MB",
 									"terms": "1748",
