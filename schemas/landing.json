@@ -767,7 +767,7 @@
 							"label": "Datasets"
 						},
 						"entities": {
-							"active": true,
+							"active": false,
 							"examples": [
 								"MAPK1",
 								"STAT3",
@@ -928,7 +928,7 @@
 				}
 			},
 			"EntitySearch": {
-				"active": true,
+				"active": false,
 				"landing": true,
 				"search_tab": true,
 				"endpoint": "/GenePages",
