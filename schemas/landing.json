@@ -1579,16 +1579,14 @@
 							"type": "start node",
 							"label": "Single Gene",
 							"end": [
-								"coexpression",
-								"genesearch"
+								"coexpression"
 							]
 						},
 						{
 							"type": "start node",
 							"label": "Single Variant",
 							"end": [
-								"coexpression",
-								"genesearch"
+								"coexpression"
 							]
 						},
 						{
