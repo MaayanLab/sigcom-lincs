@@ -664,6 +664,35 @@
 									"icon": "mdi-pill"
 								}
 							]
+						},
+						{
+							"label": "Croissant Files",
+							"links": [
+								{
+									"label": "LINCS L1000 Chemical Perturbations Consensus Signatures",
+									"date": "2025-02-24",
+									"href": "https://s3.amazonaws.com/lincs-dcic/croissant/l1000chempert.json",
+									"file type": "JSON",
+									"size": "6 KB",
+									"icon": "mdi-hexagon-multiple"
+								},
+								{
+									"label": "LINCS L1000 CRISPR KO Consensus Signatures",
+									"date": "2025-02-24",
+									"href": "https://s3.amazonaws.com/lincs-dcic/croissant/l1000crispr.json",
+									"file type": "JSON",
+									"size": "7 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "LINCS L1000 CMAP Signatures of Differentially Expressed Genes for Small Molecules",
+									"date": "2025-02-24",
+									"href": "https://s3.amazonaws.com/lincs-dcic/croissant/lincscmapchemical.json",
+									"file type": "JSON",
+									"size": "6 KB",
+									"icon": "mdi-pill"
+								}
+							]
 						}
 					],
 					"download_list": [
