@@ -685,7 +685,7 @@
 									"icon": "mdi-scissors-cutting"
 								},
 								{
-									"label": "LINCS L1000 CMAP Signatures of Differentially Expressed Genes for Small Molecules",
+									"label": "LINCS L1000 CMAP Signatures for Small Molecules",
 									"date": "2025-02-24",
 									"href": "https://s3.amazonaws.com/lincs-dcic/croissant/lincscmapchemical.json",
 									"file type": "JSON",
