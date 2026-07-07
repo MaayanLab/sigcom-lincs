@@ -652,6 +652,220 @@
 							]
 						},
 						{
+							"label": "Clue.io LINCS Data Release",
+							"markdown_sublabel": "**This collection of file was copied from [clue.io](https://clue.io) on January 2026. If you are using the data from these files for your academic research please cite [PMID 29195078](https://pubmed.ncbi.nlm.nih.gov/29195078/). For commercial use, please contact the [Broad Institute](https://www.broadinstitute.org/contact).**",
+							"links": [
+								{
+									"label": "LINCS2020 Release Metadata Field Definitions.xlsx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/LINCS2020 Release Metadata Field Definitions.xlsx",
+									"file type": "Excel",
+									"size": "39.5KB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "README.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/README.txt",
+									"file type": "TXT",
+									"size": "2.1KB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "cellinfo_beta.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/cellinfo_beta.txt",
+									"file type": "TXT",
+									"size": "37.1KB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "compoundinfo_beta.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/compoundinfo_beta.txt",
+									"file type": "TXT",
+									"size": "4.4MB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "geneinfo_beta.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/geneinfo_beta.txt",
+									"file type": "TXT",
+									"size": "1.1MB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "instinfo_beta.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/instinfo_beta.txt",
+									"file type": "TXT",
+									"size": "643.6MB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_ctl_n188708x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_ctl_n188708x12328.gctx",
+									"file type": "GCTX",
+									"size": "17.3GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_trt_cp_n1805898x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_trt_cp_n1805898x12328.gctx",
+									"file type": "GCTX",
+									"size": "82.9GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_trt_misc_n26428x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_trt_misc_n26428x12328.gctx",
+									"file type": "GCTX",
+									"size": "1.2GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_trt_oe_n131668x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_trt_oe_n131668x12328.gctx",
+									"file type": "GCTX",
+									"size": "6.0GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_trt_sh_n453175x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_trt_sh_n453175x12328.gctx",
+									"file type": "GCTX",
+									"size": "41.6GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level3_beta_trt_xpr_n420583x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level3_beta_trt_xpr_n420583x12328.gctx",
+									"file type": "GCTX",
+									"size": "15.1GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_ctl_n188708x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_ctl_n188708x12328.gctx",
+									"file type": "GCTX",
+									"size": "8.7GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_trt_cp_n1805898x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_trt_cp_n1805898x12328.gctx",
+									"file type": "GCTX",
+									"size": "82.9GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_trt_misc_n26428x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_trt_misc_n26428x12328.gctx",
+									"file type": "GCTX",
+									"size": "1.2GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_trt_oe_n131668x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_trt_oe_n131668x12328.gctx",
+									"file type": "GCTX",
+									"size": "6.0GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_trt_sh_n453175x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_trt_sh_n453175x12328.gctx",
+									"file type": "GCTX",
+									"size": "20.8GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level4_beta_trt_xpr_n420583x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level4_beta_trt_xpr_n420583x12328.gctx",
+									"file type": "GCTX",
+									"size": "15.9GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_ctl_n58022x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_ctl_n58022x12328.gctx",
+									"file type": "GCTX",
+									"size": "2.7GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_trt_cp_n720216x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_trt_cp_n720216x12328.gctx",
+									"file type": "GCTX",
+									"size": "33.1GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_trt_misc_n8283x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_trt_misc_n8283x12328.gctx",
+									"file type": "GCTX",
+									"size": "389.6MB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_trt_oe_n34171x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_trt_oe_n34171x12328.gctx",
+									"file type": "GCTX",
+									"size": "1.6GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_trt_sh_n238351x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_trt_sh_n238351x12328.gctx",
+									"file type": "GCTX",
+									"size": "10.9GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "level5_beta_trt_xpr_n142901x12328.gctx",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/level5_beta_trt_xpr_n142901x12328.gctx",
+									"file type": "GCTX",
+									"size": "6.1GB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "print_checksums.sh",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/print_checksums.sh",
+									"file type": "Shell script",
+									"size": "167.0B",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								},
+								{
+									"label": "siginfo_beta.txt",
+									"date": "2025-02-05",
+									"href": "https://s3.amazonaws.com/lincs-dcic/clueio/l1000/siginfo_beta.txt",
+									"file type": "TXT",
+									"size": "443.7MB",
+									"src": "${PREFIX}/static/cmap-logo.svg"
+								}
+							]
+						},
+						{
 							"label": "Mass-Spec Proteomics Signatures",
 							"links": [
 								{
@@ -691,6 +905,74 @@
 									"file type": "JSON",
 									"size": "6 KB",
 									"icon": "mdi-pill"
+								}
+							]
+						},
+						{
+							"label": "DRUG-seqr GMT",
+							"markdown_sublabel": "Created from processing the Novartis DRUG-seq U2OS MoABox Dataset. [DRUG-seqr](https://drugseqr.maayanlab.cloud/) contains up and down sets for 4,343 compounds at 24hr timepoint in U2OS cell line at 0.01, 0.1, 1.0 and 10mM concentrations.",
+							"links": [
+								{
+									"label": "DRUG-seqr",
+									"date": "2025-05-08",
+									"href": "https://minio.dev.maayanlab.cloud/drugseq/DRUGseqr.gmt",
+									"file type": "GMT",
+									"size": "34.3 MB",
+									"icon": "mdi-pill"
+								}
+							]
+						},
+						{
+							"label": "PerturbSEQ GMT",
+							"markdown_sublabel": "Created from processing Perturb-seq data from the datasets presented in [Replogle et al., Cell 2022](https://www.cell.com/cell/fulltext/S0092-8674(22)00597-9). scRNA-seq expression was measured in response to CRISPR interference libraries targeting genome-wide genetic perturbations in the K562 chronic myeloid leukemia cell line, targeting essential genes (selected from DepMap) in the K562 cell line, and targeting essential genes in the RPE1 retinal pigment epithelial cell line.",
+							"links": [
+								{
+									"label": "PerturbSEQ K562 CRISPR KO Up",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglek562genomewide/gene_set_library_up_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "678 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "PerturbSEQ K562 CRISPR KO Down",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglek562genomewide/gene_set_library_dn_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "139 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "PerturbSEQ K562 CRISPR KO Up (Essential Genes)",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglek562essential/gene_set_library_up_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "441 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "PerturbSEQ K562 CRISPR KO Down (Essential Genes)",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglek562essential/gene_set_library_up_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "133 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "PerturbSEQ RPE1 CRISPR KO Up (Essential Genes)",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglerpe1essential/gene_set_library_up_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "272 KB",
+									"icon": "mdi-scissors-cutting"
+								},
+								{
+									"label": "PerturbSEQ RPE1 CRISPR KO Down (Essential Genes)",
+									"date": "2025-05-08",
+									"href": "https://amp.pharm.mssm.edu/static/hdfs/harmonizome/data/reploglerpe1essential/gene_set_library_dn_crisp.gmt.gz",
+									"file type": "GMT",
+									"size": "48 KB",
+									"icon": "mdi-scissors-cutting"
 								}
 							]
 						}
@@ -1030,7 +1312,9 @@
 						{
 							"type": "appyter",
 							"url": "https://appyters.maayanlab.cloud/Gene_Centric_GEO_Reverse_Search/",
-							"default_form_data": {},
+							"default_form_data": {
+
+							},
 							"input_name": "human_gene",
 							"label": "GEO Reverse Search Appyter",
 							"icon": "${PREFIX}/static/appyters_logo.png"
@@ -1038,7 +1322,9 @@
 						{
 							"type": "appyter",
 							"url": "https://appyters.maayanlab.cloud/L1000_RNAseq_Gene_Search/",
-							"default_form_data": {},
+							"default_form_data": {
+
+							},
 							"input_name": "gene",
 							"label": "RNA-seq-like Reverse Search Appyter",
 							"icon": "${PREFIX}/static/appyters_logo.png"
@@ -1628,10 +1914,10 @@
 							]
 						},
 						{
-						  "type": "youtube",
-						  "endpoint": "https://www.youtube.com/watch?v=mupAIqTXceE", 
-						  "label": "tutorial",
-						  "thumbnail": "${PREFIX}/static/tutorial-thumbnail.png"
+							"type": "youtube",
+							"endpoint": "https://www.youtube.com/watch?v=mupAIqTXceE",
+							"label": "tutorial",
+							"thumbnail": "${PREFIX}/static/tutorial-thumbnail.png"
 						}
 					],
 					"end": {
@@ -1659,7 +1945,9 @@
 				}
 			}
 		},
-		"extraNav": [],
+		"extraNav": [
+
+		],
 		"preferred_name_singular": {
 			"libraries": "Dataset",
 			"resources": "Resource"
